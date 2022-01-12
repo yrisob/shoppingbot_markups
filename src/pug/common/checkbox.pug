@@ -1,0 +1,14 @@
+mixin checkbox(obj)
+	-
+		var attr = {
+			type: 'checkbox',
+			name: obj.name
+		}
+		if('checked' in obj){
+			attr['checked'] = 'checked';
+		}
+	label.checkbox
+		input.checkbox__input&attributes(attr)
+		span.checkbox__mark
+		if obj.text
+			span.checkbox__text=obj.text

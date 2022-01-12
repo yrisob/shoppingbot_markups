@@ -1,0 +1,60 @@
+.sidebar {
+	width: $sideWidth;
+	background-color: var(--sidebar);
+	color: var(--white);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	&__scroll {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		color: transparent;
+		transition: color var(--time) var(--anim);
+		scrollbar-color: rgba(255,255,255,0) rgba(255,255,255,0);
+		scrollbar-width: thin;
+		@media (max-height: 500px){
+			align-items: flex-start;
+		}
+		&:hover {
+			scrollbar-color: rgba(255,255,255,.5) rgba(0,0,0,0);
+			color: rgba(255,255,255,.5);
+		}
+		&::-webkit-scrollbar{
+			width: 8px;
+			height: 8px;
+		}
+		&::-webkit-scrollbar-track {
+			border-radius: 5px;
+			background: rgba(0,0,0,0);
+		}
+		&::-webkit-scrollbar-thumb {
+			height: 4px;
+			border: 2px solid transparent;
+			border-radius: 10px;
+			background-clip: content-box;
+			box-shadow: inset 0 0 0 10px;
+		}
+		&::-webkit-scrollbar-button {
+			width: 0;
+			height: 0;
+			display: none;
+		}
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}
+	}
+	&__inner {
+		width: 100%;
+		color: var(--white);
+	}
+	&__footer {
+		padding: size($sm);
+	}
+}

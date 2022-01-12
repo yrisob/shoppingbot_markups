@@ -1,0 +1,59 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	&__qnt {
+		font-size: size(14);
+		font-weight: 500;
+		line-height: 1.2;
+		margin-right: size(36);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__current,
+	&__link,
+	&__dots {
+		order: 2;
+		font-weight: 500;
+		font-size: size(14);
+		line-height: 1.2;
+		padding: 0 size($sm-div);
+	}
+	&__current {
+		color: var(--black-alt);
+		cursor: default;
+	}
+	&__dots {
+		cursor: default;
+	}
+	&__link,
+	&__dots {
+		color: var(--gray-alt);
+	}
+	&__link:hover {
+		color: var(--accent);
+	}
+	&__prev,
+	&__next {
+		width: size(16);
+		height: size(16);
+		color: var(--black);
+		&:hover {
+			color: var(--accent);
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__prev {
+		order: 1;
+		margin-right: size($md-div);
+	}
+	&__next {
+		order: 3;
+		margin-left: size($md-div);
+	}
+}

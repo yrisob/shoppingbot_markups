@@ -1,0 +1,53 @@
+@use 'sass:math';
+
+@function d-round ($number, $digits: 0, $mode: round) {
+	$n: 1;
+	@if type-of($number) != number {
+		@warn '#{ $number } is not a number.';
+		@return $number;
+	}
+	@if type-of($digits) != number {
+		@warn '#{ $digits } is not a number.';
+		@return $number;
+	} @else if not unitless($digits) {
+		@warn '#{ $digits } has a unit.';
+		@return $number;
+	}
+	@if $digits > 0 {
+		@for $i from 1 through $digits {
+			$n: $n * 10;
+		}
+	}
+	@if $mode == round {
+		@return round($number * $n) / $n;
+	} @else if $mode == ceil {
+		@return ceil($number * $n) / $n;
+	} @else if $mode == floor {
+		@return floor($number * $n) / $n;
+	} @else {
+		@warn '#{ $mode } is undefined keyword.';
+		@return $number;
+	}
+}
+
+@function size($value, $default: 16, $d: px) {
+	// default: 16px;
+	// $d: rem;
+	$result: 0;
+	@if $d == px {
+		$result: $value + px;
+	} @else {
+		$result: (math.div($value, $default)) + $d;
+	}
+	@return $result;
+}
+@function lh($value, $size, $digits: 1){
+	$result: ($value * (math.div(1,$size)));
+	$round: d-round($result, $digits);
+	@return $round;
+}
+
+
+@function color($name){
+	@return var(--#{unquote($name)});
+}

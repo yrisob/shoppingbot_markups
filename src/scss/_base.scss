@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+html {
+	font-size: var(--html);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-overflow-style: scrollbar;
+}
+
+body {
+	font-family: var(--font-main);
+	font-weight: 400;
+	line-height: 1;
+	font-size: size(16);
+	background-color: var(--white);
+	color: var(--text-base);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: 0;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+figure {
+	margin: 0;
+}
+img {
+	vertical-align: middle;
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--white);
+}

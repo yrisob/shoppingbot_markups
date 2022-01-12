@@ -1,0 +1,15 @@
+extends ../templates/base
+include ../components/pagination
+block variables
+	-
+		var title = 'Products';
+		var active = 'Products';
+
+block content
+	+header({
+		back: false,
+		headline: 'Products',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		+pagination

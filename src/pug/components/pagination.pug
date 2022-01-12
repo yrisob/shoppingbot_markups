@@ -1,0 +1,13 @@
+mixin pagination()
+	.pagination
+		.pagination__qnt 1 - 10 of 34
+		.pagination__list
+			a.pagination__prev(href='#')
+				+icon('chevron-left')
+			a.pagination__next(href='#')
+				+icon('chevron-right')
+			a.pagination__link(href='#') 1
+			span.pagination__current 2
+			a.pagination__link(href='#') 3
+			span.pagination__dots ...
+			a.pagination__link(href='#') 10

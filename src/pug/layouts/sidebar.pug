@@ -1,0 +1,12 @@
+include ../components/navigation
+include ../components/profile
+.sidebar
+	.sidebar__scroll
+		.sidebar__inner
+			+navigation
+	.sidebar__footer
+		+profile({
+			img: '../assets/uploads/avatar.png',
+			name: 'Puma store',
+			text: 'name@domain.com'
+		})

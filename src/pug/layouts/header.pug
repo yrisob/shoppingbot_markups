@@ -1,0 +1,11 @@
+mixin header(obj)
+	header.header
+		.header__inner
+			if obj.back
+				.header__bar
+					a.header__back(href='#')
+						+icon('chevron-left')
+						|Back
+			.header__headline=obj.headline
+			if obj.text
+				.header__text=obj.text

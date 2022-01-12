@@ -1,0 +1,45 @@
+.header {
+	background-color: var(--white);
+	padding: size($sm*2);
+	color: var(--text-base);
+	&__headline {
+		font-weight: 600;
+		font-size: size(24);
+		line-height: 1.2;
+		padding-top: size($bs-div);
+	}
+	&__text {
+		margin-top: size($md-div);
+		font-size: size(14);
+		font-weight: 400;
+		line-height: 1.5;
+	}
+	&__bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: size($bs-div);
+		padding-top: size($bs-div);
+	}
+	&__back {
+		display: inline-flex;
+		align-items: center;
+		gap: size(4);
+		color: var(--text-base);
+		font-size: size(16);
+		font-weight: 500;
+		line-height: 1.2;
+		svg {
+			display: inline-block;
+			width: size(16);
+			height: size(16);
+			color: inherit;
+		}
+		&:hover {
+			svg {
+				transition: transform var(--time) var(--anim);
+				transform: translateX(-2px);
+			}
+		}
+	}
+}

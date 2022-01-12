@@ -1,0 +1,8 @@
+mixin profile(obj)
+	button.profile(type='button')
+		.profile__picture
+			img.profile__img(src=obj.img alt=obj.name)
+		.profile__info
+			.profile__name=obj.name
+			.profile__text=obj.text
+

@@ -1,0 +1,52 @@
+@use 'sass:math';
+@import "mixin/func";
+
+$bs: 16; //base
+$md: 20; //medium
+$sm: 12; //small
+$lg: 28; //large
+
+$bs-div: math.div($bs, 2);
+$md-div: math.div($md, 2);
+$sm-div: math.div($sm, 2);
+
+$sideWidth: size(236);
+
+:root {
+	--text-base:  #3E424E;
+	--text-additional: #6B778C;
+
+	--stroke: #EAEAEA;
+	--accent: #681F9C;
+	--bg: #FAFAFB;
+	--sidebar: #1E1E1E;
+
+	--button: #F2F2F2;
+	--button-additional: #FAFAFB;
+
+	--white: #FFFFFF;
+	--red: #EB4335;
+	--gray: #A4A4A4;
+	--gray-alt: #ABABAB;
+	--black: #262626;
+	--black-alt: #3E424E;
+
+	--shadow: 0px 16px 24px rgba(0, 0, 0, 0.03), 0px 2px 6px rgba(0, 0, 0, 0.01), 0px 0px 1px rgba(0, 0, 0, 0.01);
+	--shadow2: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+	--danger-00: #F3A7A7;
+	--danger-01: #E64E4E;
+	--success-00: #7FD569;
+	--success-01: #5FCA43;
+	--warn-00: #ffefcc;
+	--warn-01: #ffaf01;
+
+	--radius: 0;
+	--button-radius: 0;
+	--control-radius: 0;
+	--font-main: 'Inter', sans-serif;
+	--html: 100%;
+
+	--time: 150ms;
+	--anim: ease;
+}
