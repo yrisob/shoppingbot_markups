@@ -7,6 +7,9 @@ mixin checkbox(obj)
 		if('checked' in obj){
 			attr['checked'] = 'checked';
 		}
+		if('half' in obj){
+			attr['data-half'] = 'true';
+		}
 	label.checkbox
 		input.checkbox__input&attributes(attr)
 		span.checkbox__mark

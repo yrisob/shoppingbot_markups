@@ -1,0 +1,9 @@
+include ../common/icon
+mixin select(obj)
+	div.select
+		button.select__toggle(type='button')
+			span!=obj.def
+			+icon('chevron-down')
+		.select__list
+			for item in obj.list
+				.select__item(class=item.action)=item.value

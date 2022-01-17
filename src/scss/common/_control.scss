@@ -1,0 +1,50 @@
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.control {
+	position: relative;
+	&__input {
+		width: 100%;
+		background-color: var(--white);
+		border: 1px solid var(--stroke);
+		color: var(--black-alt);
+		font-size: size(14);
+		line-height: size(16);
+		font-weight: 400;
+		outline: 0;
+		border-radius: 8px;
+		padding: size(11) size($bs);
+		height: size(40);
+		&::-webkit-input-placeholder {
+			color: var(--gray);
+		}
+		&::-moz-placeholder {
+			color: var(--gray);
+		}
+		&:-ms-input-placeholder {
+			color: var(--gray);
+		}
+		&:not(:disabled):focus {
+			background-color: var(--white);
+			border-color: var(--accent);
+		}
+	}
+	&__select {
+		position: relative;
+	}
+	&__select select {
+		display: none;
+	}
+	//select#{&}__select {
+	//	cursor: pointer;
+	//	background-image: url("../icons/icons.svg#chevron-down");
+	//	background-repeat: no-repeat;
+	//	background-position: center right size(12);
+	//	background-size: size(16);
+	//	padding-right: size(12 + 16 + 12);
+	//}
+}

@@ -1,0 +1,40 @@
+include ../common/icon
+mixin button(obj)
+	-
+		var def = {
+			text: 'Кнопка',
+			tag: 'button',
+			mods: []
+		}
+		var obj = obj ?? {}
+		for (const key in def) {
+			if (obj[key] == null) {
+				obj[key] = def[key];
+			}
+		}
+		obj.tag = (obj.hasOwnProperty('tag')) ? obj.tag : 'button'
+		var classArray = ['button']
+		if (obj.hasOwnProperty('mods') && obj.mods.length) {
+			obj.mods.split(',').forEach((mod) => {
+				classArray.push('button_' + mod.trim());
+			});
+		}
+		var attr = {};
+		attr.class = classArray
+		if (obj.tag === 'a') {
+			attr.href = (obj.hasOwnProperty('href')) ? '#' : obj.href
+		}
+		if (obj.tag === 'button') {
+			attr.type = (obj.hasOwnProperty('type') ? obj.type : 'button')
+		}
+		if('disabled' in obj){
+			attr.disabled = 'disabled'
+		}
+
+
+	if obj.icon
+		#{obj.tag}&attributes(attr)
+			+icon(obj.icon)
+			span!=obj.text
+	else
+		#{obj.tag}&attributes(attr)!=obj.text

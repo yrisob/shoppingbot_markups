@@ -14,13 +14,55 @@ block content
 		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
 	})
 	.content
+		.toolbar
+			.toolbar__main
+				form.filter
+					.filter__item
+						div.control
+							input.control__input(placeholder='Search')
+					.filter__item
+						+select({
+							def: 'All status',
+							list: [
+								{value:'All status', action:'selected'},
+								{value:'Active'},
+								{value:'Inactive'},
+								{value:'Disabled', action:'disabled'}
+							]
+						})
+						div.control
+							.control__select
+								select
+									option(value='0' selected='selected') All status
+									option(value='1') Active
+									option(value='2') Inactive
+								.control__toggle All status
+									+icon('chevron-down')
+								.control__dropdown
+									.control__item.active All status
+									.control__item Active
+									.control__item Inactive
+					.filter__item
+						| type
+					.filter__item
+						| Category
+			.toolbar__controls
+				+button({text:'Export', mods:'link'})
+				+button({text:'Import', mods:'link'})
+				+button({icon: 'plus', text: 'Add Product'})
+
 		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
 			.table__inner
-				.table__header
+				//-.table__header
 					.table__row
 						.table__th.table__th_start
 							+checkbox({
-								name: 'all'
+								name: 'all',
+								half: true
 							})
 						.table__th.table__th_pic
 						.table__th
@@ -74,7 +116,7 @@ block content
 				.table__body
 					.table__row
 						.table__td
-							+checkbox({name:'item1'})
+							+checkbox({name: 'item1'})
 						.table__td
 							.table__pic
 								img(src='../assets/uploads/item-pic1.png' alt='')
@@ -82,19 +124,19 @@ block content
 							.table__short-text
 								div Professional nail and beauty
 						.table__td
-							|Service
+							| Service
 						.table__td
-							|Beauty
+							| Beauty
 						.table__td
-							|N/A
+							| N/A
 						.table__td
-							|N/A
+							| N/A
 						.table__td
-							|N/A
+							| N/A
 						.table__td
-							|$90,00
+							| $90,00
 						.table__td
-							+badge({status:'active', text: 'Active'})
+							+badge({status: 'active', text: 'Active'})
 						.table__td
 							+dropdown({
 								icon: 'more-vertical',
@@ -140,9 +182,9 @@ block content
 									{content: 'Delete Product'}
 								]
 							})
-					.table__row
+					.table__row.active
 						.table__td
-							+checkbox({name: 'item3'})
+							+checkbox({name: 'item3', checked: true})
 						.table__td
 							.table__pic
 								img(src='../assets/uploads/item-pic2.jpg' alt='')
@@ -165,6 +207,7 @@ block content
 							+badge({status: 'active', text: 'Active'})
 						.table__td
 							+dropdown({
+								status: 'open',
 								icon: 'more-vertical',
 								modification: 'dropdown__list_end',
 								list: [
@@ -276,9 +319,9 @@ block content
 									{content: 'Delete Product'}
 								]
 							})
-					.table__row
+					.table__row.active
 						.table__td
-							+checkbox({name: 'item7'})
+							+checkbox({name: 'item7', checked: true})
 						.table__td
 							.table__pic
 								img(src='../assets/uploads/item-pic1.png' alt='')
@@ -310,38 +353,38 @@ block content
 									{content: 'Delete Product'}
 								]
 							})
-				.table__row
-					.table__td
-						+checkbox({name: 'item8'})
-					.table__td
-						.table__pic
-							img(src='../assets/uploads/item-pic2.jpg' alt='')
-					.table__td
-						.table__short-text
-							div Puma Ultra Cross Smash v2Plus Limited Edition
-					.table__td
-						| Product
-					.table__td
-						| Shoes
-					.table__td
-						| 2
-					.table__td
-						| 1
-					.table__td
-						| SH1004+
-					.table__td
-						| $1 530,00
-					.table__td
-						+badge({status: 'danger', text: 'Inactive'})
-					.table__td
-						+dropdown({
-							icon: 'more-vertical',
-							modification: 'dropdown__list_end',
-							list: [
-								{content: 'View Product'},
-								{content: 'Make Inactive', action: 'active'},
-								{content: 'Archive Product', action: 'disabled'},
-								{content: 'Delete Product'}
-							]
-						})
+					.table__row
+						.table__td
+							+checkbox({name: 'item8'})
+						.table__td
+							.table__pic
+								img(src='../assets/uploads/item-pic2.jpg' alt='')
+						.table__td
+							.table__short-text
+								div Puma Ultra Cross Smash v2Plus Limited Edition
+						.table__td
+							| Product
+						.table__td
+							| Shoes
+						.table__td
+							| 2
+						.table__td
+							| 1
+						.table__td
+							| SH1004+
+						.table__td
+							| $1 530,00
+						.table__td
+							+badge({status: 'danger', text: 'Inactive'})
+						.table__td
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Product'},
+									{content: 'Make Inactive', action: 'active'},
+									{content: 'Archive Product', action: 'disabled'},
+									{content: 'Delete Product'}
+								]
+							})
 		+pagination

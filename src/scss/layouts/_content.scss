@@ -1,0 +1,11 @@
+.content {
+	flex: 1;
+	padding: size($sm*2);
+	background-color: var(--white);
+	&_bg {
+		background-color: var(--bg);
+	}
+	.header + &:not(.content_bg) {
+		padding-top: 0;
+	}
+}

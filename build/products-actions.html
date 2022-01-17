@@ -64,72 +64,71 @@
 					</div>
 				</header>
 				<div class="content">
-					<div class="table">
-						<div class="table__inner">
-							<div class="table__header">
-								<div class="table__row">
-									<div class="table__th table__th_start">
-										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" name="all"/><span class="checkbox__mark"></span>
-										</label>
+					<div class="toolbar">
+						<div class="toolbar__main">
+							<form class="filter">
+								<div class="filter__item">
+									<div class="control">
+										<input class="control__input" placeholder="Search">
 									</div>
-									<div class="table__th table__th_pic"></div>
-									<div class="table__th"><a class="table__head" href="#">Name<span class="table__sort">
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">Type<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">Category<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">Quantity<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">On&nbsp;hold<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">SKU<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">Price<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th"><a class="table__head" href="#">Status<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></div>
-									<div class="table__th table__th_end"></div>
 								</div>
-							</div>
+								<div class="filter__item">
+									<div class="select">
+										<button class="select__toggle" type="button"><span>All status</span>
+											<svg class="icon-chevron-down">
+												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+											</svg>
+										</button>
+										<div class="select__list">
+											<div class="select__item selected">All status</div>
+											<div class="select__item">Active</div>
+											<div class="select__item">Inactive</div>
+											<div class="select__item disabled">Disabled</div>
+										</div>
+									</div>
+									<div class="control">
+										<div class="control__select">
+											<select>
+												<option value="0" selected="selected">All status</option>
+												<option value="1">Active</option>
+												<option value="2">Inactive</option>
+											</select>
+											<div class="control__toggle">All status
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="control__dropdown">
+												<div class="control__item active">All status</div>
+												<div class="control__item">Active</div>
+												<div class="control__item">Inactive</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filter__item">type</div>
+								<div class="filter__item">Category</div>
+							</form>
+						</div>
+						<div class="toolbar__controls">
+							<button class="button button_link" type="button">Export</button>
+							<button class="button button_link" type="button">Import</button>
+							<button class="button" type="button">
+								<svg class="icon-plus">
+									<use xlink:href="../assets/icons/icons.svg#plus"></use>
+								</svg><span>Add Product</span>
+							</button>
+						</div>
+					</div>
+					<div class="table">
+						<div class="table__group">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="all" data-half="true"/><span class="checkbox__mark"></span>
+							</label>
+							<button class="button button_bg_gray" type="button">Make inactive</button>
+							<button class="button button_bg_gray button_color_danger" type="button">Delete</button>
+						</div>
+						<div class="table__inner">
 							<div class="table__body">
 								<div class="table__row">
 									<div class="table__td">
@@ -201,10 +200,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="table__row">
+								<div class="table__row active">
 									<div class="table__td">
 										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" name="item3"/><span class="checkbox__mark"></span>
+											<input class="checkbox__input" type="checkbox" name="item3" checked="checked"/><span class="checkbox__mark"></span>
 										</label>
 									</div>
 									<div class="table__td">
@@ -225,7 +224,7 @@
 										<button class="badge badge_active" type="button">Active</button>
 									</div>
 									<div class="table__td">
-										<div class="dropdown">
+										<div class="dropdown open">
 											<button class="dropdown__toggle" type="button">
 												<svg class="icon-more-vertical">
 													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
@@ -341,10 +340,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="table__row">
+								<div class="table__row active">
 									<div class="table__td">
 										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" name="item7"/><span class="checkbox__mark"></span>
+											<input class="checkbox__input" type="checkbox" name="item7" checked="checked"/><span class="checkbox__mark"></span>
 										</label>
 									</div>
 									<div class="table__td">
@@ -376,38 +375,38 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">
-									<label class="checkbox">
-										<input class="checkbox__input" type="checkbox" name="item8"/><span class="checkbox__mark"></span>
-									</label>
-								</div>
-								<div class="table__td">
-									<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
-								</div>
-								<div class="table__td">
-									<div class="table__short-text">
-										<div>Puma Ultra Cross Smash v2Plus Limited Edition</div>
+								<div class="table__row">
+									<div class="table__td">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" name="item8"/><span class="checkbox__mark"></span>
+										</label>
 									</div>
-								</div>
-								<div class="table__td">Product</div>
-								<div class="table__td">Shoes</div>
-								<div class="table__td">2</div>
-								<div class="table__td">1</div>
-								<div class="table__td">SH1004+</div>
-								<div class="table__td">$1 530,00</div>
-								<div class="table__td">
-									<button class="badge badge_danger" type="button">Inactive</button>
-								</div>
-								<div class="table__td">
-									<div class="dropdown">
-										<button class="dropdown__toggle" type="button">
-											<svg class="icon-more-vertical">
-												<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
-											</svg>
-										</button>
-										<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">View Product</a><a class="dropdown__item active" href="#">Make Inactive</a><a class="dropdown__item disabled" href="#">Archive Product</a><a class="dropdown__item" href="#">Delete Product</a>
+									<div class="table__td">
+										<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
+									</div>
+									<div class="table__td">
+										<div class="table__short-text">
+											<div>Puma Ultra Cross Smash v2Plus Limited Edition</div>
+										</div>
+									</div>
+									<div class="table__td">Product</div>
+									<div class="table__td">Shoes</div>
+									<div class="table__td">2</div>
+									<div class="table__td">1</div>
+									<div class="table__td">SH1004+</div>
+									<div class="table__td">$1 530,00</div>
+									<div class="table__td">
+										<button class="badge badge_danger" type="button">Inactive</button>
+									</div>
+									<div class="table__td">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">View Product</a><a class="dropdown__item active" href="#">Make Inactive</a><a class="dropdown__item disabled" href="#">Archive Product</a><a class="dropdown__item" href="#">Delete Product</a>
+											</div>
 										</div>
 									</div>
 								</div>

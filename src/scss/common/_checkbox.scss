@@ -1,6 +1,6 @@
 $classCheckbox: checkbox;
 .#{$classCheckbox} {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 	outline: 0;
@@ -17,9 +17,22 @@ $classCheckbox: checkbox;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		&[data-half="true"] + .#{$classCheckbox}__mark {
+			background-color: var(--accent);
+			border-color: var(--accent);
+			&:before {
+				opacity: 1;
+			}
+			&:after {
+				opacity: 0;
+			}
+		}
 		&:checked + .#{$classCheckbox}__mark {
 			background-color: var(--accent);
 			border-color: var(--accent);
+			&:before {
+				opacity: 0;
+			}
 			&:after {
 				opacity: 1;
 			}
@@ -40,6 +53,20 @@ $classCheckbox: checkbox;
 		background-color: transparent;
 		position: relative;
 		border-radius: 4px;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			opacity: 0;
+			width: size(8);
+			height: size(1);
+			background-color: var(--white);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
 		&:after {
 			content: '';
 			display: block;

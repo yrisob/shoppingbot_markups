@@ -1,0 +1,11 @@
+.toolbar {
+	display: flex;
+	align-items: center;
+	margin-bottom: size($bs);
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: auto;
+		gap: size($bs-div);
+	}
+}

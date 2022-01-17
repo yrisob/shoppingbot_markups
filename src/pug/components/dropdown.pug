@@ -1,0 +1,10 @@
+mixin dropdown(obj)
+	div.dropdown(class=obj.status)
+		button.dropdown__toggle(type='button' class=obj.toggleClass)
+			if obj.icon
+				+icon(obj.icon)
+			if obj.toggleContent
+				span!=obj.toggleContent
+		.dropdown__list(class=obj.modification)
+			for item in obj.list
+				a.dropdown__item(class=item.action href='#')!=item.content
