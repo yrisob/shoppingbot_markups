@@ -14,6 +14,7 @@
 	padding: size(11) size(20);
 	border-radius: 8px;
 	white-space: nowrap;
+	user-select: none;
 	&:not(:disabled):not(.disabled):not([disabled]):hover{
 		border-color: var(--accent-hover);
 		background-color: var(--accent-hover);
@@ -33,7 +34,7 @@
 	&_bg {
 		&_gray {
 			color: var(--text-base);
-			font-weight: 700;
+			//font-weight: 700;
 			background-color: var(--button2);
 			border-color: var(--button2);
 			&:not(:disabled):not(.disabled):not([disabled]):hover{
@@ -43,6 +44,26 @@
 			&:not(:disabled):not(.disabled):not([disabled]):active{
 				border-color: var(--button2-pressed);
 				background-color: var(--button2-pressed);
+			}
+			&:disabled,
+			&[disabled],
+			&.disabled {
+				opacity: .5;
+				pointer-events: none;
+				cursor: default;
+			}
+		}
+		&_danger {
+			color: var(--white);
+			background-color: var(--button-danger);
+			border-color: var(--button-danger);
+			&:not(:disabled):not(.disabled):not([disabled]):hover{
+				border-color: var(--button-danger-hover);
+				background-color: var(--button-danger-hover);
+			}
+			&:not(:disabled):not(.disabled):not([disabled]):active{
+				border-color: var(--button-danger-pressed);
+				background-color: var(--button-danger-pressed);
 			}
 			&:disabled,
 			&[disabled],

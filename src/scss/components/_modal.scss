@@ -1,0 +1,105 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	visibility: hidden;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background: rgba(0,0,0,.3);
+	opacity: 0;
+	&.open {
+		display: flex;
+		visibility: visible;
+		opacity: 1;
+	}
+	&-box {
+		position: relative;
+		flex-shrink: 0;
+		margin-top: auto;
+		margin-bottom: auto;
+		width: size(475);
+		background-color: transparent;
+		opacity: 1;
+		cursor: auto;
+		will-change: transform,opacity;
+		.open & {
+			animation: scale .2s linear forwards;
+		}
+		&__content {
+			padding: size($md);
+			border-radius: 8px;
+			background-color: var(--white);
+			color: var(--text-base);
+			box-shadow: 0 16px 24px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.01), 0 0 1px rgba(0, 0, 0, 0.01);
+		}
+		&__header {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: size($lg);
+		}
+		&__headline {
+			font-size: size(20);
+			line-height: 1.2;
+			font-weight: 500;
+			margin: 0;
+		}
+		&__close {
+			background: transparent;
+			cursor: pointer;
+			outline: 0;
+			border: 0;
+			width: size(20);
+			height: size(20);
+			display: block;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: var(--black-alt);
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__body {
+			font-size: size(16);
+			line-height: 1.2;
+			font-weight: 400;
+		}
+		&__footer {
+			display: flex;
+			align-items: center;
+			gap: size($bs);
+			padding-top: size($md);
+			margin-top: size($bs*2);
+			border-top: 1px solid var(--stroke);
+			.button {
+				flex: 1;
+			}
+		}
+	}
+}
+//body.modal-open {
+//	position: fixed;
+//	right: 0;
+//	left: 0;
+//	overflow: hidden;
+//}
+@keyframes scale {
+	0% {
+		opacity: 0;
+		transform: scale(.9)
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1)
+	}
+}

@@ -1,0 +1,246 @@
+extends ../templates/base
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+block variables
+	-
+		var title = 'Products';
+		var active = 'Products';
+		var isModalOpen = true;
+
+block content
+	+header({
+		back: false,
+		headline: 'Products',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		.toolbar
+			.toolbar__main
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'All status', selected: true},
+								{value: 'Active'},
+								{value: 'Inactive'}
+							],
+							name: 'status',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Product'},
+								{value: 'Service'}
+							],
+							name: 'type',
+							def: 'Type',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Shoes'},
+								{value: 'Beauty'}
+							],
+							name: 'category',
+							def: 'Category',
+							mods: ['bg_fill']
+						})
+
+			.toolbar__controls
+				+button({text: 'Export', mods: 'link'})
+				+button({text: 'Import', mods: 'link'})
+				+button({icon: 'plus', text: 'Add Product'})
+
+		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+			table
+				thead
+					tr
+						th
+							+checkbox({
+								name: 'all'
+							})
+						th
+						th
+							a.table__head(href='#')
+								| Name
+								span.table__sort
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Type
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Category
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Quantity
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| On&nbsp;hold
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| SKU
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Price
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Status
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+				tbody
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic1.png' alt='')
+						td
+							.table__text Professional nail and beauty
+							//.table__short-text
+								div Professional nail and beauty
+						td
+							| Service
+						td
+							| Beauty
+						td
+							| N/A
+						td
+							| N/A
+						td
+							| N/A
+						td
+							| $90,00
+						td
+							+badge({status: 'active', text: 'Active'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Product'},
+									{content: 'Make Inactive', action: 'active'},
+									{content: 'Archive Product', action: 'disabled'},
+									{content: 'Delete Product'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item2'})
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic2.jpg' alt='')
+						td
+							.table__text Puma Ultra Cross Smash v2 Plus Limited Edition
+							//.table__short-text
+								div Puma Ultra Cross Smash v2 Plus Limited Edition
+						td
+							| Product
+						td
+							| Shoes
+						td
+							| 38
+						td
+							| 100
+						td
+							| SH1003
+						td
+							| $560,00
+						td
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Product'},
+									{content: 'Make Inactive', action: 'active'},
+									{content: 'Archive Product', action: 'disabled'},
+									{content: 'Delete Product'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item3'})
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic2.jpg' alt='')
+						td
+							.table__text Puma Ultra Cross Smash
+							//.table__short-text
+								div Puma Ultra Cross Smash
+						td
+							| Product
+						td
+							| Shoes
+						td
+							| 11
+						td
+							| 1 000
+						td
+							| SH1004
+						td
+							| $1 560,00
+						td
+							+badge({status: 'active', text: 'Active'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Product'},
+									{content: 'Make Inactive', action: 'active'},
+									{content: 'Archive Product', action: 'disabled'},
+									{content: 'Delete Product'}
+								]
+							})
+		+pagination
+
+	.modal.open
+		.modal-box
+			.modal-box__content
+				.modal-box__header
+					.modal-box__headline Confirmation
+					button.modal-box__close(type='button')
+						+icon('x')
+				.modal-box__body
+					|Are you sure you want to delete this product?
+				.modal-box__footer
+					button.button.button_bg_gray(type='button') Cancel
+					button.button.button_bg_danger(type='button') Delete

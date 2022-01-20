@@ -20,7 +20,7 @@ html(lang="ru")
 		head
 			include ../layouts/head
 			title #{title}
-	body
+	body(class=(isModalOpen)?'modal-open': '')
 		.wrapper
 			include ../layouts/sidebar
 				block sidebar
