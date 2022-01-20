@@ -1,0 +1,34 @@
+mixin control(obj)
+	-
+		var def = {
+			name: 'custom_name'
+		}
+		var attr = obj.attr ?? {}
+		for (const key in def) {
+			if (attr[key] == null) {
+				attr[key] = def[key];
+			}
+		}
+		// attr.name = obj.name;
+		if (obj.type !== 'textarea') {
+			attr['type'] = (obj.type) ? obj.type : 'text';
+			if (obj.hasOwnProperty('value') && obj.value !== '') {
+				attr['value'] = obj.value;
+			}
+		}
+		var extraClass = [];
+		if(obj.mods){
+			obj.mods.forEach(mod => {
+				extraClass.push('control__input_'+mod)
+				// attr['class'] = 'control__input_'+mod
+			});
+		}
+
+	div.control
+		if obj.icon
+			span.control__icon
+				+icon(obj.icon)
+		if(obj.type !== 'textarea')
+			input.control__input&attributes(attr)(class=extraClass)
+		else if(obj.type === 'textarea')
+			textarea.control__input&attributes(attr)(class=extraClass)

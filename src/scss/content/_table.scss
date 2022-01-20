@@ -1,6 +1,7 @@
 .table {
 	$indentEdge: 16+10;
 	$indentInner: 20;
+	position: relative;
 	width: 100%;
 	margin-bottom: size($bs*2);
 	table {
@@ -31,10 +32,14 @@
 		}
 		&.active {
 			background-color: var(--bg);
+			border-top: transparent;
 		}
 		&.active + tr {
 			border-top-color: transparent;
 		}
+	}
+	tbody tr:first-child td {
+		padding-top: size($sm-div + 2);
 	}
 	td {
 		font-size: size(15);
@@ -50,13 +55,27 @@
 	}
 
 	&__group {
-		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		//display: flex;
 		flex-wrap: wrap;
 		gap: size(12);
 		padding: 0 size($bs);
+		display: none;
 		.checkbox {
 			margin-right: size(8);
 		}
+	}
+	&_groups &__group {
+		display: flex;
+	}
+	&_groups thead {
+		// это сделано для того, чтобы таблица не "ломала" ширину ячеек, когда включена панель для групповых операций
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
 	}
 
 	&__w {
@@ -110,6 +129,12 @@
 			object-fit: cover;
 			border-radius: 4px;
 		}
+	}
+	&__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: size(300);
 	}
 	&__short-text {
 		position: relative;

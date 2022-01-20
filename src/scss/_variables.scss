@@ -58,6 +58,9 @@ $sideWidth: size(236);
 	--font-main: 'Inter', sans-serif;
 	--html: 100%;
 
+	--gutter-x: #{size($md)};
+	--gutter-y: 0;
+
 	--time: 150ms;
 	--anim: ease;
 }

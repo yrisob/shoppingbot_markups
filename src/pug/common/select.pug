@@ -1,9 +1,42 @@
 include ../common/icon
 mixin select(obj)
-	div.select
-		button.select__toggle(type='button')
-			span!=obj.def
+	-
+		var activeItem = 0;
+		for(let i=0; i<obj.list.length; i++){
+			if(obj.list[i].checked){
+				activeItem = i;
+				break;
+			}
+		}
+		var extraClass = [];
+		if (obj.mods) {
+			obj.mods.forEach(mod => {
+				extraClass.push('select__toggle_' + mod)
+			});
+		}
+	div.select(class=obj.status)
+		select(name=obj.name)
+			if obj.def
+				option(value='')=obj.def
+			for item in obj.list
+				-
+					var attr = {};
+					if(item.disabled){attr['disabled'] = 'disabled'}
+					if(item.disabled){attr['selected'] = 'selected'}
+				option&attributes(attr)(value=item.value)=item.value
+		button.select__toggle(type='button' class=extraClass)
+			span=(obj.def) ? obj.def : obj.list[activeItem].value
 			+icon('chevron-down')
 		.select__list
+			if obj.def
+				.select__item=obj.def
 			for item in obj.list
-				.select__item(class=item.action)=item.value
+				-
+					var extraClass = [];
+					if (item.disabled) {
+						extraClass.push('disabled')
+					}
+					if (item.selected) {
+						extraClass.push('selected')
+					}
+				.select__item(class=extraClass)=item.value

@@ -1,0 +1,12 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: size($sm);
+	row-gap: size($md);
+	&:not(.form_horizontal) &__group {
+		flex: 1 1 100%;
+	}
+	//&_horizontal &__group {
+	//	flex: 1;
+	//}
+}

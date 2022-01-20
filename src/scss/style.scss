@@ -11,10 +11,11 @@
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/toolbar";
-@import "layouts/filter";
 
+@import "content/grid";
 @import "content/typography";
 @import "content/table";
+@import "content/form";
 
 @import "common/button";
 @import "common/control";

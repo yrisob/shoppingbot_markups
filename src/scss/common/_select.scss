@@ -1,5 +1,8 @@
 .select {
 	position: relative;
+	select {
+		display: none;
+	}
 	&__toggle {
 		position: relative;
 		width: 100%;
@@ -28,6 +31,12 @@
 			margin: auto 0;
 			pointer-events: none;
 		}
+		&_bg {
+			&_fill {
+				background-color: var(--bg);
+				border-color: var(--bg);
+			}
+		}
 		.open & {
 			border-color: var(--accent);
 			background-color: var(--white);
@@ -42,10 +51,10 @@
 		margin-top: size(4);
 		left: 0;
 		background-color: var(--white);
-		z-index: 1;
+		z-index: 2;
 		border-radius: 8px;
 		box-shadow: var(--dropdown);
-		min-width: size(170);
+		min-width: size(300);
 		user-select: none;
 		white-space: nowrap;
 		display: none;

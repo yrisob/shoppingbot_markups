@@ -2,6 +2,10 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: size($bs);
+	gap: size($bs);
+	&__main {
+		flex: 0 0 size(700);
+	}
 	&__controls {
 		display: flex;
 		flex-wrap: wrap;

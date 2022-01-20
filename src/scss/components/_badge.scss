@@ -15,6 +15,10 @@
 	outline: 0;
 	text-decoration: none;
 	white-space: nowrap;
+	&_active {
+		--badge-bg: var(--badge-info);
+		--badge-color: var(--color-info);
+	}
 	&_danger {
 		--badge-bg: var(--badge-danger);
 		--badge-color: var(--color-danger);

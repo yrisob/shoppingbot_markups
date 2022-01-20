@@ -16,128 +16,140 @@ block content
 	.content
 		.toolbar
 			.toolbar__main
-				form.filter
-					.filter__item
-						div.control
-							input.control__input(placeholder='Search')
-					.filter__item
-						+select({
-							def: 'All status',
-							list: [
-								{value:'All status', action:'selected'},
-								{value:'Active'},
-								{value:'Inactive'},
-								{value:'Disabled', action:'disabled'}
-							]
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
 						})
-						div.control
-							.control__select
-								select
-									option(value='0' selected='selected') All status
-									option(value='1') Active
-									option(value='2') Inactive
-								.control__toggle All status
-									+icon('chevron-down')
-								.control__dropdown
-									.control__item.active All status
-									.control__item Active
-									.control__item Inactive
-					.filter__item
-						| type
-					.filter__item
-						| Category
+					.form__group.col
+						+select({
+							list: [
+								{value: 'All status', selected: true},
+								{value: 'Active'},
+								{value: 'Inactive'}
+							],
+							name: 'status',
+							mods: ['bg_fill'],
+							status: 'open'
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Product'},
+								{value: 'Service'}
+							],
+							name: 'type',
+							def: 'Type',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Shoes'},
+								{value: 'Beauty'}
+							],
+							name: 'category',
+							def: 'Category',
+							mods: ['bg_fill']
+						})
+
 			.toolbar__controls
-				+button({text:'Export', mods:'link'})
-				+button({text:'Import', mods:'link'})
+				+button({text: 'Export', mods: 'link'})
+				+button({text: 'Import', mods: 'link'})
 				+button({icon: 'plus', text: 'Add Product'})
 
-		div.table
+		div.table.table_groups
 			.table__group
 				+checkbox({name: 'all', half: true})
 				+button({mods: 'bg_gray', text: 'Make inactive'})
 				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
-			.table__inner
-				//-.table__header
-					.table__row
-						.table__th.table__th_start
+			table
+				thead
+					tr
+						th
 							+checkbox({
-								name: 'all',
-								half: true
+								name: 'all'
 							})
-						.table__th.table__th_pic
-						.table__th
+						th
+						th
 							a.table__head(href='#')
 								| Name
 								span.table__sort
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| Type
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| Category
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| Quantity
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| On&nbsp;hold
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| SKU
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| Price
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th
+						th
 							a.table__head(href='#')
 								| Status
 								span.table__sort
 									+icon('chevron-up')
 									+icon('chevron-down')
-						.table__th.table__th_end
-				.table__body
-					.table__row
-						.table__td
+						th
+				tbody
+					tr
+						td.table__w_16
 							+checkbox({name: 'item1'})
-						.table__td
+						td.table__w_40
 							.table__pic
 								img(src='../assets/uploads/item-pic1.png' alt='')
-						.table__td
-							.table__short-text
+						td
+							.table__text Professional nail and beauty
+							//.table__short-text
 								div Professional nail and beauty
-						.table__td
+						td
 							| Service
-						.table__td
+						td
 							| Beauty
-						.table__td
+						td
 							| N/A
-						.table__td
+						td
 							| N/A
-						.table__td
+						td
 							| N/A
-						.table__td
+						td
 							| $90,00
-						.table__td
+						td
 							+badge({status: 'active', text: 'Active'})
-						.table__td
+						td.table__w_28
 							+dropdown({
 								icon: 'more-vertical',
 								modification: 'dropdown__list_end',
@@ -148,30 +160,31 @@ block content
 									{content: 'Delete Product'}
 								]
 							})
-					.table__row
-						.table__td
-							+checkbox({name: 'item2'})
-						.table__td
+					tr.active
+						td.table__w_16
+							+checkbox({name: 'item2', checked: true})
+						td.table__w_40
 							.table__pic
 								img(src='../assets/uploads/item-pic2.jpg' alt='')
-						.table__td
-							.table__short-text
-								div Puma Smash v2
-						.table__td
+						td
+							.table__text Puma Ultra Cross Smash v2 Plus Limited Edition
+							//.table__short-text
+								div Puma Ultra Cross Smash v2 Plus Limited Edition
+						td
 							| Product
-						.table__td
+						td
 							| Shoes
-						.table__td
+						td
+							| 38
+						td
 							| 100
-						.table__td
-							| 100
-						.table__td
+						td
 							| SH1003
-						.table__td
-							| $530,00
-						.table__td
+						td
+							| $560,00
+						td
 							+badge({status: 'danger', text: 'Inactive'})
-						.table__td
+						td.table__w_28
 							+dropdown({
 								icon: 'more-vertical',
 								modification: 'dropdown__list_end',
@@ -182,204 +195,35 @@ block content
 									{content: 'Delete Product'}
 								]
 							})
-					.table__row.active
-						.table__td
-							+checkbox({name: 'item3', checked: true})
-						.table__td
+					tr
+						td.table__w_16
+							+checkbox({name: 'item3'})
+						td.table__w_40
 							.table__pic
 								img(src='../assets/uploads/item-pic2.jpg' alt='')
-						.table__td
-							.table__short-text
-								div Puma Ultra Cross Smash v2Plus Limited Edition
-						.table__td
+						td
+							.table__text Puma Ultra Cross Smash
+							//.table__short-text
+								div Puma Ultra Cross Smash
+						td
 							| Product
-						.table__td
+						td
 							| Shoes
-						.table__td
-							| 2
-						.table__td
-							| 1
-						.table__td
-							| SH1004+
-						.table__td
-							| $1 530,00
-						.table__td
+						td
+							| 11
+						td
+							| 1 000
+						td
+							| SH1004
+						td
+							| $1 560,00
+						td
 							+badge({status: 'active', text: 'Active'})
-						.table__td
+						td.table__w_28
 							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
 								status: 'open',
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
-								list: [
-									{content: 'View Product'},
-									{content: 'Make Inactive', action: 'active'},
-									{content: 'Archive Product', action: 'disabled'},
-									{content: 'Delete Product'}
-								]
-							})
-					.table__row
-						.table__td
-							+checkbox({name: 'item4'})
-						.table__td
-							.table__pic
-								img(src='../assets/uploads/item-pic2.jpg' alt='')
-						.table__td
-							.table__short-text
-								div Puma Ultra Cross Smash v2Plus Limited Edition
-						.table__td
-							| Product
-						.table__td
-							| Shoes
-						.table__td
-							| 2
-						.table__td
-							| 1
-						.table__td
-							| SH1004+
-						.table__td
-							| $1 530,00
-						.table__td
-							+badge({status: 'danger', text: 'Inactive'})
-						.table__td
-							+dropdown({
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
-								list: [
-									{content: 'View Product'},
-									{content: 'Make Inactive', action: 'active'},
-									{content: 'Archive Product', action: 'disabled'},
-									{content: 'Delete Product'}
-								]
-							})
-					.table__row
-						.table__td
-							+checkbox({name: 'item5'})
-						.table__td
-							.table__pic
-								img(src='../assets/uploads/item-pic1.png' alt='')
-						.table__td
-							.table__short-text
-								div Professional nail and beauty
-						.table__td
-							| Service
-						.table__td
-							| Beauty
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| $90,00
-						.table__td
-							+badge({status: 'active', text: 'Active'})
-						.table__td
-							+dropdown({
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
-								list: [
-									{content: 'View Product'},
-									{content: 'Make Inactive', action: 'active'},
-									{content: 'Archive Product', action: 'disabled'},
-									{content: 'Delete Product'}
-								]
-							})
-					.table__row
-						.table__td
-							+checkbox({name: 'item6'})
-						.table__td
-							.table__pic
-								img(src='../assets/uploads/item-pic1.png' alt='')
-						.table__td
-							.table__short-text
-								div Professional nail and beauty
-						.table__td
-							| Service
-						.table__td
-							| Beauty
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| $90,00
-						.table__td
-							+badge({status: 'active', text: 'Active'})
-						.table__td
-							+dropdown({
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
-								list: [
-									{content: 'View Product'},
-									{content: 'Make Inactive', action: 'active'},
-									{content: 'Archive Product', action: 'disabled'},
-									{content: 'Delete Product'}
-								]
-							})
-					.table__row.active
-						.table__td
-							+checkbox({name: 'item7', checked: true})
-						.table__td
-							.table__pic
-								img(src='../assets/uploads/item-pic1.png' alt='')
-						.table__td
-							.table__short-text
-								div Professional nail and beauty
-						.table__td
-							| Service
-						.table__td
-							| Beauty
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| N/A
-						.table__td
-							| $90,00
-						.table__td
-							+badge({status: 'active', text: 'Active'})
-						.table__td
-							+dropdown({
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
-								list: [
-									{content: 'View Product'},
-									{content: 'Make Inactive', action: 'active'},
-									{content: 'Archive Product', action: 'disabled'},
-									{content: 'Delete Product'}
-								]
-							})
-					.table__row
-						.table__td
-							+checkbox({name: 'item8'})
-						.table__td
-							.table__pic
-								img(src='../assets/uploads/item-pic2.jpg' alt='')
-						.table__td
-							.table__short-text
-								div Puma Ultra Cross Smash v2Plus Limited Edition
-						.table__td
-							| Product
-						.table__td
-							| Shoes
-						.table__td
-							| 2
-						.table__td
-							| 1
-						.table__td
-							| SH1004+
-						.table__td
-							| $1 530,00
-						.table__td
-							+badge({status: 'danger', text: 'Inactive'})
-						.table__td
-							+dropdown({
-								icon: 'more-vertical',
-								modification: 'dropdown__list_end',
 								list: [
 									{content: 'View Product'},
 									{content: 'Make Inactive', action: 'active'},
