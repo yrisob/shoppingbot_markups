@@ -1,0 +1,16 @@
+extends ../templates/base
+include ../components/dropdown
+include ../components/informer
+include ../components/upload-photo
+include ../components/attach-link
+block variables
+	-
+		var title = 'Order AKN183333';
+		var active = 'Orders';
+block content
+	+header({
+		back: true,
+		headline: 'Order AKN183333'
+	})
+	.content.content_bg
+		|asd

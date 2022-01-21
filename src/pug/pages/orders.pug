@@ -1,0 +1,218 @@
+extends ../templates/base
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+block variables
+	-
+		var title = 'Orders';
+		var active = 'Orders';
+
+block content
+	+header({
+		back: false,
+		headline: 'Orders',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		.toolbar
+			.toolbar__main
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'All status', selected: true},
+								{value: 'Pending'},
+								{value: 'Shipping'},
+								{value: 'Processed'},
+								{value: 'Declined'}
+							],
+							name: 'status',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Puma Shorts'},
+								{value: 'Nike T-Shirt'}
+							],
+							name: 'product',
+							def: 'Product',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Anna Miller'},
+								{value: 'Vincent van Gogh'}
+							],
+							name: 'customer',
+							def: 'Customer',
+							mods: ['bg_fill']
+						})
+
+			.toolbar__controls
+
+
+		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+			table
+				thead
+					tr
+						th
+							+checkbox({
+								name: 'all'
+							})
+						th
+							a.table__head(href='#')
+								| Order ID
+								span.table__sort
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Product
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Customer
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Date
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Price
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Status
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+				tbody
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| AKN183333
+						td
+							| Puma Shorts
+						td
+							| Anna Miller
+						td
+							| 1 hour ago
+						td
+							| $530,00
+						td.table__w_120
+							+badge({status: 'warn', text: 'Pending'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Confirm Order'},
+									{content: 'View  Order', action: 'active'},
+									{content: 'Archive Order'},
+									{content: 'Delete Order'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| AKN183333
+						td
+							| Puma Shorts
+						td
+							| Anna Miller
+						td
+							| 1 hour ago
+						td
+							| $530,00
+						td.table__w_120
+							+badge({status: 'danger', text: 'Declined'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Confirm Order'},
+									{content: 'View  Order', action: 'active'},
+									{content: 'Archive Order'},
+									{content: 'Delete Order'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| AKN183333
+						td
+							| Puma Shorts
+						td
+							| Anna Miller
+						td
+							| 1 hour ago
+						td
+							| $530,00
+						td.table__w_120
+							+badge({status: 'info', text: 'Shipping'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Confirm Order'},
+									{content: 'View  Order', action: 'active'},
+									{content: 'Archive Order'},
+									{content: 'Delete Order'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| AKN183333
+						td
+							| Puma Shorts
+						td
+							| Anna Miller
+						td
+							| 1 hour ago
+						td
+							| $530,00
+						td.table__w_120
+							+badge({status: 'success', text: 'Processed'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Confirm Order'},
+									{content: 'View  Order', action: 'active'},
+									{content: 'Archive Order'},
+									{content: 'Delete Order'}
+								]
+							})
+		+pagination
