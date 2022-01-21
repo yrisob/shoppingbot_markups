@@ -1,5 +1,8 @@
 extends ../templates/base
 include ../components/dropdown
+include ../components/informer
+include ../components/upload-photo
+include ../components/attach-link
 block variables
 	-
 		var title = 'Products New';
@@ -10,4 +13,86 @@ block content
 		headline: 'New product'
 	})
 	.content.content_bg
-		|asd
+		.section
+			.section__header
+				.section__headline Photos
+				.section__description Add as many as you can so buyer can see every detail.
+			.section__content
+				.row
+					.col-4
+						h3 Photos*
+						p Use up to ten photos to show your item’s most important qualities.
+						+informer
+							ul
+								li Use natural light and no flash.
+								li Include a common object for scale.
+								li Show the item being held, worn, or used.
+								li Shoot against a clean, simple background.
+					.col-8
+						+upload-photo([
+							{image:'../assets/uploads/item-pic2.jpg'},
+							{image:'../assets/uploads/item-pic2.jpg'},
+							{upload:true},
+							{upload:false},
+							{upload:false},
+							{upload:false},
+							{upload:false},
+							{upload:false},
+							{upload:false},
+							{upload:false}
+						])
+		.section
+			.section__header
+				.section__headline Video
+				.section__description Bring your product to life with a 5 to 15 second video — it could help you drive more sales. The video won’t feature sound, so let your product do the talking!
+			.section__content
+				+attach-link(false)
+				+attach-link(true)
+		.section
+			.section__header
+				.section__headline Details
+				.section__description Tell the world all about your item and why they’ll love it.
+			.section__content
+				.form.form_direction_row
+					.form__group
+						.form__label Title
+						+control({
+							attr: {
+								placeholder: 'Product name',
+								name: 'title'
+							}
+						})
+					.form__group
+						.form__label Type
+						+select({
+							list: [
+								{value: 'Product'},
+								{value: 'Service'}
+							],
+							name: 'type',
+							def: 'Select'
+						})
+					.form__group
+						.form__label Description
+						+control({
+							type: 'textarea',
+							attr: {
+								name: 'description'
+							}
+						})
+					.form__group
+						.form__label Tags
+						+control({
+							attr: {
+								placeholder: 'Shape, colot, style, function, ect.',
+								name: 'tags'
+							}
+						})
+					.form__group
+						.form__label Materials
+						+control({
+							attr: {
+								placeholder: 'Ingredients, components. ect.',
+								name: 'materials'
+							}
+						})

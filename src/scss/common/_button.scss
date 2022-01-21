@@ -95,6 +95,9 @@
 		&_danger {
 			color: var(--red);
 		}
+		&_accent {
+			color: var(--accent);
+		}
 	}
 	svg {
 		display: inline-block;

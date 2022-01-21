@@ -3,8 +3,34 @@
 	flex-wrap: wrap;
 	column-gap: size($sm);
 	row-gap: size($md);
+	.section & {
+		max-width: size(585);
+	}
 	&:not(.form_horizontal) &__group {
 		flex: 1 1 100%;
+	}
+	&__label {
+		display: block;
+		font-size: size(14);
+		line-height: 1.2;
+		font-weight: 600;
+		align-self: flex-start;
+		color: var(--text-base);
+		margin-right: size($bs * 0.5);
+		margin-bottom: size($bs * 0.5);
+	}
+	&_direction_row &__group > *:not(.form__label){
+		flex: 1;
+	}
+	&_direction_row &__label {
+		margin-bottom: 0;
+		text-align: right;
+		flex: 1 0 size(80);
+		max-width: size(80);
+		padding: size(11) 0;
+	}
+	&_direction_row &__group {
+		display: flex;
 	}
 	//&_horizontal &__group {
 	//	flex: 1;

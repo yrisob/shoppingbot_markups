@@ -1,0 +1,14 @@
+mixin upload-photo(array)
+	.upload-photo
+		.upload-photo__grid
+			for item in array
+				.upload-photo__item
+					if item.upload
+						label.upload-photo__label
+							input(type='file' name='photos[]')
+							+icon('camera')
+							span Add a photo
+					else if item.image
+						img.upload-photo__img(src=item.image alt='')
+					else
+						.upload-photo__empty

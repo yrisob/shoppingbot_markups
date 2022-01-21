@@ -1,0 +1,46 @@
+.section {
+	background-color: var(--white);
+	border: 1px solid var(--stroke);
+	padding: size($md);
+	border-radius: 8px;
+	margin-bottom: size($sm*2);
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		//margin-bottom: size($bs * 2);
+		margin-bottom: size($md);
+	}
+	&__headline {
+		font-size: size(20);
+		font-weight: 700;
+		line-height: 1.2;
+		margin: 0;
+	}
+	&__description {
+		flex: 1 1 100%;
+		max-width: 100%;
+		margin-top: size($md * 0.5);
+		font-size: size(16);
+		line-height: 1.5;
+		p {
+			margin: 0;
+		}
+	}
+	&__content {
+		font-size: size(14);
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+		[class*='col-'] {
+			> *:first-child {
+				margin-top: 0;
+			}
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

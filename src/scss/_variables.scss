@@ -53,13 +53,15 @@ $sideWidth: size(236);
 
 	--danger-00: #F3A7A7;
 	--danger-01: #E64E4E;
-	--success-00: #7FD569;
+	--success-00: #bdf3a7;
 	--success-01: #5FCA43;
 	--warn-00: #ffefcc;
 	--warn-01: #ffaf01;
 
 	--font-main: 'Inter', sans-serif;
 	--html: 100%;
+
+	--typography-indent: #{size($bs)};
 
 	--gutter-x: #{size($md)};
 	--gutter-y: 0;

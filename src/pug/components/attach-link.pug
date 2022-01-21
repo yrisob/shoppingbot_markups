@@ -1,0 +1,11 @@
+mixin attach-link(linked)
+	div.attach-link
+		if linked
+			.attach-link__link https://www.youtube.com/watch?v=s-t4FruftSo
+			.attach-link__controls
+				button.attach-link__button(type='button')
+					+icon('edit-2')
+				button.attach-link__button(type='button')
+					+icon('trash-2')
+		else
+			+button({icon: 'plus', text: 'Add link', mods:'link,color_accent'})

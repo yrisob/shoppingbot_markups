@@ -45,6 +45,9 @@
 			}
 		}
 	}
+	&__placeholder {
+		color: var(--gray);
+	}
 	&__list {
 		position: absolute;
 		top: 100%;

@@ -1,0 +1,61 @@
+h3, .h3 {
+	font-size: size(16);
+	font-weight: 600;
+	line-height: 1.5;
+	margin: size($bs) 0 size($bs*0.5);
+}
+
+h2 + h3,
+h3 + h2,
+h2 + h2,
+h3 + h3,
+h4 + h2,
+h2 + h4,
+h3 + h4,
+h4 + h3,
+h4 + h4,
+h5 + h2,
+h5 + h3,
+h5 + h4,
+h5 + h5,
+h2 + h5,
+h3 + h5,
+h4 + h5 {
+	margin-top: size($bs*0.5);
+}
+
+h1 + h2,
+h1 + h3,
+h1 + h4,
+h1 + h5 {
+	margin-top: 0;
+}
+p {
+	font-size: inherit;
+	//line-height: inherit;
+	margin: size($bs*0.5) 0;
+	line-height: 1.5;
+	&:empty {
+		display: none;
+	}
+}
+ol,
+ul {
+	font-size: inherit;
+	line-height: inherit;
+	margin: size($bs) 0;
+	padding: 0;
+	list-style-position: inside;
+	li {
+		&:not(:first-child) {
+			margin-top: size(4);
+		}
+	}
+	ul,
+	ol {
+		margin-left: size($bs);
+	}
+}
+ul li {
+	padding-left: size(6);
+}

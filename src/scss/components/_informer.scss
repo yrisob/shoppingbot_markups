@@ -1,0 +1,32 @@
+.informer {
+	--informer-bg: var(--bg);
+	border-radius: 8px;
+	background-color: var(--informer-bg);
+	padding: size($bs);
+	width: max-content;
+	margin: size($md) 0;
+	&_danger {
+		--informer-bg: var(--danger-00);
+	}
+	&_success {
+		--informer-bg: var(--success-00);
+	}
+	&_warn {
+		--informer-bg: var(--warn-00);
+	}
+	&__content {
+		font-size: size(14);
+		line-height: 1.5;
+		font-weight: 400;
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}

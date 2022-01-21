@@ -66,7 +66,155 @@
 						<div class="header__headline">New product</div>
 					</div>
 				</header>
-				<div class="content content_bg">asd</div>
+				<div class="content content_bg">
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Photos</div>
+							<div class="section__description">Add as many as you can so buyer can see every detail.</div>
+						</div>
+						<div class="section__content">
+							<div class="row">
+								<div class="col-4">
+									<h3>Photos*</h3>
+									<p>Use up to ten photos to show your item’s most important qualities.</p>
+									<div class="informer">
+										<div class="informer__content">
+											<ul>
+												<li>Use natural light and no flash.</li>
+												<li>Include a common object for scale.</li>
+												<li>Show the item being held, worn, or used.</li>
+												<li>Shoot against a clean, simple background.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-8">
+									<div class="upload-photo">
+										<div class="upload-photo__grid">
+											<div class="upload-photo__item"><img class="upload-photo__img" src="../assets/uploads/item-pic2.jpg" alt=""/>
+											</div>
+											<div class="upload-photo__item"><img class="upload-photo__img" src="../assets/uploads/item-pic2.jpg" alt=""/>
+											</div>
+											<div class="upload-photo__item">
+												<label class="upload-photo__label">
+													<input type="file" name="photos[]"/>
+													<svg class="icon-camera">
+														<use xlink:href="../assets/icons/icons.svg#camera"></use>
+													</svg><span>Add a photo</span>
+												</label>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+											<div class="upload-photo__item">
+												<div class="upload-photo__empty"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Video</div>
+							<div class="section__description">Bring your product to life with a 5 to 15 second video — it could help you drive more sales. The video won’t feature sound, so let your product do the talking!</div>
+						</div>
+						<div class="section__content">
+							<div class="attach-link">
+								<button class="button button_link button_color_accent" type="button">
+									<svg class="icon-plus">
+										<use xlink:href="../assets/icons/icons.svg#plus"></use>
+									</svg><span>Add link</span>
+								</button>
+							</div>
+							<div class="attach-link">
+								<div class="attach-link__link">https://www.youtube.com/watch?v=s-t4FruftSo</div>
+								<div class="attach-link__controls">
+									<button class="attach-link__button" type="button">
+										<svg class="icon-edit-2">
+											<use xlink:href="../assets/icons/icons.svg#edit-2"></use>
+										</svg>
+									</button>
+									<button class="attach-link__button" type="button">
+										<svg class="icon-trash-2">
+											<use xlink:href="../assets/icons/icons.svg#trash-2"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Details</div>
+							<div class="section__description">Tell the world all about your item and why they’ll love it.</div>
+						</div>
+						<div class="section__content">
+							<div class="form form_direction_row">
+								<div class="form__group">
+									<div class="form__label">Title</div>
+									<div class="control">
+										<input class="control__input" placeholder="Product name" name="title" type="text"/>
+									</div>
+								</div>
+								<div class="form__group">
+									<div class="form__label">Type</div>
+									<div class="select">
+										<select name="type">
+											<option value="">Select</option>
+											<option value="Product">Product</option>
+											<option value="Service">Service</option>
+										</select>
+										<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+											<svg class="icon-chevron-down">
+												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+											</svg>
+										</button>
+										<div class="select__list">
+											<div class="select__item">Select</div>
+											<div class="select__item">Product</div>
+											<div class="select__item">Service</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__group">
+									<div class="form__label">Description</div>
+									<div class="control">
+										<textarea class="control__input" name="description"></textarea>
+									</div>
+								</div>
+								<div class="form__group">
+									<div class="form__label">Tags</div>
+									<div class="control">
+										<input class="control__input" placeholder="Shape, colot, style, function, ect." name="tags" type="text"/>
+									</div>
+								</div>
+								<div class="form__group">
+									<div class="form__label">Materials</div>
+									<div class="control">
+										<input class="control__input" placeholder="Ingredients, components. ect." name="materials" type="text"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
