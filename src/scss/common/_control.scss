@@ -59,6 +59,7 @@ textarea {
 	textarea#{&}__input {
 		resize: vertical;
 		min-height: size(250);
+		line-height: 1.5;
 	}
 	&__icon + &__input {
 		padding-left: size(16 + $sm + 8);

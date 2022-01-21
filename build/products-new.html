@@ -166,7 +166,7 @@
 							<div class="section__description">Tell the world all about your item and why they’ll love it.</div>
 						</div>
 						<div class="section__content">
-							<div class="form form_direction_row">
+							<div class="form form_direction_row form_width_short">
 								<div class="form__group">
 									<div class="form__label">Title</div>
 									<div class="control">
@@ -196,7 +196,7 @@
 								<div class="form__group">
 									<div class="form__label">Description</div>
 									<div class="control">
-										<textarea class="control__input" name="description"></textarea>
+										<textarea class="control__input" name="description">Smash was such a hit on the courts, we’ve decided to take these classic sports shoes and deem them an all-around fashion icon. Updated with softer leather and an improved feel...</textarea>
 									</div>
 								</div>
 								<div class="form__group">
@@ -213,6 +213,190 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Variants</div>
+							<div class="section__description">Add available options like color or size. Buyers will choose from these during checkout.</div>
+						</div>
+						<div class="section__content">
+							<div class="form">
+								<div class="form__fieldset">
+									<div class="form__set">
+										<div class="form__group">
+											<div class="form__label">Option 1
+												<button class="form__remove" type="button">Remove</button>
+											</div>
+											<div class="form__option">
+												<div class="control">
+													<input class="control__input" placeholder="Option 1" name="option1" value="Size" type="text"/>
+												</div>
+												<div class="multiple">
+													<input type="hidden" name="sizes" value="8;9;9,5"/>
+													<div class="multiple__list">
+														<div class="multiple__item"><span>8</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="multiple__item"><span>9</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="multiple__item"><span>9,5</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+													<input class="multiple__search" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__set">
+										<div class="form__group">
+											<div class="form__label">Option 2
+												<button class="form__remove" type="button">Remove</button>
+											</div>
+											<div class="form__option">
+												<div class="control">
+													<input class="control__input" placeholder="Option 2" name="option2" value="Color" type="text"/>
+												</div>
+												<div class="multiple">
+													<input type="hidden" name="colors" value="Black;White;Red;Green"/>
+													<div class="multiple__list">
+														<div class="multiple__item"><span>Black</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="multiple__item"><span>White</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="multiple__item"><span>Red</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="multiple__item"><span>Green</span>
+															<button class="multiple__remove" type="button">
+																<svg class="icon-x">
+																	<use xlink:href="../assets/icons/icons.svg#x"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+													<input class="multiple__search" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="section__controls">
+								<button class="button button_bg_gray" type="button">Add variations</button>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Category</div>
+							<div class="section__description">Categories allow you to group products by similar attributes.</div>
+						</div>
+						<div class="section__content">
+							<div class="form">
+								<div class="form__fieldset">
+									<div class="form__set">
+										<div class="form__group">
+											<div class="form__label">Category 1
+												<button class="form__remove" type="button">Remove</button>
+											</div>
+											<div class="control">
+												<input class="control__input" placeholder="Category 1" name="category1" value="Shoes" type="text"/>
+												<div class="autocomplete">
+													<div class="autocomplete__list">
+														<div class="autocomplete__item">Shoes</div>
+														<div class="autocomplete__item">Sneakers</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__set">
+										<div class="form__group">
+											<div class="form__label">Subcategory 1
+												<button class="form__remove" type="button">Remove</button>
+											</div>
+											<div class="control">
+												<input class="control__input" placeholder="Subcategory 1" name="subcategory1" value="Puma" type="text"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__footer">
+									<button class="button button_link button_color_accent" type="button">
+										<svg class="icon-plus">
+											<use xlink:href="../assets/icons/icons.svg#plus"></use>
+										</svg><span>Add subcategory</span>
+									</button>
+								</div>
+							</div>
+							<div class="form">
+								<div class="form__fieldset">
+									<div class="form__set">
+										<div class="form__group">
+											<div class="form__label">Category 2
+												<button class="form__remove" type="button">Remove</button>
+											</div>
+											<div class="control">
+												<input class="control__input" placeholder="Category 2" name="category2" type="text"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__footer">
+									<button class="button button_link button_color_accent" type="button">
+										<svg class="icon-plus">
+											<use xlink:href="../assets/icons/icons.svg#plus"></use>
+										</svg><span>Add subcategory</span>
+									</button>
+								</div>
+							</div>
+							<div class="section__controls">
+								<button class="button button_bg_gray" type="button">Add category</button>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__header">
+							<div class="section__headline">Shipping</div>
+							<div class="section__description">Set clear and realistic shipping expectations for shoppers by providing accurate processing time.</div>
+						</div>
+						<div class="section__content">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__mark"></span><span class="checkbox__text">This is a physical product.</span>
+							</label>
+						</div>
+					</div>
+					<div class="content__footer">
+						<button class="button button_link button_color_danger" type="button">Cancel</button>
+						<button class="button" type="button">Save</button>
 					</div>
 				</div>
 			</div>

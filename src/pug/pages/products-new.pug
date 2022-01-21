@@ -53,7 +53,7 @@ block content
 				.section__headline Details
 				.section__description Tell the world all about your item and why they’ll love it.
 			.section__content
-				.form.form_direction_row
+				.form.form_direction_row.form_width_short
 					.form__group
 						.form__label Title
 						+control({
@@ -78,7 +78,8 @@ block content
 							type: 'textarea',
 							attr: {
 								name: 'description'
-							}
+							},
+							text: 'Smash was such a hit on the courts, we’ve decided to take these classic sports shoes and deem them an all-around fashion icon. Updated with softer leather and an improved feel...'
 						})
 					.form__group
 						.form__label Tags
@@ -96,3 +97,106 @@ block content
 								name: 'materials'
 							}
 						})
+
+		.section
+			.section__header
+				.section__headline Variants
+				.section__description Add available options like color or size. Buyers will choose from these during checkout.
+			.section__content
+				.form
+					.form__fieldset
+						.form__set
+							.form__group
+								.form__label Option 1
+									button.form__remove(type='button') Remove
+								.form__option
+									+control({
+										attr: {
+											placeholder: 'Option 1',
+											name: 'option1',
+											value: 'Size'
+										}
+									})
+									+multiple({
+										name: 'sizes',
+										list: ['8', '9', '9,5']
+									})
+						.form__set
+							.form__group
+								.form__label Option 2
+									button.form__remove(type='button') Remove
+								.form__option
+									+control({
+										attr: {
+											placeholder: 'Option 2',
+											name: 'option2',
+											value: 'Color'
+										}
+									})
+									+multiple({
+										name: 'colors',
+										list: ['Black', 'White', 'Red', 'Green']
+									})
+				.section__controls
+					+button({text: 'Add variations', mods: 'bg_gray'})
+
+		.section
+			.section__header
+				.section__headline Category
+				.section__description Categories allow you to group products by similar attributes.
+			.section__content
+				.form
+					.form__fieldset
+						.form__set
+							.form__group
+								.form__label Category 1
+									button.form__remove(type='button') Remove
+								+control({
+									attr: {
+										placeholder: 'Category 1',
+										name: 'category1',
+										value: 'Shoes'
+									},
+									autocomplete: true
+								})
+						.form__set
+							.form__group
+								.form__label Subcategory 1
+									button.form__remove(type='button') Remove
+								+control({
+									attr: {
+										placeholder: 'Subcategory 1',
+										name: 'subcategory1',
+										value: 'Puma'
+									}
+								})
+					.form__footer
+						+button({text: 'Add subcategory', mods: 'link, color_accent', icon: 'plus'})
+
+				.form
+					.form__fieldset
+						.form__set
+							.form__group
+								.form__label Category 2
+									button.form__remove(type='button') Remove
+								+control({
+									attr: {
+										placeholder: 'Category 2',
+										name: 'category2'
+									}
+								})
+					.form__footer
+						+button({text: 'Add subcategory', mods: 'link, color_accent', icon: 'plus'})
+				.section__controls
+					+button({text: 'Add category', mods: 'bg_gray'})
+
+		.section
+			.section__header
+				.section__headline Shipping
+				.section__description Set clear and realistic shipping expectations for shoppers by providing accurate processing time.
+			.section__content
+				+checkbox({text: 'This is a physical product.'})
+
+		.content__footer
+			+button({text:'Cancel', mods:'link,color_danger'})
+			+button({text:'Save'})

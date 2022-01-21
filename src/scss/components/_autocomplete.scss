@@ -1,0 +1,28 @@
+.autocomplete {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin-top: size(4);
+	z-index: 2;
+	background-color: var(--white);
+	box-shadow: 0 16px 24px rgba(8, 35, 48, 0.16);
+	border-radius: 8px;
+	&__list {
+		padding: size($md*0.5) 0;
+	}
+	&__item {
+		padding: size($md*0.5) size($md);
+		display: block;
+		font-size: size(14);
+		line-height: 1.2;
+		font-weight: 400;
+		cursor: pointer;
+		outline: 0;
+		background-color: var(--white);
+		border: 0;
+		text-align: left;
+		&:hover {
+			background-color: var(--bg);
+		}
+	}
+}

@@ -31,4 +31,9 @@ mixin control(obj)
 		if(obj.type !== 'textarea')
 			input.control__input&attributes(attr)(class=extraClass)
 		else if(obj.type === 'textarea')
-			textarea.control__input&attributes(attr)(class=extraClass)
+			textarea.control__input&attributes(attr)(class=extraClass)=obj.text
+		if obj.autocomplete
+			.autocomplete
+				.autocomplete__list
+					.autocomplete__item Shoes
+					.autocomplete__item Sneakers

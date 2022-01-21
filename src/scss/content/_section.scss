@@ -43,4 +43,10 @@
 			}
 		}
 	}
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: size($sm);
+		margin-top: size($md);
+	}
 }

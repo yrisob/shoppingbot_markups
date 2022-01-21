@@ -10,4 +10,10 @@
 	.header + &:not(.content_bg) {
 		padding-top: 0;
 	}
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: size($sm);
+	}
 }

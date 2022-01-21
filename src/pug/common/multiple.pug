@@ -1,0 +1,11 @@
+mixin multiple(obj)
+	- var v = obj.list.join(';');
+	.multiple
+		input(type='hidden' name=obj.name value=v)
+		.multiple__list
+			for item in obj.list
+				.multiple__item
+					span=item
+					button.multiple__remove(type='button')
+						+icon('x')
+		input.multiple__search(type='text')
