@@ -68,6 +68,13 @@
 		align-self: flex-start;
 		color: var(--text-base);
 		margin-bottom: size($bs * 0.5);
+		sup {
+			position: static;
+			top: auto;
+			font-size: 100%;
+			line-height: 1;
+			color: var(--danger-01);
+		}
 	}
 	&__remove {
 		margin-left: auto;
@@ -95,8 +102,9 @@
 	&_direction_row &__label {
 		margin-bottom: 0;
 		text-align: right;
-		flex: 1 0 size(80);
-		max-width: size(80);
+		justify-content: flex-end;
+		flex: 1 0 size(100);
+		max-width: size(100);
 		padding: size(11) 0;
 		margin-right: size($bs * 0.5);
 		flex-wrap: wrap;

@@ -5,6 +5,9 @@
 	gap: size($bs);
 	&__main {
 		flex: 0 0 size(700);
+		.page_split & {
+			flex: 0 0 size(190);
+		}
 	}
 	&__controls {
 		display: flex;

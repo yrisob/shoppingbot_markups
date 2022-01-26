@@ -4,6 +4,11 @@
 	background-color: var(--white);
 	display: flex;
 	flex-direction: column;
+	color: var(--text-base);
+	.page_split & {
+		padding-left: size($md);
+		padding-right: size($md);
+	}
 	&_bg {
 		background-color: var(--bg);
 	}

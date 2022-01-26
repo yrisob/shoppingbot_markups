@@ -4,6 +4,9 @@
 		grid-template-columns: repeat(4, #{size(140)});
 		grid-auto-rows: size(140);
 		grid-gap: size($md);
+		&_single {
+			grid-template-columns: 1fr;
+		}
 	}
 	&__item {
 		overflow: hidden;

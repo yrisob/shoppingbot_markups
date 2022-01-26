@@ -1,0 +1,238 @@
+extends ../templates/base
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+block variables
+	-
+		var title = 'Customers Opened';
+		var active = 'Customers';
+
+block content
+	+header({
+		back: false,
+		headline: 'Customers',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		.toolbar
+			.toolbar__main
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+					.form__group.col-3
+						+select({
+							list: [
+								{value: 'Value 1'},
+								{value: 'Value 2'}
+							],
+							def: 'Messenger',
+							name: 'messenger',
+							mods: ['bg_fill']
+						})
+
+			.toolbar__controls
+
+		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+			table
+				thead
+					tr
+						th
+							+checkbox({
+								name: 'all'
+							})
+						th
+							a.table__head(href='#')
+								| Name
+								span.table__sort
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Orders
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Last order
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| LTV
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+				tbody
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| Anna Miller
+						td
+							| 114
+						td
+							| 1 hour ago
+						td
+							| $530,00
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Customer', action: 'active'},
+									{content: 'Archive Customer'},
+									{content: 'Delete Customer'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item2'})
+						td
+							| Anna Miller
+						td
+							| 4
+						td
+							| 19.09.2021
+						td
+							| $560,00
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								status: 'open',
+								list: [
+									{content: 'View Customer', action: 'active'},
+									{content: 'Archive Customer'},
+									{content: 'Delete Customer'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item3'})
+						td
+							| Anna Miller
+						td
+							| 1
+						td
+							| 19.09.2021
+						td
+							| $90,00
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'View Customer', action: 'active'},
+									{content: 'Archive Customer'},
+									{content: 'Delete Customer'}
+								]
+							})
+		+pagination
+
+	.editor.open
+		.editor-box
+			.editor-box__inner
+				.editor-box__header
+					button.editor-box__back(type='button')
+						+icon('chevron-left')
+						| Back
+				.editor-box__body
+					.editor-box__section
+						.table-inner
+							table
+								thead
+									tr
+										th(colspan='2') Customer info
+								tbody
+									tr
+										td User ID:
+										td
+											+control({
+												attr: {
+													value: '105088845334',
+													name: 'id'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td Messenger:
+										td
+											+control({
+												attr: {
+													value: 'Telegram',
+													name: 'messenger'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td
+											| Apartment, suite, ect.
+										td
+											+control({
+												attr: {
+													value: '012',
+													name: 'apartment'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td
+											| City
+										td
+											+control({
+												attr: {
+													value: 'City name',
+													name: 'city'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td
+											| Postal Code
+										td
+											+control({
+												attr: {
+													value: '0123456789',
+													name: 'postal'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td
+											| Country/region
+										td
+											+control({
+												attr: {
+													value: 'Country name',
+													name: 'country'
+												},
+												mods: ['right', 'width_full']
+											})
+									tr
+										td
+											| Phone number
+										td
+											+control({
+												attr: {
+													value: '+0 000 123-45-67',
+													name: 'phone'
+												},
+												mods: ['right', 'width_full']
+											})
+
+				.editor-box__footer
+					+button({text: 'Edit', mods: 'width_full'})
+					+button({text: 'Cancel', mods: 'width_full,bg_gray'})

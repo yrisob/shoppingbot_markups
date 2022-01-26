@@ -1,0 +1,8 @@
+mixin breadcrumbs(array)
+	.breadcrumbs
+		for item in array
+			.breadcrumbs__item
+				if item.current
+					.breadcrumbs__current=item.text
+				else
+					a.breadcrumbs__link(href='#')=item.text

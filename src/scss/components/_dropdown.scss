@@ -12,17 +12,20 @@
 		background-color: transparent;
 		color: var(--gray);
 		padding: size($sm-div);
-		&:hover,
-		.open & {
+		&:hover {
 			color: var(--black-alt);
 		}
-		.open & {
-			background-color: var(--pressed);
-		}
+		//.open & {
+		//	background-color: var(--pressed);
+		//}
 		svg {
 			width: size(16);
 			height: size(16);
 		}
+	}
+	&.open &__toggle {
+		color: var(--black-alt);
+		background-color: var(--pressed);
 	}
 	&__list {
 		position: absolute;
@@ -38,9 +41,12 @@
 			left: auto;
 			right: 0;
 		}
-		.open & {
-			display: block;
-		}
+		//.open & {
+		//	display: block;
+		//}
+	}
+	.dropdown.open &__list {
+		display: block;
 	}
 	&__item {
 		display: flex;

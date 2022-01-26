@@ -1,6 +1,7 @@
-mixin upload-photo(array)
+mixin upload-photo(array, single)
+	- var isSingle = (single) ? true : false;
 	.upload-photo
-		.upload-photo__grid
+		.upload-photo__grid(class=(isSingle)? 'upload-photo__grid_single': '')
 			for item in array
 				.upload-photo__item
 					if item.upload

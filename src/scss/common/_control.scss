@@ -58,6 +58,12 @@ textarea {
 		&_right {
 			text-align: right;
 		}
+		&_width {
+			&_full {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
 	}
 	textarea#{&}__input {
 		resize: vertical;

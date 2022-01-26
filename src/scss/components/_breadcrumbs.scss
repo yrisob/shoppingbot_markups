@@ -1,0 +1,40 @@
+.breadcrumbs {
+	display: flex;
+	margin: size($md) 0;
+	.toolbar + & {
+		margin-top: size(4);
+	}
+	&__item {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		margin-right: size($bs * 0.5);
+		&:not(:last-child){
+			&:after {
+				content: '';
+				display: inline-block;
+				background-image: url("../icons/icons.svg#chevron-right");
+				width: size(16);
+				height: size(16);
+				margin-left: size($bs * 0.5);
+				opacity: .5;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		color: var(--gray);
+		font-size: size(12);
+		line-height: size(16);
+		font-weight: 500;
+		letter-spacing: 0.04em;
+	}
+	&__current {
+		display: block;
+		color: var(--text-base);
+		font-size: size(12);
+		line-height: size(16);
+		font-weight: 500;
+		letter-spacing: 0.04em;
+	}
+}

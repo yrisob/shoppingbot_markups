@@ -127,15 +127,15 @@ block content
 									td
 										| #[span +0 000 123-45-67]
 
-		.modal.open
-			.modal-box
-				.modal-box__content
-					.modal-box__header
-						.modal-box__headline Save this customer?
-						button.modal-box__close(type='button')
-							+icon('x')
-					.modal-box__body
-						| Would you like to add this customer to your list?
-					.modal-box__footer
-						+button({text: 'Decline', mods:'bg_gray'})
-						+button({text: 'Save'})
+	.modal.open
+		.modal-box
+			.modal-box__content
+				.modal-box__header
+					.modal-box__headline Save this customer?
+					button.modal-box__close(type='button')
+						+icon('x')
+				.modal-box__body
+					| Would you like to add this customer to your list?
+				.modal-box__footer
+					+button({text: 'Decline', mods:'bg_gray'})
+					+button({text: 'Save'})

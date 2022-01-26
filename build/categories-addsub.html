@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title>Categories add</title>
+	</head>
+	<body class="modal-open">
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__scroll">
+					<div class="sidebar__inner">
+									<nav class="navigation">
+										<div class="navigation__list">
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#mail"></use>
+													</svg><span class="navigation__name">Inbox</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#folder"></use>
+													</svg><span class="navigation__name">Products</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
+													</svg><span class="navigation__name">Orders</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#users"></use>
+													</svg><span class="navigation__name">Customers</span></a></div>
+											<div class="navigation__item"><a class="navigation__link active" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#grid"></use>
+													</svg><span class="navigation__name">Categories</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#tag"></use>
+													</svg><span class="navigation__name">Promo</span></a></div>
+										</div>
+									</nav>
+					</div>
+				</div>
+				<div class="sidebar__footer">
+								<button class="profile" type="button">
+									<div class="profile__picture"><img class="profile__img" src="../assets/uploads/avatar.png" alt="Puma store"></div>
+									<div class="profile__info">
+										<div class="profile__name">Puma store</div>
+										<div class="profile__text">name@domain.com</div>
+									</div>
+								</button>
+				</div>
+			</div>
+			<div class="page">
+				<header class="header">
+					<div class="header__inner">
+						<div class="header__head">
+							<div class="header__headline">Categories</div>
+						</div>
+						<div class="header__text">Categories allow you to group products by similar attributes. The categories in your store are shown below.</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="toolbar">
+						<div class="toolbar__main">
+							<form class="form form_horizontal">
+								<div class="form__group col-5">
+									<div class="control"><span class="control__icon">
+											<svg class="icon-search">
+												<use xlink:href="../assets/icons/icons.svg#search"></use>
+											</svg></span>
+										<input class="control__input control__input_bg_fill" placeholder="Search by name, category..." name="search" type="text"/>
+									</div>
+								</div>
+								<div class="form__group col-3">
+									<div class="select">
+										<select name="status">
+											<option value="All status">All status</option>
+											<option value="Pending">Pending</option>
+											<option value="Shipping">Shipping</option>
+											<option value="Processed">Processed</option>
+											<option value="Declined">Declined</option>
+										</select>
+										<button class="select__toggle select__toggle_bg_fill" type="button"><span>All status</span>
+											<svg class="icon-chevron-down">
+												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+											</svg>
+										</button>
+										<div class="select__list">
+											<div class="select__item selected">All status</div>
+											<div class="select__item">Pending</div>
+											<div class="select__item">Shipping</div>
+											<div class="select__item">Processed</div>
+											<div class="select__item">Declined</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="toolbar__controls">
+							<button class="button" type="button">
+								<svg class="icon-plus">
+									<use xlink:href="../assets/icons/icons.svg#plus"></use>
+								</svg><span>Add Category</span>
+							</button>
+						</div>
+					</div>
+					<div class="table">
+						<div class="table__group">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="all" data-half="true"/><span class="checkbox__mark"></span>
+							</label>
+							<button class="button button_bg_gray" type="button">Make inactive</button>
+							<button class="button button_bg_gray button_color_danger" type="button">Delete</button>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th></th>
+									<th>Name</th>
+									<th>Subcategory</th>
+									<th>Position</th>
+									<th>Products</th>
+									<th>Status</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="active">
+									<td class="table__w_16">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td class="table__w_40">
+										<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
+									</td>
+									<td>
+										<div class="table__good">Summer Clothes</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_danger" type="button">Inactive</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown open">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table__sub">
+									<td class="table__w_16"></td>
+									<td class="table__w_40">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td>
+										<div class="table__good">
+											<div class="table__pic"><img src="../assets/uploads/item-pic1.png" alt=""></div>Summer Clothes
+										</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_danger" type="button">Inactive</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table__sub">
+									<td class="table__w_16"></td>
+									<td class="table__w_40">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td>
+										<div class="table__good">
+											<div class="table__pic"><img src="../assets/uploads/item-pic1.png" alt=""></div>Summer Clothes
+										</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_danger" type="button">Inactive</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="table__w_16">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td class="table__w_40">
+										<div class="table__pic"><img src="../assets/uploads/item-pic1.png" alt=""></div>
+									</td>
+									<td>
+										<div class="table__good">Summer Clothes</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_info" type="button">Active</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table__sub hidden">
+									<td class="table__w_16"></td>
+									<td class="table__w_40">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td>
+										<div class="table__good">
+											<div class="table__pic"><img src="../assets/uploads/item-pic1.png" alt=""></div>Summer Clothes
+										</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_danger" type="button">Inactive</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="table__w_16">
+										<button class="table__toggle" type="button">
+											<svg class="icon-chevron-right">
+												<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+											</svg>
+										</button>
+									</td>
+									<td class="table__w_40">
+										<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
+									</td>
+									<td>
+										<div class="table__good">Summer Clothes</div>
+									</td>
+									<td>Shoes</td>
+									<td>1</td>
+									<td>100</td>
+									<td class="table__w_120">
+										<button class="badge badge_info" type="button">Active</button>
+									</td>
+									<td class="table__w_28">
+										<div class="dropdown">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-more-vertical">
+													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">Edit Category</a><a class="dropdown__item" href="#">Add Subcategory</a><a class="dropdown__item" href="#">Make Inactive</a><a class="dropdown__item" href="#">Delete Category</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="modal open">
+					<div class="modal-box">
+						<div class="modal-box__content">
+							<div class="modal-box__header">
+								<div class="modal-box__headline">New Subcategory</div>
+								<button class="modal-box__close" type="button">
+									<svg class="icon-x">
+										<use xlink:href="../assets/icons/icons.svg#x"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="modal-box__body modal-box__body_stroke">
+								<div class="form form_direction_row">
+									<div class="form__group">
+										<div class="form__label">Name <sup>*</sup></div>
+										<div class="control">
+											<input class="control__input" placeholder="Category name" name="category" type="text"/>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Main category</div>
+										<div class="select">
+											<select name="category">
+												<option value="">Select</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+											</select>
+											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Select</div>
+												<div class="select__item">1</div>
+												<div class="select__item">2</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Position</div>
+										<div class="select">
+											<select name="position">
+												<option value="">Select</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+											</select>
+											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Select</div>
+												<div class="select__item">1</div>
+												<div class="select__item">2</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Status</div>
+										<div class="select">
+											<select name="status">
+												<option value="">Select</option>
+												<option value="Active">Active</option>
+												<option value="Inactive">Inactive</option>
+											</select>
+											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Select</div>
+												<div class="select__item">Active</div>
+												<div class="select__item">Inactive</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Photo</div>
+										<div class="upload-photo">
+											<div class="upload-photo__grid upload-photo__grid_single">
+												<div class="upload-photo__item">
+													<label class="upload-photo__label">
+														<input type="file" name="photos[]"/>
+														<svg class="icon-camera">
+															<use xlink:href="../assets/icons/icons.svg#camera"></use>
+														</svg><span>Add a photo</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-box__footer">
+								<button class="button button_bg_gray" type="button">Cancel</button>
+								<button class="button" type="button">Create</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

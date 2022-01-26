@@ -37,12 +37,12 @@
 				border-color: var(--bg);
 			}
 		}
-		.open & {
-			border-color: var(--accent);
-			background-color: var(--white);
-			svg {
-				transform: rotate(180deg);
-			}
+	}
+	&.open &__toggle {
+		border-color: var(--accent);
+		background-color: var(--white);
+		svg {
+			transform: rotate(180deg);
 		}
 	}
 	&__placeholder {
@@ -61,9 +61,9 @@
 		user-select: none;
 		white-space: nowrap;
 		display: none;
-		.open & {
-			display: block;
-		}
+	}
+	&.open &__list {
+		display: block;
 	}
 	&__item {
 		background-color: var(--white);

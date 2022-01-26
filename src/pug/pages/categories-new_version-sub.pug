@@ -1,0 +1,69 @@
+extends ../templates/base-split
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+include ../components/breadcrumbs
+include ../components/categories
+block variables
+	-
+		var title = 'Categories';
+		var active = 'Categories';
+
+block content
+	.page__main
+		.page__scroll
+			+header({
+				back: false,
+				headline: 'Summer shoes'
+			})
+			.content
+				.toolbar
+					.toolbar__main
+						form.form.form_horizontal
+							.form__group
+								+control({
+									attr: {
+										placeholder: 'Search',
+										name: 'search'
+									},
+									icon: 'search',
+									mods: ['bg_fill']
+								})
+
+					.toolbar__controls
+						+button({icon: 'plus', text: 'Add Subcategory'})
+				+breadcrumbs([
+					{text: 'Categories'},
+					{text: 'Summer shoes', current: true}
+				])
+
+				+categories([
+					{
+						name: 'Summer shoes',
+						img: '../assets/uploads/item-pic2.jpg',
+						specs: ['263 products', 'Position: 1'],
+						status: {text: 'Active', status: 'info'}
+					},
+					{
+						name: 'Beauty',
+						img: '../assets/uploads/item-pic1.png',
+						specs: ['N/A', 'Position: 3'],
+						status: {text: 'Inactive', status: 'danger'}
+					},
+					{
+						name: 'Summer shoes',
+						active: 'active',
+						img: '../assets/uploads/item-pic2.jpg',
+						specs: ['263 products', 'Position: 1'],
+						status: {text: 'Active', status: 'info'}
+					},
+					{
+						name: 'Summer shoes',
+						img: '../assets/uploads/item-pic2.jpg',
+						specs: ['263 products', 'Position: 1'],
+						status: {text: 'Active', status: 'info'}
+					}
+				])
+
+	.page__side
+		| side

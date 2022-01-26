@@ -43,7 +43,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-bottom: size($lg);
+			margin-bottom: size($sm*2);
 		}
 		&__headline {
 			font-size: size(20);
@@ -73,6 +73,10 @@
 			font-size: size(16);
 			line-height: 1.2;
 			font-weight: 400;
+			&_stroke {
+				border-top: 1px solid var(--stroke);
+				padding-top: size($sm*2);
+			}
 		}
 		&__footer {
 			display: flex;

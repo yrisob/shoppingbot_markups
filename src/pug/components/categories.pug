@@ -1,0 +1,14 @@
+include ../components/badge
+mixin categories(array)
+	.categories
+		for item in array
+			.categories__item(class=item.active)
+				.categories__pic
+					img.categories__img(src=item.img alt='')
+				.categories__info
+					.categories__name=item.name
+					.categories__specs
+						for spec in item.specs
+							.categories__spec=spec
+				.categories__status
+					+badge({text:item.status.text, status:item.status.status})

@@ -2,6 +2,10 @@
 	background-color: var(--white);
 	padding: size($sm*2);
 	color: var(--text-base);
+	.page_split & {
+		padding-left: size($md);
+		padding-right: size($md);
+	}
 	&__head {
 		padding-top: size($bs-div);
 		display: flex;

@@ -1,0 +1,291 @@
+extends ../templates/base
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+include ../components/upload-photo
+block variables
+	-
+		var title = 'Categories add';
+		var active = 'Categories';
+		var isModalOpen = true;
+
+block content
+	+header({
+		back: false,
+		headline: 'Categories',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		.toolbar
+			.toolbar__main
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+					.form__group.col-3
+						+select({
+							list: [
+								{value: 'All status', selected: true},
+								{value: 'Pending'},
+								{value: 'Shipping'},
+								{value: 'Processed'},
+								{value: 'Declined'}
+							],
+							name: 'status',
+							mods: ['bg_fill']
+						})
+
+			.toolbar__controls
+				+button({icon: 'plus', text: 'Add Category'})
+
+		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+			table
+				thead
+					tr
+						th
+						th
+						th
+							| Name
+						th
+							| Subcategory
+						th
+							| Position
+						th
+							| Products
+						th
+							| Status
+						th
+				tbody
+					tr.active
+						td.table__w_16
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic2.jpg' alt='')
+						td
+							.table__good Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								status: 'open',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+
+					tr.table__sub
+						td.table__w_16
+
+						td.table__w_40
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td
+							.table__good
+								.table__pic
+									img(src='../assets/uploads/item-pic1.png' alt='')
+								| Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+					tr.table__sub
+						td.table__w_16
+
+						td.table__w_40
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td
+							.table__good
+								.table__pic
+									img(src='../assets/uploads/item-pic1.png' alt='')
+								| Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+
+					tr
+						td.table__w_16
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic1.png' alt='')
+						td
+							.table__good Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'info', text: 'Active'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+					tr.table__sub.hidden
+						td.table__w_16
+
+						td.table__w_40
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td
+							.table__good
+								.table__pic
+									img(src='../assets/uploads/item-pic1.png' alt='')
+								| Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+					tr
+						td.table__w_16
+							button.table__toggle(type='button')
+								+icon('chevron-right')
+						td.table__w_40
+							.table__pic
+								img(src='../assets/uploads/item-pic2.jpg' alt='')
+						td
+							.table__good Summer Clothes
+						td
+							| Shoes
+						td
+							| 1
+						td
+							| 100
+						td.table__w_120
+							+badge({status: 'info', text: 'Active'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit Category', action: 'active'},
+									{content: 'Add Subcategory'},
+									{content: 'Make Inactive'},
+									{content: 'Delete Category'}
+								]
+							})
+
+	.modal.open
+		.modal-box
+			.modal-box__content
+				.modal-box__header
+					.modal-box__headline New Category
+					button.modal-box__close(type='button')
+						+icon('x')
+				.modal-box__body.modal-box__body_stroke
+					.form.form_direction_row
+						.form__group
+							.form__label Name #[sup *]
+							+control({
+								attr: {
+									placeholder: 'Category name',
+									name: 'category'
+								}
+							})
+						.form__group
+							.form__label Position
+							+select({
+								list: [
+									{value: '1'},
+									{value: '2'}
+								],
+								name: 'position',
+								def: 'Select'
+							})
+						.form__group
+							.form__label Status
+							+select({
+								list: [
+									{value: 'Active'},
+									{value: 'Inactive'}
+								],
+								name: 'status',
+								def: 'Select'
+							})
+						.form__group
+							.form__label Photo
+							+upload-photo([
+								{upload: true}
+							], true)
+				.modal-box__footer
+					+button({text: 'Cancel', mods: 'bg_gray'})
+					+button({text: 'Create'})

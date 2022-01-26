@@ -9,7 +9,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="../assets/css/style.css">
-		<title>Products</title>
+		<title>Customers</title>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -22,7 +22,7 @@
 													<svg class="navigation__icon">
 														<use xlink:href="../assets/icons/icons.svg#mail"></use>
 													</svg><span class="navigation__name">Inbox</span></a></div>
-											<div class="navigation__item"><a class="navigation__link active" href="#">
+											<div class="navigation__item"><a class="navigation__link" href="#">
 													<svg class="navigation__icon">
 														<use xlink:href="../assets/icons/icons.svg#folder"></use>
 													</svg><span class="navigation__name">Products</span></a></div>
@@ -30,7 +30,7 @@
 													<svg class="navigation__icon">
 														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
 													</svg><span class="navigation__name">Orders</span></a></div>
-											<div class="navigation__item"><a class="navigation__link" href="#">
+											<div class="navigation__item"><a class="navigation__link active" href="#">
 													<svg class="navigation__icon">
 														<use xlink:href="../assets/icons/icons.svg#users"></use>
 													</svg><span class="navigation__name">Customers</span></a></div>
@@ -60,7 +60,7 @@
 				<header class="header">
 					<div class="header__inner">
 						<div class="header__head">
-							<div class="header__headline">Products</div>
+							<div class="header__headline">Customers</div>
 						</div>
 						<div class="header__text">Categories allow you to group products by similar attributes. The categories in your store are shown below.</div>
 					</div>
@@ -77,76 +77,30 @@
 										<input class="control__input control__input_bg_fill" placeholder="Search by name, category..." name="search" type="text"/>
 									</div>
 								</div>
-								<div class="form__group col">
-									<div class="select open">
-										<select name="status">
-											<option value="All status">All status</option>
-											<option value="Active">Active</option>
-											<option value="Inactive">Inactive</option>
-										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span>All status</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item selected">All status</div>
-											<div class="select__item">Active</div>
-											<div class="select__item">Inactive</div>
-										</div>
-									</div>
-								</div>
-								<div class="form__group col">
+								<div class="form__group col-3">
 									<div class="select">
-										<select name="type">
-											<option value="">Type</option>
-											<option value="Product">Product</option>
-											<option value="Service">Service</option>
+										<select name="messenger">
+											<option value="">Messenger</option>
+											<option value="Value 1">Value 1</option>
+											<option value="Value 2">Value 2</option>
 										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Type</span>
+										<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Messenger</span>
 											<svg class="icon-chevron-down">
 												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
 											</svg>
 										</button>
 										<div class="select__list">
-											<div class="select__item">Type</div>
-											<div class="select__item">Product</div>
-											<div class="select__item">Service</div>
-										</div>
-									</div>
-								</div>
-								<div class="form__group col">
-									<div class="select">
-										<select name="category">
-											<option value="">Category</option>
-											<option value="Shoes">Shoes</option>
-											<option value="Beauty">Beauty</option>
-										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Category</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item">Category</div>
-											<div class="select__item">Shoes</div>
-											<div class="select__item">Beauty</div>
+											<div class="select__item">Messenger</div>
+											<div class="select__item">Value 1</div>
+											<div class="select__item">Value 2</div>
 										</div>
 									</div>
 								</div>
 							</form>
 						</div>
-						<div class="toolbar__controls">
-							<button class="button button_link" type="button">Export</button>
-							<button class="button button_link" type="button">Import</button>
-							<button class="button" type="button">
-								<svg class="icon-plus">
-									<use xlink:href="../assets/icons/icons.svg#plus"></use>
-								</svg><span>Add Product</span>
-							</button>
-						</div>
+						<div class="toolbar__controls"></div>
 					</div>
-					<div class="table table_groups">
+					<div class="table">
 						<div class="table__group">
 							<label class="checkbox">
 								<input class="checkbox__input" type="checkbox" name="all" data-half="true"/><span class="checkbox__mark"></span>
@@ -162,54 +116,25 @@
 											<input class="checkbox__input" type="checkbox" name="all"/><span class="checkbox__mark"></span>
 										</label>
 									</th>
-									<th></th>
 									<th><a class="table__head" href="#">Name<span class="table__sort">
 												<svg class="icon-chevron-down">
 													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
 												</svg></span></a></th>
-									<th><a class="table__head" href="#">Type<span class="table__sort">
+									<th><a class="table__head" href="#">Orders<span class="table__sort">
 												<svg class="icon-chevron-up">
 													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
 												</svg>
 												<svg class="icon-chevron-down">
 													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
 												</svg></span></a></th>
-									<th><a class="table__head" href="#">Category<span class="table__sort">
+									<th><a class="table__head" href="#">Last order<span class="table__sort">
 												<svg class="icon-chevron-up">
 													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
 												</svg>
 												<svg class="icon-chevron-down">
 													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
 												</svg></span></a></th>
-									<th><a class="table__head" href="#">Quantity<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></th>
-									<th><a class="table__head" href="#">On&nbsp;hold<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></th>
-									<th><a class="table__head" href="#">SKU<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></th>
-									<th><a class="table__head" href="#">Price<span class="table__sort">
-												<svg class="icon-chevron-up">
-													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
-												</svg>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg></span></a></th>
-									<th><a class="table__head" href="#">Status<span class="table__sort">
+									<th><a class="table__head" href="#">LTV<span class="table__sort">
 												<svg class="icon-chevron-up">
 													<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
 												</svg>
@@ -226,23 +151,10 @@
 											<input class="checkbox__input" type="checkbox" name="item1"/><span class="checkbox__mark"></span>
 										</label>
 									</td>
-									<td class="table__w_40">
-										<div class="table__pic"><img src="../assets/uploads/item-pic1.png" alt=""></div>
-									</td>
-									<td>
-										<div class="table__good">Professional nail and beauty</div>
-										<!--.table__short-textdiv Professional nail and beauty
-										-->
-									</td>
-									<td>Service</td>
-									<td>Beauty</td>
-									<td>N/A</td>
-									<td>N/A</td>
-									<td>N/A</td>
-									<td>$90,00</td>
-									<td>
-										<button class="badge badge_active" type="button">Active</button>
-									</td>
+									<td>Anna Miller</td>
+									<td>114</td>
+									<td>1 hour ago</td>
+									<td>$530,00</td>
 									<td class="table__w_28">
 										<div class="dropdown">
 											<button class="dropdown__toggle" type="button">
@@ -250,42 +162,29 @@
 													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
 												</svg>
 											</button>
-											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">View Product</a><a class="dropdown__item active" href="#">Make Inactive</a><a class="dropdown__item disabled" href="#">Archive Product</a><a class="dropdown__item" href="#">Delete Product</a>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">View Customer</a><a class="dropdown__item" href="#">Archive Customer</a><a class="dropdown__item" href="#">Delete Customer</a>
 											</div>
 										</div>
 									</td>
 								</tr>
-								<tr class="active">
+								<tr>
 									<td class="table__w_16">
 										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" name="item2" checked="checked"/><span class="checkbox__mark"></span>
+											<input class="checkbox__input" type="checkbox" name="item2"/><span class="checkbox__mark"></span>
 										</label>
 									</td>
-									<td class="table__w_40">
-										<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
-									</td>
-									<td>
-										<div class="table__good">Puma Ultra Cross Smash v2 Plus Limited Edition</div>
-										<!--.table__short-textdiv Puma Ultra Cross Smash v2 Plus Limited Edition
-										-->
-									</td>
-									<td>Product</td>
-									<td>Shoes</td>
-									<td>38</td>
-									<td>100</td>
-									<td>SH1003</td>
+									<td>Anna Miller</td>
+									<td>4</td>
+									<td>19.09.2021</td>
 									<td>$560,00</td>
-									<td>
-										<button class="badge badge_danger" type="button">Inactive</button>
-									</td>
 									<td class="table__w_28">
-										<div class="dropdown">
+										<div class="dropdown open">
 											<button class="dropdown__toggle" type="button">
 												<svg class="icon-more-vertical">
 													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
 												</svg>
 											</button>
-											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">View Product</a><a class="dropdown__item active" href="#">Make Inactive</a><a class="dropdown__item disabled" href="#">Archive Product</a><a class="dropdown__item" href="#">Delete Product</a>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">View Customer</a><a class="dropdown__item" href="#">Archive Customer</a><a class="dropdown__item" href="#">Delete Customer</a>
 											</div>
 										</div>
 									</td>
@@ -296,31 +195,18 @@
 											<input class="checkbox__input" type="checkbox" name="item3"/><span class="checkbox__mark"></span>
 										</label>
 									</td>
-									<td class="table__w_40">
-										<div class="table__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""></div>
-									</td>
-									<td>
-										<div class="table__good">Puma Ultra Cross Smash</div>
-										<!--.table__short-textdiv Puma Ultra Cross Smash
-										-->
-									</td>
-									<td>Product</td>
-									<td>Shoes</td>
-									<td>11</td>
-									<td>1 000</td>
-									<td>SH1004</td>
-									<td>$1 560,00</td>
-									<td>
-										<button class="badge badge_active" type="button">Active</button>
-									</td>
+									<td>Anna Miller</td>
+									<td>1</td>
+									<td>19.09.2021</td>
+									<td>$90,00</td>
 									<td class="table__w_28">
-										<div class="dropdown open">
+										<div class="dropdown">
 											<button class="dropdown__toggle" type="button">
 												<svg class="icon-more-vertical">
 													<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
 												</svg>
 											</button>
-											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">View Product</a><a class="dropdown__item active" href="#">Make Inactive</a><a class="dropdown__item disabled" href="#">Archive Product</a><a class="dropdown__item" href="#">Delete Product</a>
+											<div class="dropdown__list dropdown__list_end"><a class="dropdown__item active" href="#">View Customer</a><a class="dropdown__item" href="#">Archive Customer</a><a class="dropdown__item" href="#">Delete Customer</a>
 											</div>
 										</div>
 									</td>

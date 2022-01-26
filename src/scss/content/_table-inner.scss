@@ -6,16 +6,20 @@
 		margin: 0;
 	}
 	th {
-		text-align: left;
-		font-size: size(14);
-		line-height: 1.2;
+		font-size: size(12);
+		line-height: size(16);
 		font-weight: 600;
-		padding: size($bs * 0.5);
+		text-transform: uppercase;
+		padding: size($bs) size($md-div);
+		text-align: left;
+		background-color: var(--bg);
+		color: var(--black-alt);
+		letter-spacing: 0.02em;
 		&:first-child {
-			padding-left: 0;
+			padding-left: size($sm-div + $md-div);
 		}
 		&:last-child {
-			padding-right: 0;
+			padding-right: size($sm-div + $md-div);
 		}
 	}
 	td {
@@ -37,6 +41,15 @@
 	}
 	tr:first-child td {
 		padding-top: 0;
+	}
+	thead + tbody tr:first-child td {
+		padding-top: size($md);
+	}
+	thead + tbody td:first-child {
+		padding-left: size($bs);
+	}
+	thead + tbody td:last-child {
+		padding-right: size($bs);
 	}
 	tr:last-child td {
 		padding-bottom: 0;
@@ -80,7 +93,7 @@
 			padding-top: size($bs + 24);
 		}
 	}
-	.control {
+	.control__input:not(.control__input_width_full) {
 		max-width: size(175);
 	}
 }
