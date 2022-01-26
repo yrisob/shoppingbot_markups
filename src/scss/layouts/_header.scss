@@ -2,11 +2,62 @@
 	background-color: var(--white);
 	padding: size($sm*2);
 	color: var(--text-base);
+	&__head {
+		padding-top: size($bs-div);
+		display: flex;
+		align-items: center;
+		column-gap: size(60);
+	}
 	&__headline {
 		font-weight: 600;
 		font-size: size(24);
 		line-height: 1.2;
-		padding-top: size($bs-div);
+		margin: 0;
+	}
+	&__date {
+		font-size: size(14);
+		line-height: 1.5;
+		font-weight: 400;
+		color: var(--text-base);
+	}
+	&__status {
+		--header-status: var(--color-info);
+		position: relative;
+		font-size: size(14);
+		line-height: 1.2;
+		font-weight: 500;
+		padding-left: size(16);
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto 0;
+			border-radius: 50%;
+			width: size(8);
+			height: size(8);
+			background-color: var(--header-status);
+		}
+		&_info {
+			--header-status: var(--color-info);
+		}
+		&_warn {
+			--header-status: var(--color-warn);
+		}
+		&_danger {
+			--header-status: var(--color-danger);
+		}
+		&_success {
+			--header-status: var(--color-success);
+		}
+	}
+	&__controls {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		gap: size($sm);
 	}
 	&__text {
 		margin-top: size($md-div);

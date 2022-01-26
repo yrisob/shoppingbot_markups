@@ -99,6 +99,11 @@
 			color: var(--accent);
 		}
 	}
+	&_width {
+		&_full {
+			width: 100%;
+		}
+	}
 	svg {
 		display: inline-block;
 		width: size(16);

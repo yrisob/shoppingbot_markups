@@ -6,6 +6,19 @@ mixin header(obj)
 					a.header__back(href='#')
 						+icon('chevron-left')
 						|Back
-			.header__headline=obj.headline
+			.header__head
+				.header__headline=obj.headline
+				if obj.status
+					.header__status(class='header__status_'+obj.status.status)=obj.status.text
+				if obj.date
+					.header__date 24.09.2021, 11:48:15
+				if obj.controls
+					.header__controls
+						+button({text: 'Edit order', mods: 'bg_gray'})
+						+button({text: 'Confirm order'})
+				if obj.cancel
+					.header__controls
+						+button({text: 'Cancel', mods: 'bg_gray,color_danger'})
+						+button({text: 'Save'})
 			if obj.text
 				.header__text=obj.text

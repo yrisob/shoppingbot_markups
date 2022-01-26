@@ -3,6 +3,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	margin-top: auto;
+	margin-bottom: size($bs*2);
 	&__qnt {
 		font-size: size(14);
 		font-weight: 500;

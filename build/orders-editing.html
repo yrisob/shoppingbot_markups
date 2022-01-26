@@ -65,11 +65,11 @@
 								</svg>Back</a></div>
 						<div class="header__head">
 							<div class="header__headline">Order AKN183333</div>
-							<div class="header__status header__status_warn">Pending</div>
+							<div class="header__status header__status_success">Success</div>
 							<div class="header__date">24.09.2021, 11:48:15</div>
 							<div class="header__controls">
-								<button class="button button_bg_gray" type="button">Edit order</button>
-								<button class="button" type="button">Confirm order</button>
+								<button class="button button_bg_gray button_color_danger" type="button">Cancel</button>
+								<button class="button" type="button">Save</button>
 							</div>
 						</div>
 					</div>
@@ -88,70 +88,68 @@
 											<div class="item__info">
 												<div class="item__name">PUMA Smash v2 Sneakers</div>
 												<div class="item__list">
-													<div class="item__spec">
+													<div class="item__edit">
 														<div class="item__label">Color:</div>
-														<div class="item__value">Black</div>
+														<div class="item__control">
+															<div class="select">
+																<select name="type">
+																	<option value="">Value 1</option>
+																	<option value="Value 1">Value 1</option>
+																	<option value="Value 2">Value 2</option>
+																</select>
+																<button class="select__toggle" type="button"><span class="select__placeholder">Value 1</span>
+																	<svg class="icon-chevron-down">
+																		<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																	</svg>
+																</button>
+																<div class="select__list">
+																	<div class="select__item">Value 1</div>
+																	<div class="select__item">Value 1</div>
+																	<div class="select__item">Value 2</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="item__spec">
+													<div class="item__edit">
 														<div class="item__label">Size:</div>
-														<div class="item__value">US 10</div>
+														<div class="item__control">
+															<div class="select">
+																<select name="type">
+																	<option value="">Value 1</option>
+																	<option value="Value 1">Value 1</option>
+																	<option value="Value 2">Value 2</option>
+																</select>
+																<button class="select__toggle" type="button"><span class="select__placeholder">Value 1</span>
+																	<svg class="icon-chevron-down">
+																		<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																	</svg>
+																</button>
+																<div class="select__list">
+																	<div class="select__item">Value 1</div>
+																	<div class="select__item">Value 1</div>
+																	<div class="select__item">Value 2</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="item__edit">
+														<div class="item__label">Quantity:</div>
+														<div class="item__control">
+															<div class="control">
+																<input class="control__input" placeholder="0" name="qnt" value="2" type="text"/>
+															</div>
+														</div>
 													</div>
 												</div>
+												<button class="item__remove button button_bg_danger" type="button">Delete</button>
 											</div>
-											<div class="item__qnt">2</div>
 											<div class="item__price">$ 3 398.00</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="section section_alt">
-								<div class="section__header">
-									<div class="section__headline">Product Info</div>
+								<div class="section__footer">
+									<button class="button button_bg_gray" type="button">Add product</button>
 								</div>
-								<div class="section__content">
-									<div class="item">
-										<div class="item__pic"><img class="item__img" src="../assets/uploads/item-pic2.jpg" alt=""/></div>
-										<div class="item__main">
-											<div class="item__info">
-												<div class="item__name">Donec ultricies, elit a ultricies pretium, purus tellus blandit nibh, lacinia pulvinar sapien velit ac metus.</div>
-												<div class="item__list">
-													<div class="item__spec">
-														<div class="item__label">Color:</div>
-														<div class="item__value">Black</div>
-													</div>
-													<div class="item__spec">
-														<div class="item__label">Size:</div>
-														<div class="item__value">US 10</div>
-													</div>
-													<div class="item__spec">
-														<div class="item__label">Limited:</div>
-														<div class="item__value">Yes</div>
-													</div>
-													<div class="item__spec">
-														<div class="item__label">Extra:</div>
-														<div class="item__value">Yes</div>
-													</div>
-													<div class="item__spec">
-														<div class="item__label">Water resistance:</div>
-														<div class="item__value">No</div>
-													</div>
-												</div>
-											</div>
-											<div class="item__qnt">21</div>
-											<div class="item__price">$ 1 223 000.00</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="pagination">
-								<div class="pagination__qnt">1 - 10 of 34</div>
-								<div class="pagination__list"><a class="pagination__prev" href="#">
-										<svg class="icon-chevron-left">
-											<use xlink:href="../assets/icons/icons.svg#chevron-left"></use>
-										</svg></a><a class="pagination__next" href="#">
-										<svg class="icon-chevron-right">
-											<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
-										</svg></a><a class="pagination__link" href="#">1</a><span class="pagination__current">2</span><a class="pagination__link" href="#">3</a><span class="pagination__dots">...</span><a class="pagination__link" href="#">10</a></div>
 							</div>
 							<div class="section section_alt">
 								<div class="section__header">
@@ -164,17 +162,29 @@
 												<tr>
 													<td>Subtotal</td>
 													<td></td>
-													<td class="table-inner_align_right">$ 3 398.00</td>
+													<td class="table-inner_align_right">
+														<div class="control">
+															<input class="control__input control__input_right" placeholder="$ 0.00" name="subtotal" type="text"/>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td><span class="table-inner__disabled">Discount</span></td>
+													<td>Discount</td>
 													<td></td>
-													<td class="table-inner_align_right"><span class="table-inner__disabled">$ 0.00</span></td>
+													<td class="table-inner_align_right">
+														<div class="control">
+															<input class="control__input control__input_right" placeholder="$ 0.00" name="subtotal" type="text"/>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td><span class="table-inner__disabled">Shipping</span></td>
+													<td>Shipping</td>
 													<td></td>
-													<td class="table-inner_align_right"><span class="table-inner__disabled">$ 0.00</span></td>
+													<td class="table-inner_align_right">
+														<div class="control">
+															<input class="control__input control__input_right" placeholder="$ 0.00" name="subtotal" type="text"/>
+														</div>
+													</td>
 												</tr>
 												<tr>
 													<td>Tax</td>

@@ -6,13 +6,14 @@ block variables
 	-
 		var title = 'Order AKN183333';
 		var active = 'Orders';
+		var isModalOpen = true;
 block content
 	+header({
 		back: true,
 		headline: 'Order AKN183333',
 		controls: true,
 		date: true,
-		status: {text:'Pending', status: 'warn'}
+		status: {text: 'Pending', status: 'warn'}
 	})
 	.content.content_bg
 
@@ -29,24 +30,6 @@ block content
 							qnt: '2',
 							price: '$ 3 398.00'
 						})
-				.section.section_alt
-					.section__header
-						.section__headline Product Info
-					.section__content
-						+item({
-							img: '../assets/uploads/item-pic2.jpg',
-							name: 'Donec ultricies, elit a ultricies pretium, purus tellus blandit nibh, lacinia pulvinar sapien velit ac metus.',
-							specs: [{label: 'Color:', value: 'Black'}, {
-								label: 'Size:',
-								value: 'US 10'
-							}, {label: 'Limited:', value: 'Yes'}, {
-								label: 'Extra:',
-								value: 'Yes'
-							}, {label: 'Water resistance:', value: 'No'}],
-							qnt: '21',
-							price: '$ 1 223 000.00'
-						})
-				+pagination
 				.section.section_alt
 					.section__header
 						.section__headline Payment
@@ -143,3 +126,16 @@ block content
 										| Phone number
 									td
 										| #[span +0 000 123-45-67]
+
+		.modal.open
+			.modal-box
+				.modal-box__content
+					.modal-box__header
+						.modal-box__headline Save this customer?
+						button.modal-box__close(type='button')
+							+icon('x')
+					.modal-box__body
+						| Would you like to add this customer to your list?
+					.modal-box__footer
+						+button({text: 'Decline', mods:'bg_gray'})
+						+button({text: 'Save'})

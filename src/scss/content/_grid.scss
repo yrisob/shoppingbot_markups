@@ -13,6 +13,9 @@
 	padding-left: calc(var(--gutter-x) * 0.5);
 	margin-top: var(--gutter-y);
 }
+.row_gutter_24 {
+	--gutter-x: #{size(24)};
+}
 
 .col {
 	flex: 1 0 0;

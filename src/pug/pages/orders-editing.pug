@@ -10,9 +10,10 @@ block content
 	+header({
 		back: true,
 		headline: 'Order AKN183333',
-		controls: true,
+		controls: false,
+		cancel: true,
 		date: true,
-		status: {text:'Pending', status: 'warn'}
+		status: {text: 'Success', status: 'success'}
 	})
 	.content.content_bg
 
@@ -25,28 +26,11 @@ block content
 						+item({
 							img: '../assets/uploads/item-pic2.jpg',
 							name: 'PUMA Smash v2 Sneakers',
-							specs: [{label: 'Color:', value: 'Black'}, {label: 'Size:', value: 'US 10'}],
-							qnt: '2',
+							edit: [{label: 'Color:', control: 'select'}, {label: 'Size:', control: 'select'}, {label: 'Quantity:', control: 'input'}],
 							price: '$ 3 398.00'
 						})
-				.section.section_alt
-					.section__header
-						.section__headline Product Info
-					.section__content
-						+item({
-							img: '../assets/uploads/item-pic2.jpg',
-							name: 'Donec ultricies, elit a ultricies pretium, purus tellus blandit nibh, lacinia pulvinar sapien velit ac metus.',
-							specs: [{label: 'Color:', value: 'Black'}, {
-								label: 'Size:',
-								value: 'US 10'
-							}, {label: 'Limited:', value: 'Yes'}, {
-								label: 'Extra:',
-								value: 'Yes'
-							}, {label: 'Water resistance:', value: 'No'}],
-							qnt: '21',
-							price: '$ 1 223 000.00'
-						})
-				+pagination
+					.section__footer
+						+button({text: 'Add product', mods: 'bg_gray'})
 				.section.section_alt
 					.section__header
 						.section__headline Payment
@@ -59,19 +43,37 @@ block content
 											| Subtotal
 										td
 										td.table-inner_align_right
-											| $ 3 398.00
+											+control({
+												attr: {
+													placeholder: '$ 0.00',
+													name: 'subtotal'
+												},
+												mods:['right']
+											})
 									tr
 										td
-											| #[span.table-inner__disabled Discount]
+											| Discount
 										td
 										td.table-inner_align_right
-											| #[span.table-inner__disabled $ 0.00]
+											+control({
+												attr: {
+													placeholder: '$ 0.00',
+													name: 'subtotal'
+												},
+												mods:['right']
+											})
 									tr
 										td
-											| #[span.table-inner__disabled Shipping]
+											| Shipping
 										td
 										td.table-inner_align_right
-											| #[span.table-inner__disabled $ 0.00]
+											+control({
+												attr: {
+													placeholder: '$ 0.00',
+													name: 'subtotal'
+												},
+												mods:['right']
+											})
 									tr
 										td
 											| Tax

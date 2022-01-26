@@ -55,6 +55,9 @@ textarea {
 				border-color: var(--bg);
 			}
 		}
+		&_right {
+			text-align: right;
+		}
 	}
 	textarea#{&}__input {
 		resize: vertical;

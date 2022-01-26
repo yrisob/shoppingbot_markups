@@ -4,17 +4,28 @@
 	padding: size($md);
 	border-radius: 8px;
 	margin-bottom: size($sm*2);
+	&_alt {
+		border: 0;
+	}
 	&__header {
 		display: flex;
 		flex-wrap: wrap;
-		//margin-bottom: size($bs * 2);
 		margin-bottom: size($md);
+	}
+	&_alt &__header {
+		margin-bottom: size($sm*2);
 	}
 	&__headline {
 		font-size: size(20);
 		font-weight: 700;
 		line-height: 1.2;
 		margin: 0;
+	}
+	&_alt &__headline {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: size(16);
+		letter-spacing: 0.02em;
 	}
 	&__description {
 		flex: 1 1 100%;
@@ -43,10 +54,25 @@
 			}
 		}
 	}
+	&__content + &__header {
+		padding-top: size($md);
+		border-top: 1px solid var(--stroke);
+		margin-top: size($md);
+	}
+	&__content + &__header &__headline {
+		font-size: size(12);
+	}
 	&__controls {
 		display: flex;
 		flex-wrap: wrap;
 		gap: size($sm);
 		margin-top: size($md);
+	}
+	&__footer {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: size($sm*2);
+		padding-top: size($md);
+		border-top: 1px solid var(--stroke);
 	}
 }

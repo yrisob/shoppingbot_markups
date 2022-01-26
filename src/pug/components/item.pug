@@ -1,0 +1,43 @@
+include ../common/control
+include ../common/select
+mixin item(obj)
+	.item
+		.item__pic
+			img.item__img(src=obj.img alt='')
+		.item__main
+			.item__info
+				.item__name=obj.name
+				if obj.specs
+					.item__list
+						for spec in obj.specs
+							.item__spec
+								.item__label=spec.label
+								if spec.value
+									.item__value=spec.value
+				if obj.edit
+					.item__list
+						for edit in obj.edit
+							.item__edit
+								.item__label=edit.label
+								.item__control
+									if edit.control === 'input'
+										+control({
+											attr: {
+												placeholder: '0',
+												name: 'qnt',
+												value: '2'
+											}
+										})
+									else if edit.control === 'select'
+										+select({
+											list: [
+												{value: 'Value 1'},
+												{value: 'Value 2'}
+											],
+											name: 'type',
+											def: 'Value 1'
+										})
+					button.item__remove.button.button_bg_danger(type='button') Delete
+			if obj.qnt
+				.item__qnt=obj.qnt
+			.item__price=obj.price
