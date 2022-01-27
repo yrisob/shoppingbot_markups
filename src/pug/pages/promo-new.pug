@@ -1,0 +1,217 @@
+extends ../templates/base
+include ../components/pagination
+include ../components/badge
+include ../components/dropdown
+include ../components/generate
+block variables
+	-
+		var title = 'Promo';
+		var active = 'Promo';
+		var isModalOpen = true;
+
+block content
+	+header({
+		back: false,
+		headline: 'Promo',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	.content
+		.toolbar
+			.toolbar__main
+				form.form.form_horizontal
+					.form__group.col-5
+						+control({
+							attr: {
+								placeholder: 'Search by name, category...',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'All status', selected: true},
+								{value: 'Pending'},
+								{value: 'Shipping'},
+								{value: 'Processed'},
+								{value: 'Declined'}
+							],
+							name: 'status',
+							mods: ['bg_fill']
+						})
+					.form__group.col
+						+select({
+							list: [
+								{value: 'Value 1'},
+								{value: 'Value 2'}
+							],
+							name: 'type',
+							def: 'Type',
+							mods: ['bg_fill']
+						})
+
+			.toolbar__controls
+				+button({icon: 'plus', text: 'New Promo'})
+
+		div.table
+			.table__group
+				+checkbox({name: 'all', half: true})
+				+button({mods: 'bg_gray', text: 'Make inactive'})
+				+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+			table
+				thead
+					tr
+						th
+							+checkbox({
+								name: 'all'
+							})
+						th
+							a.table__head(href='#')
+								| Code
+								span.table__sort
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Condition
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Product
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Start date
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| End date
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+							a.table__head(href='#')
+								| Status
+								span.table__sort
+									+icon('chevron-up')
+									+icon('chevron-down')
+						th
+				tbody
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| WADE2021%
+						td
+							| -30%
+						td
+							.table__good
+								.table__pic
+									img(src='../assets/uploads/item-pic2.jpg' alt='')
+								| Puma Smash v2
+						td
+							| 21.10.2021, 10:00
+						td
+							| 28.10.2021, 10:00
+						td.table__w_120
+							+badge({status: 'success', text: 'Active'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit promo', action: 'active'},
+									{content: 'Archive promo'},
+									{content: 'Delete promo'}
+								]
+							})
+					tr
+						td.table__w_16
+							+checkbox({name: 'item1'})
+						td
+							| WADE2021%
+						td
+							| Free delivery
+						td
+							.table__good
+								.table__pic
+									img(src='../assets/uploads/item-pic2.jpg' alt='')
+								| Puma Smash v2
+						td
+							| 21.10.2021, 10:00
+						td
+							| 28.10.2021, 10:00
+						td.table__w_120
+							+badge({status: 'danger', text: 'Inactive'})
+						td.table__w_28
+							+dropdown({
+								icon: 'more-vertical',
+								modification: 'dropdown__list_end',
+								list: [
+									{content: 'Edit promo', action: 'active'},
+									{content: 'Archive promo'},
+									{content: 'Delete promo'}
+								]
+							})
+		+pagination
+
+	.modal.open
+		.modal-box
+			.modal-box__content
+				.modal-box__header
+					.modal-box__headline New Promo
+					button.modal-box__close(type='button')
+						+icon('x')
+				.modal-box__body
+					.form.form_direction_row
+						.form__group
+							.form__label Promo code
+							+control({
+								attr: {
+									placeholder: 'CODEEXAMPLE112',
+									name: 'code'
+								}
+							})
+						.form__group
+							.form__label
+							+generate
+						.form__group
+							.form__label Product
+							+select({
+								list: [
+									{value: '1'},
+									{value: '2'}
+								],
+								name: 'product',
+								def: 'Select'
+							})
+						.form__group
+							.form__label Start date
+							+select({
+								list: [
+									{value: '1'},
+									{value: '2'}
+								],
+								name: 'start',
+								def: 'Select'
+							})
+						.form__group
+							.form__label End date
+							+select({
+								list: [
+									{value: '1'},
+									{value: '2'}
+								],
+								name: 'End',
+								def: 'Select'
+							})
+
+				.modal-box__footer
+					+button({text: 'Cancel', mods: 'bg_gray'})
+					+button({text: 'Create'})

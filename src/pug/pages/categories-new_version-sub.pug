@@ -4,6 +4,7 @@ include ../components/badge
 include ../components/dropdown
 include ../components/breadcrumbs
 include ../components/categories
+include ../components/small-item
 block variables
 	-
 		var title = 'Categories';
@@ -66,4 +67,24 @@ block content
 				])
 
 	.page__side
-		| side
+		.grid
+			+small-item({
+				img: '../assets/uploads/item-pic2.jpg',
+				name: 'PUMA Smash v2 Sneak',
+				specs: [{label:'Type:',value:'Product'},{label:'Price:',value:'$530,00'}]
+			})
+			+small-item({
+				img: '../assets/uploads/item-pic2.jpg',
+				name: 'PUMA Smash v2 Sneak Super Limited Edition',
+				specs: [{label: 'Type:', value: 'Product'}, {label: 'Price:', value: '$530,00'}]
+			})
+			+small-item({
+				img: '../assets/uploads/item-pic2.jpg',
+				name: 'PUMA Smash v2 Sneak',
+				specs: [{label: 'Type:', value: 'Product'}, {label: 'Price:', value: '$530,00'}]
+			})
+			+small-item({
+				img: '../assets/uploads/item-pic2.jpg',
+				name: 'PUMA Smash v2 Sneak',
+				specs: [{label: 'Type:', value: 'Product'}, {label: 'Price:', value: '$530,00'}]
+			})

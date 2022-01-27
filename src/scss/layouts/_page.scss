@@ -61,7 +61,8 @@
 	&__side {
 		flex: 1;
 		background-color: var(--bg);
-		overflow-y: auto;
-		-webkit-overflow-scrolling: touch;
+		//overflow-y: auto;
+		//-webkit-overflow-scrolling: touch;
+		padding: size($sm*2);
 	}
 }

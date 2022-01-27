@@ -1,0 +1,25 @@
+.generate {
+	cursor: pointer;
+	outline: 0;
+	text-align: left;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	color: var(--accent);
+	font-size: size(12);
+	line-height: size(16);
+	font-weight: 600;
+	user-select: none;
+	svg {
+		width: size(16);
+		height: size(16);
+		margin-right: size($bs * 0.5);
+	}
+	.form__group & {
+		margin-top: size(-$md * 0.5);
+		//flex: 1 1 100% !important;
+	}
+}

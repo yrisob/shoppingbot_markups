@@ -1,0 +1,23 @@
+include ../components/dropdown
+mixin small-item(obj)
+	.small-item
+		.small-item__pic
+			img.small-item__img(src=obj.img alt='')
+		.small-item__info
+			.small-item__name=obj.name
+			.small-item__specs
+				for item in obj.specs
+					.small-item__spec
+						.small-item__label=item.label
+						.small-item__value=item.value
+			.small-item__footer
+				+dropdown({
+					icon: 'more-horizontal',
+					modification: 'dropdown__list_end',
+					list: [
+						{content: 'Edit Category', action: 'active'},
+						{content: 'Add Subcategory'},
+						{content: 'Make Inactive'},
+						{content: 'Delete Category'}
+					]
+				})

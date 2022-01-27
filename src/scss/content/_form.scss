@@ -14,6 +14,7 @@
 	}
 	&:not(.form_horizontal) &__group {
 		flex: 1 1 100%;
+		flex-wrap: wrap;
 		&:not(:last-child){
 			margin-bottom: size($md);
 		}
@@ -68,6 +69,9 @@
 		align-self: flex-start;
 		color: var(--text-base);
 		margin-bottom: size($bs * 0.5);
+		&:empty {
+			padding: 0 !important;
+		}
 		sup {
 			position: static;
 			top: auto;
