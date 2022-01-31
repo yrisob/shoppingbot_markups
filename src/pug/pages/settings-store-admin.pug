@@ -1,0 +1,110 @@
+extends ../templates/base
+include ../components/dropdown
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Store'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button(type='button') General
+			button.tab-nav__button(type='button') Payment & messengers
+			button.tab-nav__button(type='button') Shipping
+			button.tab-nav__button.active(type='button') Admins
+			button.tab-nav__button(type='button') Taxes
+		.tab-content
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item.active
+				form.form
+					.form__set
+						.form__group
+							.form__title View users
+							.form__text A user is someone who has access to the administration area of your store. Each user account also has its own customizable access permissions.
+						.toolbar
+							.toolbar__main
+								div.form.row
+									.col-5
+										.form__group
+											+control({
+												attr: {
+													placeholder: 'Search by name, category...',
+													name: 'search'
+												},
+												icon: 'search',
+												mods: ['bg_fill']
+											})
+									.col
+										.form__group
+											+select({
+												list: [
+													{value: 'Role', selected: true},
+													{value: 'Admin'},
+													{value: 'Manager'}
+												],
+												name: 'role',
+												mods: ['bg_fill']
+											})
+							.toolbar__controls
+								+button({icon: 'plus', text: 'Add user'})
+
+						div.table
+							.table__group
+								+checkbox({name: 'all', half: true})
+								+button({mods: 'bg_gray', text: 'Make inactive'})
+								+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+							table
+								thead
+									tr
+										th
+											+checkbox({
+												name: 'all'
+											})
+										th
+											a.table__head(href='#')
+												| Name
+												span.table__sort
+													+icon('chevron-down')
+										th
+											a.table__head(href='#')
+												| Role
+												span.table__sort
+													+icon('chevron-up')
+													+icon('chevron-down')
+										th
+											a.table__head(href='#')
+												| Email
+												span.table__sort
+													+icon('chevron-up')
+													+icon('chevron-down')
+										th
+								tbody
+									tr
+										td.table__w_16
+											+checkbox({name: 'item1'})
+										td
+											|User Name
+										td
+											|Owner (you)
+										td
+											|username@domain.com
+										td.table__w_28
+											+dropdown({
+												icon: 'more-vertical',
+												modification: 'dropdown__list_end',
+												list: [
+													{content: 'Remove'},
+													{content: 'Edit'}
+												]
+											})
+			.tab-content__item
+

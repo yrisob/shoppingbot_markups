@@ -18,6 +18,9 @@
 @import "content/table-inner";
 @import "content/form";
 @import "content/section";
+@import "content/tab-nav";
+@import "content/tab-content";
+@import "content/subscription";
 
 @import "common/button";
 @import "common/control";
@@ -38,7 +41,10 @@
 @import "components/breadcrumbs";
 @import "components/categories";
 @import "components/small-item";
+@import "components/avatar";
+@import "components/plan";
 
 @import "components/modal";
 @import "components/editor";
 @import "components/generate";
+@import "components/alert";

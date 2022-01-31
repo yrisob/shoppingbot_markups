@@ -1,0 +1,46 @@
+extends ../templates/base
+include ../components/plan
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Account'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button(type='button') General
+			button.tab-nav__button.active(type='button') Your plan
+		.tab-content
+			.tab-content__item
+				| tab settings-account-general
+			.tab-content__item.active
+				.subscription
+					.subscription__section
+						.subscription__total
+							.subscription__label Mounthly subscription
+							.subscription__value $00.00
+					.subscription__section
+						.subscription__headline Sunscripton Plans
+						.subscription__plans
+							+plan({
+								name: 'Free',
+								price: '$00.00',
+								list: ['Unlimited products', 'Inbox'],
+								selected: true
+							})
+							+plan({
+								name: 'Standart',
+								price: '$100.00',
+								list: ['Unlimited products', 'Inbox', 'Add more than 10 Customers'],
+								selected: false
+							})
+							+plan({
+								name: 'Pro',
+								price: '$100.00',
+								list: ['Unlimited products', 'Inbox', 'Add more than 10 Customers', 'Priority Support'],
+								selected: false
+							})

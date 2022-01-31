@@ -1,0 +1,52 @@
+.plan {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	background-color: var(--bg);
+	padding: size($bs * 2) size($sm * 2);
+	&__header {
+		text-align: center;
+		margin-bottom: size($bs * 2);
+	}
+	&__name {
+		font-size: size(20);
+		line-height: 1.2;
+		margin-bottom: size($md);
+	}
+	&__price {
+		font-size: size(28);
+		font-weight: 600;
+		line-height: 1.2;
+	}
+	&__per {
+		margin-top: size($bs);
+		font-size: size(16);
+		line-height: 1.2;
+	}
+	&__body {
+		flex: 1;
+	}
+	&__item {
+		position: relative;
+		padding-left: size(20 + $bs * 0.5);
+		font-size: size(16);
+		line-height: 1.2;
+		&:not(:last-child){
+			margin-bottom: size($bs);
+		}
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: var(--accent);
+			width: size(20);
+			height: size(20);
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: size($bs * 2);
+	}
+}

@@ -1,0 +1,52 @@
+.tab-nav {
+	position: relative;
+	display: flex;
+	padding: size($sm) 0 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		right: 0;
+		border-bottom: 1px solid var(--stroke);
+	}
+	&__button {
+		position: relative;
+		cursor: pointer;
+		width: max-content;
+		outline: 0;
+		border: 0;
+		background-color: transparent;
+		color: var(--dark-shadow);
+		font-size: size(14);
+		font-weight: 500;
+		line-height: 1.2;
+		padding: 0 0 size(7);
+		&:not(:last-child) {
+			margin-right: size($md * 2);
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			right: 0;
+			border-bottom: 3px solid var(--accent);
+			opacity: 0;
+			border-radius: 3px;
+			z-index: 1;
+		}
+		&:hover {
+			color: var(--text-base);
+		}
+		&.active {
+			color: var(--text-base);
+			font-weight: 600;
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}

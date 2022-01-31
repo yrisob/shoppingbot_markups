@@ -23,6 +23,20 @@ textarea {
 			height: 100%;
 		}
 	}
+	&__suffix {
+		display: block;
+		height: size(15);
+		font-size: size(15);
+		line-height: 1;
+		font-weight: 500;
+		position: absolute;
+		top: 0;
+		right: size($bs);
+		bottom: 0;
+		margin: auto 0;
+		color: var(--gray);
+		pointer-events: none;
+	}
 	&__input {
 		width: 100%;
 		background-color: var(--white);
@@ -73,5 +87,18 @@ textarea {
 	&__icon + &__input {
 		padding-left: size(16 + $sm + 8);
 	}
+	&.error &__input,
+	&_error &__input,
+	&__input.error,
+	&__input_error {
+		border-color: var(--danger-01);
+	}
 
+	&__error {
+		color: var(--danger-01);
+		font-size: size(14);
+		font-weight: 400;
+		display: block;
+		margin-top: size(4);
+	}
 }

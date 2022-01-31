@@ -1,0 +1,114 @@
+extends ../templates/base
+include ../components/avatar
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Store'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button(type='button') General
+			button.tab-nav__button.active(type='button') Payment & messengers
+			button.tab-nav__button(type='button') Shipping
+			button.tab-nav__button(type='button') Admins
+			button.tab-nav__button(type='button') Taxes
+		.tab-content
+			.tab-content__item
+
+			.tab-content__item.active
+				form.form
+					.form__set
+						.form__group
+							+checkbox({text: 'Telegram', checked: true})
+							.form__hidden.show
+								.form__group
+									.form__label Telegram token:
+									+control({
+										attr: {
+											name: 'tg-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Telegram payment token:
+									+control({
+										attr: {
+											name: 'tg-payment-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Coinbase token:
+									+control({
+										attr: {
+											name: 'coinbase-token'
+										},
+										mods: ['bg_fill']
+									})
+						.form__group
+							+checkbox({text: 'Viber'})
+							.form__hidden
+								.form__group
+									.form__label Viber token:
+									+control({
+										attr: {
+											name: 'vb-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Viber payment token:
+									+control({
+										attr: {
+											name: 'vb-payment-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Coinbase token:
+									+control({
+										attr: {
+											name: 'coinbase-token'
+										},
+										mods: ['bg_fill']
+									})
+						.form__group
+							+checkbox({text: 'Facebook messenger'})
+							.form__hidden
+								.form__group
+									.form__label Facebook token:
+									+control({
+										attr: {
+											name: 'fb-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Facebook payment token:
+									+control({
+										attr: {
+											name: 'fb-payment-token'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Coinbase token:
+									+control({
+										attr: {
+											name: 'coinbase-token'
+										},
+										mods: ['bg_fill']
+									})
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+

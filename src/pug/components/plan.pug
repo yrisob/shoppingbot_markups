@@ -1,0 +1,17 @@
+mixin plan(obj)
+	.plan
+		.plan__header
+			.plan__name=obj.name
+			.plan__price=obj.price
+			.plan__per per mounth
+		.plan__body
+			.plan__list
+				for item in obj.list
+					.plan__item
+						+icon('check')
+						span=item
+		.plan__footer
+			if obj.selected
+				+button({text:'Selected', mods:'link'})
+			else
+				+button({text:'Upgrade'})

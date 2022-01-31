@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title>Settings</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__scroll">
+					<div class="sidebar__inner">
+									<nav class="navigation">
+										<div class="navigation__list">
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#mail"></use>
+													</svg><span class="navigation__name">Inbox</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#folder"></use>
+													</svg><span class="navigation__name">Products</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
+													</svg><span class="navigation__name">Orders</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#users"></use>
+													</svg><span class="navigation__name">Customers</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#grid"></use>
+													</svg><span class="navigation__name">Categories</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#tag"></use>
+													</svg><span class="navigation__name">Promo</span></a></div>
+										</div>
+									</nav>
+					</div>
+				</div>
+				<div class="sidebar__footer">
+								<button class="profile" type="button">
+									<div class="profile__picture"><img class="profile__img" src="../assets/uploads/avatar.png" alt="Puma store"></div>
+									<div class="profile__info">
+										<div class="profile__name">Puma store</div>
+										<div class="profile__text">name@domain.com</div>
+									</div>
+								</button>
+				</div>
+			</div>
+			<div class="page">
+				<header class="header">
+					<div class="header__inner">
+						<div class="header__head">
+							<div class="header__headline">Store</div>
+						</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="tab-nav">
+						<button class="tab-nav__button" type="button">General</button>
+						<button class="tab-nav__button active" type="button">Payment & messengers</button>
+						<button class="tab-nav__button" type="button">Shipping</button>
+						<button class="tab-nav__button" type="button">Admins</button>
+						<button class="tab-nav__button" type="button">Taxes</button>
+					</div>
+					<div class="tab-content">
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item active">
+							<form class="form">
+								<div class="form__set">
+									<div class="form__group">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" checked="checked"/><span class="checkbox__mark"></span><span class="checkbox__text">Telegram</span>
+										</label>
+										<div class="form__hidden show">
+											<div class="form__group">
+												<div class="form__label">Telegram token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="tg-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Telegram payment token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="tg-payment-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Coinbase token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="coinbase-token" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox"/><span class="checkbox__mark"></span><span class="checkbox__text">Viber</span>
+										</label>
+										<div class="form__hidden">
+											<div class="form__group">
+												<div class="form__label">Viber token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="vb-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Viber payment token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="vb-payment-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Coinbase token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="coinbase-token" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox"/><span class="checkbox__mark"></span><span class="checkbox__text">Facebook messenger</span>
+										</label>
+										<div class="form__hidden">
+											<div class="form__group">
+												<div class="form__label">Facebook token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="fb-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Facebook payment token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="fb-payment-token" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Coinbase token:</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" name="coinbase-token" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

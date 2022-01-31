@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title>Settings</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__scroll">
+					<div class="sidebar__inner">
+									<nav class="navigation">
+										<div class="navigation__list">
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#mail"></use>
+													</svg><span class="navigation__name">Inbox</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#folder"></use>
+													</svg><span class="navigation__name">Products</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
+													</svg><span class="navigation__name">Orders</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#users"></use>
+													</svg><span class="navigation__name">Customers</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#grid"></use>
+													</svg><span class="navigation__name">Categories</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#tag"></use>
+													</svg><span class="navigation__name">Promo</span></a></div>
+										</div>
+									</nav>
+					</div>
+				</div>
+				<div class="sidebar__footer">
+								<button class="profile" type="button">
+									<div class="profile__picture"><img class="profile__img" src="../assets/uploads/avatar.png" alt="Puma store"></div>
+									<div class="profile__info">
+										<div class="profile__name">Puma store</div>
+										<div class="profile__text">name@domain.com</div>
+									</div>
+								</button>
+				</div>
+			</div>
+			<div class="page">
+				<header class="header">
+					<div class="header__inner">
+						<div class="header__head">
+							<div class="header__headline">Store</div>
+						</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="tab-nav">
+						<button class="tab-nav__button" type="button">General</button>
+						<button class="tab-nav__button" type="button">Payment & messengers</button>
+						<button class="tab-nav__button" type="button">Shipping</button>
+						<button class="tab-nav__button active" type="button">Admins</button>
+						<button class="tab-nav__button" type="button">Taxes</button>
+					</div>
+					<div class="tab-content">
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item"></div>
+						<div class="tab-content__item active">
+							<form class="form">
+								<div class="form__set">
+									<div class="form__group">
+										<div class="form__title">View users</div>
+										<div class="form__text">A user is someone who has access to the administration area of your store. Each user account also has its own customizable access permissions.</div>
+									</div>
+									<div class="toolbar">
+										<div class="toolbar__main">
+											<div class="form row">
+												<div class="col-5">
+													<div class="form__group">
+														<div class="control"><span class="control__icon">
+																<svg class="icon-search">
+																	<use xlink:href="../assets/icons/icons.svg#search"></use>
+																</svg></span>
+															<input class="control__input control__input_bg_fill" placeholder="Search by name, category..." name="search" type="text"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="form__group">
+														<div class="select">
+															<select name="role">
+																<option value="Role">Role</option>
+																<option value="Admin">Admin</option>
+																<option value="Manager">Manager</option>
+															</select>
+															<button class="select__toggle select__toggle_bg_fill" type="button"><span>Role</span>
+																<svg class="icon-chevron-down">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																</svg>
+															</button>
+															<div class="select__list">
+																<div class="select__item selected">Role</div>
+																<div class="select__item">Admin</div>
+																<div class="select__item">Manager</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="toolbar__controls">
+											<button class="button" type="button">
+												<svg class="icon-plus">
+													<use xlink:href="../assets/icons/icons.svg#plus"></use>
+												</svg><span>Add user</span>
+											</button>
+										</div>
+									</div>
+									<div class="table">
+										<div class="table__group">
+											<label class="checkbox">
+												<input class="checkbox__input" type="checkbox" name="all" data-half="true"/><span class="checkbox__mark"></span>
+											</label>
+											<button class="button button_bg_gray" type="button">Make inactive</button>
+											<button class="button button_bg_gray button_color_danger" type="button">Delete</button>
+										</div>
+										<table>
+											<thead>
+												<tr>
+													<th>
+														<label class="checkbox">
+															<input class="checkbox__input" type="checkbox" name="all"/><span class="checkbox__mark"></span>
+														</label>
+													</th>
+													<th><a class="table__head" href="#">Name<span class="table__sort">
+																<svg class="icon-chevron-down">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																</svg></span></a></th>
+													<th><a class="table__head" href="#">Role<span class="table__sort">
+																<svg class="icon-chevron-up">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
+																</svg>
+																<svg class="icon-chevron-down">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																</svg></span></a></th>
+													<th><a class="table__head" href="#">Email<span class="table__sort">
+																<svg class="icon-chevron-up">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-up"></use>
+																</svg>
+																<svg class="icon-chevron-down">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+																</svg></span></a></th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="table__w_16">
+														<label class="checkbox">
+															<input class="checkbox__input" type="checkbox" name="item1"/><span class="checkbox__mark"></span>
+														</label>
+													</td>
+													<td>User Name</td>
+													<td>Owner (you)</td>
+													<td>username@domain.com</td>
+													<td class="table__w_28">
+														<div class="dropdown">
+															<button class="dropdown__toggle" type="button">
+																<svg class="icon-more-vertical">
+																	<use xlink:href="../assets/icons/icons.svg#more-vertical"></use>
+																</svg>
+															</button>
+															<div class="dropdown__list dropdown__list_end"><a class="dropdown__item" href="#">Remove</a><a class="dropdown__item" href="#">Edit</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-content__item"></div>
+					</div>
+				</div>
+				<div class="modal open">
+					<div class="modal-box">
+						<div class="modal-box__content">
+							<div class="modal-box__header">
+								<div class="modal-box__headline">Create an User Account</div>
+								<button class="modal-box__close" type="button">
+									<svg class="icon-x">
+										<use xlink:href="../assets/icons/icons.svg#x"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="modal-box__body">
+								<div class="form form_direction_row">
+									<div class="form__group">
+										<div class="form__label">Email</div>
+										<div class="control">
+											<input class="control__input" name="email" type="text"/>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Name</div>
+										<div class="select">
+											<select name="name">
+												<option value="">Select</option>
+												<option value="user 1">user 1</option>
+												<option value="user 2">user 2</option>
+											</select>
+											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Select</div>
+												<div class="select__item">user 1</div>
+												<div class="select__item">user 2</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group">
+										<div class="form__label">Role</div>
+										<div class="select">
+											<select name="role">
+												<option value="">Select</option>
+												<option value="Admin">Admin</option>
+												<option value="Manager">Manager</option>
+											</select>
+											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Select</div>
+												<div class="select__item">Admin</div>
+												<div class="select__item">Manager</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-box__footer">
+								<button class="button button_bg_gray" type="button">Cancel</button>
+								<button class="button" type="button">Create</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

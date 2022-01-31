@@ -1,0 +1,11 @@
+mixin avatar(img)
+	.avatar
+		.avatar__pic
+			if img
+				img(src=img alt='')
+			else
+				img(src='../assets/uploads/ava.jpg' alt='')
+		.avatar__controls
+			label.button.button_bg_gray Change photo
+				input(type='file' name='photo[]')
+			+button({text: 'Delete', mods: 'bg_gray,color_danger'})

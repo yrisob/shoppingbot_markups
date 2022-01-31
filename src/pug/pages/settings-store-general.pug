@@ -1,0 +1,153 @@
+extends ../templates/base
+include ../components/avatar
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Store'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button.active(type='button') General
+			button.tab-nav__button(type='button') Payment & messengers
+			button.tab-nav__button(type='button') Shipping
+			button.tab-nav__button(type='button') Admins
+			button.tab-nav__button(type='button') Taxes
+		.tab-content
+			.tab-content__item.active
+				form.form
+					.form__set
+						.row
+							.col-4
+								+avatar("../assets/uploads/avatar.png")
+							.col-4
+								.form__group
+									.form__label Store name
+									+control({
+										attr: {
+											placeholder: 'Sample Name',
+											name: 'name'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Welcome text
+									+control({
+										attr: {
+											name: 'wellcome'
+										},
+										mods: ['bg_fill']
+									})
+					.form__set
+						.form__group
+							.form__title Address
+
+						.form__group
+							.row
+								.col-4
+									.form__group
+										.form__label Country
+										+select({
+											list: [
+												{value: 'USA'},
+												{value: 'Not USA'}
+											],
+											name: 'country',
+											def: 'USA',
+											mods: ['bg_fill']
+										})
+							.row
+								.col-2
+									.form__group
+										.form__label City
+										+control({
+											attr: {
+												name: 'city'
+											},
+											mods: ['bg_fill']
+										})
+									.form__group
+										.form__label Address
+										+control({
+											attr: {
+												name: 'address'
+											},
+											mods: ['bg_fill']
+										})
+								.col-2
+									.form__group
+										.form__label Zip Code
+										+control({
+											attr: {
+												name: 'zip'
+											},
+											mods: ['bg_fill']
+										})
+									.form__group
+										.form__label Suit
+										+control({
+											attr: {
+												name: 'suit'
+											},
+											mods: ['bg_fill']
+										})
+					.form__set
+						.form__group
+							.form__title Notifications
+						.form__group
+							.form__label Abandoned cart
+							.form__text When a shopper doesn't complete an order, we send automatic text in an attempt to save abandoned orders
+							.row
+								.col-4
+									+control({
+										attr: {
+											name: 'cart'
+										},
+										mods: ['bg_fill'],
+										suffix: 'min'
+									})
+						.form__group
+							.form__label Not fulfilled orders
+							.form__text Remind Seller about not closed offers.
+							.row
+								.col-4
+									+control({
+										attr: {
+											name: 'orders'
+										},
+										mods: ['bg_fill'],
+										suffix: 'min'
+									})
+					.form__set
+						.form__group
+							.form__title Returns
+						.form__group
+							.row
+								.col-8
+									.form__label Returns condition
+									+control({
+										attr: {
+											name: 'text'
+										},
+										mods: ['bg_fill'],
+										type: 'textarea'
+									})
+
+					.form__set
+						.form__footer
+							+button({text: 'Save', mods: 'bg_gray'})
+							+button({text: 'Delete store', mods: 'color_danger,bg_gray'})
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item
+

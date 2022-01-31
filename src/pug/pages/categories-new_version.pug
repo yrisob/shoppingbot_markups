@@ -19,16 +19,17 @@ block content
 			.content
 				.toolbar
 					.toolbar__main
-						form.form.form_horizontal
-							.form__group
-								+control({
-									attr: {
-										placeholder: 'Search',
-										name: 'search'
-									},
-									icon: 'search',
-									mods: ['bg_fill']
-								})
+						form.form.row
+							.col
+								.form__group
+									+control({
+										attr: {
+											placeholder: 'Search',
+											name: 'search'
+										},
+										icon: 'search',
+										mods: ['bg_fill']
+									})
 
 					.toolbar__controls
 						+button({icon: 'plus', text: 'Add Category'})

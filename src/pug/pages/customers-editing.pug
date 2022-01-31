@@ -16,26 +16,28 @@ block content
 	.content
 		.toolbar
 			.toolbar__main
-				form.form.form_horizontal
-					.form__group.col-5
-						+control({
-							attr: {
-								placeholder: 'Search by name, category...',
-								name: 'search'
-							},
-							icon: 'search',
-							mods: ['bg_fill']
-						})
-					.form__group.col-3
-						+select({
-							list: [
-								{value: 'Value 1'},
-								{value: 'Value 2'}
-							],
-							def: 'Messenger',
-							name: 'messenger',
-							mods: ['bg_fill']
-						})
+				form.form.row
+					.col-5
+						.form__group
+							+control({
+								attr: {
+									placeholder: 'Search by name, category...',
+									name: 'search'
+								},
+								icon: 'search',
+								mods: ['bg_fill']
+							})
+					.col-3
+						.form__group
+							+select({
+								list: [
+									{value: 'Value 1'},
+									{value: 'Value 2'}
+								],
+								def: 'Messenger',
+								name: 'messenger',
+								mods: ['bg_fill']
+							})
 
 			.toolbar__controls
 

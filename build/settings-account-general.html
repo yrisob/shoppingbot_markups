@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title>Settings</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__scroll">
+					<div class="sidebar__inner">
+									<nav class="navigation">
+										<div class="navigation__list">
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#mail"></use>
+													</svg><span class="navigation__name">Inbox</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#folder"></use>
+													</svg><span class="navigation__name">Products</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
+													</svg><span class="navigation__name">Orders</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#users"></use>
+													</svg><span class="navigation__name">Customers</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#grid"></use>
+													</svg><span class="navigation__name">Categories</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#tag"></use>
+													</svg><span class="navigation__name">Promo</span></a></div>
+										</div>
+									</nav>
+					</div>
+				</div>
+				<div class="sidebar__footer">
+								<button class="profile" type="button">
+									<div class="profile__picture"><img class="profile__img" src="../assets/uploads/avatar.png" alt="Puma store"></div>
+									<div class="profile__info">
+										<div class="profile__name">Puma store</div>
+										<div class="profile__text">name@domain.com</div>
+									</div>
+								</button>
+				</div>
+			</div>
+			<div class="page">
+				<header class="header">
+					<div class="header__inner">
+						<div class="header__head">
+							<div class="header__headline">Account</div>
+						</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="tab-nav">
+						<button class="tab-nav__button active" type="button">General</button>
+						<button class="tab-nav__button" type="button">Your plan</button>
+					</div>
+					<div class="tab-content">
+						<div class="tab-content__item active">
+							<form class="form">
+								<div class="form__set">
+									<div class="row">
+										<div class="col-4">
+											<div class="avatar">
+												<div class="avatar__pic"><img src="../assets/uploads/ava.jpg" alt=""/>
+												</div>
+												<div class="avatar__controls">
+													<label class="button button_bg_gray">Change photo
+														<input type="file" name="photo[]"/>
+													</label>
+													<button class="button button_bg_gray button_color_danger" type="button">Delete</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="form__group">
+												<div class="form__label">Your first and last name</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" placeholder="Sample Name" name="name" type="text"/>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Email</div>
+												<div class="control">
+													<input class="control__input control__input_bg_fill" placeholder="Email" name="email" type="text"/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__set">
+									<div class="row">
+										<div class="col-4">
+											<div class="form__group">
+												<div class="form__label">Country</div>
+												<div class="select">
+													<select name="country">
+														<option value="">USA</option>
+														<option value="USA">USA</option>
+														<option value="Not USA">Not USA</option>
+													</select>
+													<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">USA</span>
+														<svg class="icon-chevron-down">
+															<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+														</svg>
+													</button>
+													<div class="select__list">
+														<div class="select__item">USA</div>
+														<div class="select__item">USA</div>
+														<div class="select__item">Not USA</div>
+													</div>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">State</div>
+												<div class="select">
+													<select name="state">
+														<option value="">Alabama</option>
+														<option value="Alabama">Alabama</option>
+														<option value="NY">NY</option>
+													</select>
+													<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Alabama</span>
+														<svg class="icon-chevron-down">
+															<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+														</svg>
+													</button>
+													<div class="select__list">
+														<div class="select__item">Alabama</div>
+														<div class="select__item">Alabama</div>
+														<div class="select__item">NY</div>
+													</div>
+												</div>
+											</div>
+											<div class="form__group">
+												<div class="form__label">Default Currency</div>
+												<div class="select">
+													<select name="state">
+														<option value="">Dollar US</option>
+														<option value="Dollar US">Dollar US</option>
+														<option value="Canadian Dollar">Canadian Dollar</option>
+													</select>
+													<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Dollar US</span>
+														<svg class="icon-chevron-down">
+															<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+														</svg>
+													</button>
+													<div class="select__list">
+														<div class="select__item">Dollar US</div>
+														<div class="select__item">Dollar US</div>
+														<div class="select__item">Canadian Dollar</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__set">
+									<div class="form__footer">
+										<button class="button button_bg_gray" type="button">Change password</button>
+										<button class="button button_color_danger button_bg_gray" type="button">Delete account</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-content__item">tab settings-account-subscription</div>
+					</div>
+				</div>
+				<div class="alerts">
+					<div class="alert alert_success">
+						<div class="alert__headline">Success!</div>
+						<div class="alert__text">Your changes have been updated</div>
+					</div>
+					<div class="alert alert_danger">
+						<div class="alert__headline">Danger!</div>
+						<div class="alert__text">Your changes have been updated</div>
+					</div>
+					<div class="alert alert_warn">
+						<div class="alert__headline">Warn!</div>
+						<div class="alert__text">Your changes have been updated</div>
+					</div>
+					<div class="alert alert_info">
+						<div class="alert__headline">Information!</div>
+						<div class="alert__text">Your changes have been updated</div>
+					</div>
+					<div class="alert">
+						<div class="alert__headline">Alert</div>
+						<div class="alert__text">Your changes have been updated</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -68,73 +68,81 @@
 				<div class="content">
 					<div class="toolbar">
 						<div class="toolbar__main">
-							<form class="form form_horizontal">
-								<div class="form__group col-5">
-									<div class="control"><span class="control__icon">
-											<svg class="icon-search">
-												<use xlink:href="../assets/icons/icons.svg#search"></use>
-											</svg></span>
-										<input class="control__input control__input_bg_fill" placeholder="Search by name, category..." name="search" type="text"/>
-									</div>
-								</div>
-								<div class="form__group col">
-									<div class="select">
-										<select name="status">
-											<option value="All status">All status</option>
-											<option value="Pending">Pending</option>
-											<option value="Shipping">Shipping</option>
-											<option value="Processed">Processed</option>
-											<option value="Declined">Declined</option>
-										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span>All status</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item selected">All status</div>
-											<div class="select__item">Pending</div>
-											<div class="select__item">Shipping</div>
-											<div class="select__item">Processed</div>
-											<div class="select__item">Declined</div>
+							<form class="form row">
+								<div class="col-5">
+									<div class="form__group">
+										<div class="control"><span class="control__icon">
+												<svg class="icon-search">
+													<use xlink:href="../assets/icons/icons.svg#search"></use>
+												</svg></span>
+											<input class="control__input control__input_bg_fill" placeholder="Search by name, category..." name="search" type="text"/>
 										</div>
 									</div>
 								</div>
-								<div class="form__group col">
-									<div class="select">
-										<select name="product">
-											<option value="">Product</option>
-											<option value="Puma Shorts">Puma Shorts</option>
-											<option value="Nike T-Shirt">Nike T-Shirt</option>
-										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Product</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item">Product</div>
-											<div class="select__item">Puma Shorts</div>
-											<div class="select__item">Nike T-Shirt</div>
+								<div class="col">
+									<div class="form__group">
+										<div class="select">
+											<select name="status">
+												<option value="All status">All status</option>
+												<option value="Pending">Pending</option>
+												<option value="Shipping">Shipping</option>
+												<option value="Processed">Processed</option>
+												<option value="Declined">Declined</option>
+											</select>
+											<button class="select__toggle select__toggle_bg_fill" type="button"><span>All status</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item selected">All status</div>
+												<div class="select__item">Pending</div>
+												<div class="select__item">Shipping</div>
+												<div class="select__item">Processed</div>
+												<div class="select__item">Declined</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="form__group col">
-									<div class="select">
-										<select name="customer">
-											<option value="">Customer</option>
-											<option value="Anna Miller">Anna Miller</option>
-											<option value="Vincent van Gogh">Vincent van Gogh</option>
-										</select>
-										<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Customer</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item">Customer</div>
-											<div class="select__item">Anna Miller</div>
-											<div class="select__item">Vincent van Gogh</div>
+								<div class="col">
+									<div class="form__group">
+										<div class="select">
+											<select name="product">
+												<option value="">Product</option>
+												<option value="Puma Shorts">Puma Shorts</option>
+												<option value="Nike T-Shirt">Nike T-Shirt</option>
+											</select>
+											<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Product</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Product</div>
+												<div class="select__item">Puma Shorts</div>
+												<div class="select__item">Nike T-Shirt</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form__group">
+										<div class="select">
+											<select name="customer">
+												<option value="">Customer</option>
+												<option value="Anna Miller">Anna Miller</option>
+												<option value="Vincent van Gogh">Vincent van Gogh</option>
+											</select>
+											<button class="select__toggle select__toggle_bg_fill" type="button"><span class="select__placeholder">Customer</span>
+												<svg class="icon-chevron-down">
+													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+											<div class="select__list">
+												<div class="select__item">Customer</div>
+												<div class="select__item">Anna Miller</div>
+												<div class="select__item">Vincent van Gogh</div>
+											</div>
 										</div>
 									</div>
 								</div>

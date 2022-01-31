@@ -37,3 +37,5 @@ mixin control(obj)
 				.autocomplete__list
 					.autocomplete__item Shoes
 					.autocomplete__item Sneakers
+		if obj.suffix
+			span.control__suffix=obj.suffix

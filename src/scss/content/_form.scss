@@ -5,6 +5,9 @@
 	+ .form {
 		margin-top: size($lg);
 	}
+	.row + .row {
+		margin-top: size($md);
+	}
 	&_horizontal {
 		column-gap: size($sm);
 		row-gap: size($md);
@@ -12,7 +15,7 @@
 	&_width_short {
 		max-width: size(585);
 	}
-	&:not(.form_horizontal) &__group {
+	&__group {
 		flex: 1 1 100%;
 		flex-wrap: wrap;
 		&:not(:last-child){
@@ -27,7 +30,18 @@
 		position: relative;
 		flex: 1 1 100%;
 		max-width: 100%;
-		padding: size(18) 0;
+		// у дизайнера эти отступы между линией и контентом постоянно "скачут" отступы: то 18, то 20, то 32 пикселей
+		// Я взял среднее значение в 20
+		//padding: size(18) 0;
+		padding: size(20) 0;
+		.tab-content & {
+			//padding: size(32) 0;
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
 		&:before {
 			content: '';
 			position: absolute;
@@ -54,12 +68,24 @@
 				}
 			}
 		}
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
 	}
 	&__footer {
 		display: flex;
 		flex-wrap: wrap;
 		gap: size($sm);
 		margin-top: size($sm);
+	}
+	&__title {
+		font-size: size(20);
+		line-height: 1.2;
+		font-weight: 600;
+		margin: 0;
 	}
 	&__label {
 		display: flex;
@@ -79,6 +105,16 @@
 			line-height: 1;
 			color: var(--danger-01);
 		}
+	}
+	&__text {
+		font-size: size(14);
+		line-height: 1.2;
+		font-weight: 400;
+		color: var(--text-additional);
+		margin-bottom: size($bs);
+	}
+	&__title + &__text {
+		margin-top: size($bs * 0.5);
 	}
 	&__remove {
 		margin-left: auto;
@@ -122,6 +158,13 @@
 	}
 	&_direction_row &__group {
 		display: flex;
+	}
+	&__hidden {
+		padding-top: size($md);
+		display: none;
+		&.show {
+			display: block;
+		}
 	}
 	//&_horizontal &__group {
 	//	flex: 1;

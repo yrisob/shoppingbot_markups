@@ -1,0 +1,28 @@
+.avatar {
+	display: flex;
+	align-items: center;
+	margin: size($sm) 0 0;
+	&__pic {
+		border-radius: 50%;
+		width: size(130);
+		height: size(130);
+		overflow: hidden;
+		flex-shrink: 0;
+		margin-right: size($lg);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__controls {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		.button:not(:last-child){
+			margin-bottom: size($md);
+		}
+	}
+}

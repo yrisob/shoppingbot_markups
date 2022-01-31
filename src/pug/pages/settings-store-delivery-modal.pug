@@ -1,0 +1,181 @@
+extends ../templates/base
+include ../components/dropdown
+include ../components/badge
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Store'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button(type='button') General
+			button.tab-nav__button(type='button') Payment & messengers
+			button.tab-nav__button.active(type='button') Shipping
+			button.tab-nav__button(type='button') Admins
+			button.tab-nav__button(type='button') Taxes
+		.tab-content
+			.tab-content__item
+
+			.tab-content__item
+
+			.tab-content__item.active
+				form.form
+					.form__set
+						.toolbar
+							.toolbar__main
+								div.form.row
+									.col-5
+										.form__group
+											+control({
+												attr: {
+													placeholder: 'Search by name, category...',
+													name: 'search'
+												},
+												icon: 'search',
+												mods: ['bg_fill']
+											})
+									.col-3
+										.form__group
+											+select({
+												list: [
+													{value: 'All status', selected: true},
+													{value: 'Active'},
+													{value: 'Inactive'}
+												],
+												name: 'status',
+												mods: ['bg_fill']
+											})
+							.toolbar__controls
+								+button({icon: 'plus', text: 'Add Carrier'})
+
+						div.table
+							.table__group
+								+checkbox({name: 'all', half: true})
+								+button({mods: 'bg_gray', text: 'Make inactive'})
+								+button({mods: 'bg_gray,color_danger', text: 'Delete'})
+							table
+								thead
+									tr
+										th
+											+checkbox({
+												name: 'all'
+											})
+										th
+											a.table__head(href='#')
+												| Service Name
+												span.table__sort
+													+icon('chevron-down')
+										th
+											a.table__head(href='#')
+												| Service Type
+												span.table__sort
+													+icon('chevron-up')
+													+icon('chevron-down')
+										th
+											a.table__head(href='#')
+												| Description
+												span.table__sort
+													+icon('chevron-up')
+													+icon('chevron-down')
+										th
+											a.table__head(href='#')
+												| Status
+												span.table__sort
+													+icon('chevron-up')
+													+icon('chevron-down')
+										th
+								tbody
+									tr
+										td.table__w_16
+											+checkbox({name: 'item1'})
+										td
+											| DHL
+										td
+											| Express delivery
+										td
+											| Here will be description
+										td
+											+badge({status: 'danger', text: 'Inactive'})
+										td.table__w_28
+											+dropdown({
+												icon: 'more-vertical',
+												modification: 'dropdown__list_end',
+												list: [
+													{content: 'Remove'},
+													{content: 'Edit'}
+												]
+											})
+									tr
+										td.table__w_16
+											+checkbox({name: 'item2'})
+										td
+											| United State Postal Service
+										td
+											| Express delivery
+										td
+											| Here will be description
+										td
+											+badge({status: 'info', text: 'Active'})
+										td.table__w_28
+											+dropdown({
+												icon: 'more-vertical',
+												modification: 'dropdown__list_end',
+												list: [
+													{content: 'Remove'},
+													{content: 'Edit'}
+												]
+											})
+			.tab-content__item
+			.tab-content__item
+
+	.modal.open
+		.modal-box
+			.modal-box__content
+				.modal-box__header
+					.modal-box__headline Add Shipping Carrier
+					button.modal-box__close(type='button')
+						+icon('x')
+				.modal-box__body
+					.form.form_direction_row
+						.form__group
+							.form__label Service type
+							+select({
+								list: [
+									{value: 'Type 1'},
+									{value: 'Type 2'}
+								],
+								name: 'status',
+								def: 'Select'
+							})
+						.form__group
+							.form__label Service name
+							+control({
+								attr: {
+									name: 'name'
+								}
+							})
+						.form__group
+							.form__label Status
+							+select({
+								list: [
+									{value: 'Active', selected: true},
+									{value: 'Inactive'}
+								],
+								name: 'status',
+							})
+						.form__group
+							.form__label Descriptoin
+							+control({
+								attr:{
+									placeholder: 'Expail your customers how it works exactly '
+								},
+								type:'textarea'
+							})
+				.modal-box__footer
+					+button({text: 'Cancel', mods: 'bg_gray'})
+					+button({text: 'Add'})

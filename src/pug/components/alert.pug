@@ -1,0 +1,6 @@
+mixin alert(array)
+	.alerts
+		for obj in array
+			.alert(class=obj.extra)
+				.alert__headline=obj.headline
+				.alert__text!=obj.text

@@ -16,38 +16,41 @@ block content
 	.content
 		.toolbar
 			.toolbar__main
-				form.form.form_horizontal
-					.form__group.col-5
-						+control({
-							attr: {
-								placeholder: 'Search by name, category...',
-								name: 'search'
-							},
-							icon: 'search',
-							mods: ['bg_fill']
-						})
-					.form__group.col
-						+select({
-							list: [
-								{value: 'All status', selected: true},
-								{value: 'Pending'},
-								{value: 'Shipping'},
-								{value: 'Processed'},
-								{value: 'Declined'}
-							],
-							name: 'status',
-							mods: ['bg_fill']
-						})
-					.form__group.col
-						+select({
-							list: [
-								{value: 'Value 1'},
-								{value: 'Value 2'}
-							],
-							name: 'type',
-							def: 'Type',
-							mods: ['bg_fill']
-						})
+				form.form.row
+					.col-5
+						.form__group
+							+control({
+								attr: {
+									placeholder: 'Search by name, category...',
+									name: 'search'
+								},
+								icon: 'search',
+								mods: ['bg_fill']
+							})
+					.col-3
+						.form__group
+							+select({
+								list: [
+									{value: 'All status', selected: true},
+									{value: 'Pending'},
+									{value: 'Shipping'},
+									{value: 'Processed'},
+									{value: 'Declined'}
+								],
+								name: 'status',
+								mods: ['bg_fill']
+							})
+					.col
+						.form__group
+							+select({
+								list: [
+									{value: 'Value 1'},
+									{value: 'Value 2'}
+								],
+								name: 'type',
+								def: 'Type',
+								mods: ['bg_fill']
+							})
 
 			.toolbar__controls
 				+button({icon: 'plus', text: 'New Promo'})

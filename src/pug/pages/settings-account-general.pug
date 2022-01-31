@@ -1,0 +1,93 @@
+extends ../templates/base
+include ../components/avatar
+include ../components/alert
+block variables
+	-
+		var title = 'Settings';
+		var active = 'Settings';
+
+block content
+	+header({
+		back: false,
+		headline: 'Account'
+	})
+	.content
+		.tab-nav
+			button.tab-nav__button.active(type='button') General
+			button.tab-nav__button(type='button') Your plan
+		.tab-content
+			.tab-content__item.active
+				form.form
+					.form__set
+						.row
+							.col-4
+								+avatar
+							.col-4
+								.form__group
+									.form__label Your first and last name
+									+control({
+										attr: {
+											placeholder: 'Sample Name',
+											name: 'name'
+										},
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Email
+									+control({
+										attr: {
+											placeholder: 'Email',
+											name: 'email'
+										},
+										mods: ['bg_fill']
+									})
+					.form__set
+						.row
+							.col-4
+								.form__group
+									.form__label Country
+									+select({
+										list: [
+											{value: 'USA'},
+											{value: 'Not USA'}
+										],
+										name: 'country',
+										def: 'USA',
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label State
+									+select({
+										list: [
+											{value: 'Alabama'},
+											{value: 'NY'}
+										],
+										name: 'state',
+										def: 'Alabama',
+										mods: ['bg_fill']
+									})
+								.form__group
+									.form__label Default Currency
+									+select({
+										list: [
+											{value: 'Dollar US'},
+											{value: 'Canadian Dollar'}
+										],
+										name: 'state',
+										def: 'Dollar US',
+										mods: ['bg_fill']
+									})
+					.form__set
+						.form__footer
+							+button({text: 'Change password', mods: 'bg_gray'})
+							+button({text: 'Delete account', mods: 'color_danger,bg_gray'})
+			.tab-content__item
+				|tab settings-account-subscription
+
+	+alert([
+		{headline: 'Success!', text: 'Your changes have been updated', extra:['alert_success']},
+		{headline: 'Danger!', text: 'Your changes have been updated', extra:['alert_danger']},
+		{headline: 'Warn!', text: 'Your changes have been updated', extra:['alert_warn']},
+		{headline: 'Information!', text: 'Your changes have been updated', extra:['alert_info']},
+		{headline: 'Alert', text: 'Your changes have been updated'}
+	])
