@@ -1,0 +1,19 @@
+include ../components/badge
+mixin inbox-order(obj)
+	.inbox-order
+		.row
+			.col-2
+				.inbox-order__id=obj.id
+			.col-4
+				.inbox-order__text=obj.text
+			.col-2
+				.inbox-order__status
+					+badge(obj.status)
+			.col-2
+				.inbox-order__date=obj.date
+			.col-2
+				if obj.qnt
+					.inbox-order__messages
+						.inbox-order__qnt=obj.qnt
+				else if obj.messages
+					.inbox-order__messages=obj.messages

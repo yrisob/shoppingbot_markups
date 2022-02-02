@@ -41,6 +41,12 @@
 			left: auto;
 			right: 0;
 		}
+		&_top {
+			bottom: 100%;
+			top: auto;
+			margin-top: 0;
+			margin-bottom: 4px;
+		}
 		//.open & {
 		//	display: block;
 		//}

@@ -1,0 +1,12 @@
+mixin inbox-item(obj)
+	.inbox-item(class=obj.active)
+		.inbox-item__header
+			.inbox-item__headline=obj.headline
+			if obj.img
+				.inbox-item__icon
+					img(src=obj.img alt='')
+			.inbox-item__date=obj.date
+		.inbox-item__info
+			.inbox-item__text=obj.text
+			if obj.qnt
+				.inbox-item__qnt=obj.qnt

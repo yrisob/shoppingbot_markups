@@ -1,38 +1,28 @@
-.page {
-	--split-main-width: #{size(470)};
-	//flex: 1;
+.inbox {
 	display: flex;
-	flex-direction: column;
-	//width: 100%;
+	flex-direction: row;
 	min-height: 100vh;
-	&_split {
-		flex-direction: row;
-	}
-	&__main {
-		position: relative;
-		flex: 1 0 var(--split-main-width);
-		max-width: var(--split-main-width);
-
+	.header {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		left: 0;
+		border-bottom: 1px solid var(--stroke);
 	}
 	&__scroll {
 		position: fixed;
 		top: 0;
 		bottom: 0;
 		left: $sideWidth;
-		width: var(--split-main-width);
+		width: var(--inbox-main-width);
 		border-right: 1px solid var(--stroke);
 		background-color: var(--white);
-		display: flex;
-		flex-direction: column;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		color: transparent;
 		transition: color var(--time) var(--anim);
 		scrollbar-color: rgba(0,0,0,0) rgba(0,0,0,0);
 		scrollbar-width: thin;
-		@media (max-height: 500px){
-			align-items: flex-start;
-		}
 		&:hover {
 			scrollbar-color: rgba(0,0,0,.5) rgba(0,0,0,0);
 			color: rgba(0,0,0,.5);
@@ -61,11 +51,32 @@
 			background-color: transparent;
 		}
 	}
+	&__main {
+		position: relative;
+		//display: flex;
+		//flex-direction: column;
+		flex: 1 0 var(--inbox-main-width);
+		max-width: var(--inbox-main-width);
+	}
 	&__side {
 		flex: 1;
 		background-color: var(--bg);
-		//overflow-y: auto;
-		//-webkit-overflow-scrolling: touch;
-		padding: size($sm*2);
+		display: flex;
+		flex-direction: column;
+	}
+	&__content {
+		position: relative;
+		flex: 1;
+		color: var(--text-base);
+	}
+	&__list {
+		border-bottom: 1px solid var(--stroke);
+	}
+	&__orders {
+		padding: size($bs*2) size($sm*2);
+	}
+	&__bar {
+		background-color: var(--white);
+		border-bottom: 1px solid var(--stroke);
 	}
 }

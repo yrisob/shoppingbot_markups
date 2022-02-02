@@ -1,0 +1,11 @@
+mixin item-select(array)
+	.item-selects
+		for obj in array
+			label.item-select
+				input.item-select__input(type='checkbox' name='item-select' value=obj.value)
+				span.item-select__mark
+				.item-select__main
+					.item-select__pic
+						img(src=obj.img alt='')
+					.item-select__name=obj.name
+					.item-select__price=obj.price

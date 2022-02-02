@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title>Inbox</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__scroll">
+					<div class="sidebar__inner">
+									<nav class="navigation">
+										<div class="navigation__list">
+											<div class="navigation__item"><a class="navigation__link active" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#mail"></use>
+													</svg><span class="navigation__name">Inbox</span><span class="navigation__attention"></span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#folder"></use>
+													</svg><span class="navigation__name">Products</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#file-text"></use>
+													</svg><span class="navigation__name">Orders</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#users"></use>
+													</svg><span class="navigation__name">Customers</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#grid"></use>
+													</svg><span class="navigation__name">Categories</span></a></div>
+											<div class="navigation__item"><a class="navigation__link" href="#">
+													<svg class="navigation__icon">
+														<use xlink:href="../assets/icons/icons.svg#tag"></use>
+													</svg><span class="navigation__name">Promo</span></a></div>
+										</div>
+									</nav>
+					</div>
+				</div>
+				<div class="sidebar__footer">
+								<button class="profile" type="button">
+									<div class="profile__picture"><img class="profile__img" src="../assets/uploads/avatar.png" alt="Puma store"></div>
+									<div class="profile__info">
+										<div class="profile__name">Puma store</div>
+										<div class="profile__text">name@domain.com</div>
+									</div>
+								</button>
+				</div>
+			</div>
+			<div class="inbox">
+				<div class="inbox__main">
+					<div class="inbox__scroll">
+						<header class="header">
+							<div class="header__inner">
+								<div class="header__head">
+									<div class="header__headline">Inbox
+									</div>
+								</div>
+								<form class="header__search">
+									<div class="control"><span class="control__icon">
+											<svg class="icon-search">
+												<use xlink:href="../assets/icons/icons.svg#search"></use>
+											</svg></span>
+										<input class="control__input control__input_bg_fill" placeholder="Search" name="search" type="text"/>
+									</div>
+								</form>
+							</div>
+						</header>
+						<div class="inbox__list">
+							<div class="inbox-item">
+								<div class="inbox-item__header">
+									<div class="inbox-item__headline">Sample Client</div>
+									<div class="inbox-item__icon"><img src="../assets/img/messenger.png" alt=""/></div>
+									<div class="inbox-item__date">12:30</div>
+								</div>
+								<div class="inbox-item__info">
+									<div class="inbox-item__text">11 orders</div>
+									<div class="inbox-item__qnt">2</div>
+								</div>
+							</div>
+							<div class="inbox-item active">
+								<div class="inbox-item__header">
+									<div class="inbox-item__headline">Johnny Mnemonic</div>
+									<div class="inbox-item__icon"><img src="../assets/img/telegram.png" alt=""/></div>
+									<div class="inbox-item__date">01.29.2022</div>
+								</div>
+								<div class="inbox-item__info">
+									<div class="inbox-item__text">You have new message</div>
+									<div class="inbox-item__qnt">99+</div>
+								</div>
+							</div>
+							<div class="inbox-item">
+								<div class="inbox-item__header">
+									<div class="inbox-item__headline">Emmett Brown</div>
+									<div class="inbox-item__date">12.25.2021</div>
+								</div>
+								<div class="inbox-item__info">
+									<div class="inbox-item__text">1 order</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inbox__side">
+					<header class="header">
+						<div class="header__inner">
+							<div class="header__bar">
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Inbox</a>
+									</div>
+									<div class="breadcrumbs__item">
+										<div class="breadcrumbs__current">Sample Client</div>
+									</div>
+								</div>
+							</div>
+							<div class="header__head">
+								<div class="header__headline">Sample Client
+									<div class="header__icon"><img src="../assets/img/telegram.png" alt=""/></div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="inbox__content">
+						<div class="inbox__bar">
+							<div class="order-sm">
+								<div class="order-sm__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""/></div>
+								<div class="order-sm__name">PUMA Smash v2 Sneakers</div>
+								<div class="order-sm__props">
+									<div class="order-sm__prop">
+										<div class="order-sm__label">Color:</div>
+										<div class="order-sm__value">Blank</div>
+									</div>
+									<div class="order-sm__prop">
+										<div class="order-sm__label">Size:</div>
+										<div class="order-sm__value">US 10</div>
+									</div>
+									<div class="order-sm__prop">
+										<div class="order-sm__label">QNT:</div>
+										<div class="order-sm__value">2</div>
+									</div>
+								</div>
+								<div class="order-sm__status">
+									<button class="badge badge_warn" type="button">Pending</button>
+								</div>
+								<div class="order-sm__footer">
+									<button class="order-sm__more" type="button">More
+										<svg class="icon-chevron-right">
+											<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="chat">
+							<div class="chat__body">
+								<div class="chat__message">Hi, whats on your new items?  i need something special for my sister.</div>
+								<div class="chat__message chat__message_own">Meet the new iPad Pro. The biggest change to iPad since iPad. Now with an all-screen design with Liquid Retina display, Face ID, A12X Bionic chip, USB-C, Smart Keyboard Folio and a redesigned Apple Pencil.</div>
+								<div class="chat__message">Hi, whats on your new items?  i need something special for my sister.</div>
+								<div class="chat__message chat__message_own">Meet the new iPad Pro. The biggest change to iPad since iPad. Now with an all-screen design with Liquid Retina display, Face ID, A12X Bionic chip, USB-C, Smart Keyboard Folio and a redesigned Apple Pencil.</div>
+							</div>
+							<div class="chat__footer">
+								<div class="chat__controls">
+									<div class="chat__control">
+										<div class="dropdown open">
+											<button class="dropdown__toggle" type="button">
+												<svg class="icon-paperclip">
+													<use xlink:href="../assets/icons/icons.svg#paperclip"></use>
+												</svg>
+											</button>
+											<div class="dropdown__list dropdown__list_top"><a class="dropdown__item" href="#">Photo</a><a class="dropdown__item" href="#">Product link</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="chat__field">
+									<textarea class="chat__textarea" placeholder="Write a message..."></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="editor open">
+					<div class="editor-box editor-box_add">
+						<div class="editor-box__inner">
+							<div class="editor-box__header">
+								<button class="editor-box__back" type="button">
+									<svg class="icon-chevron-left">
+										<use xlink:href="../assets/icons/icons.svg#chevron-left"></use>
+									</svg>Back
+								</button>
+								<div class="editor-box__search">
+									<div class="control"><span class="control__icon">
+											<svg class="icon-search">
+												<use xlink:href="../assets/icons/icons.svg#search"></use>
+											</svg></span>
+										<input class="control__input control__input_bg_fill" placeholder="Search" name="search" type="text"/>
+									</div>
+								</div>
+							</div>
+							<div class="editor-box__body">
+								<div class="editor-box__side">
+									<ul class="list">
+										<li class="list__item open">
+											<button class="list__toggle" type="button">
+												<svg class="icon-chevron-right">
+													<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+												</svg><span>All categories</span>
+											</button>
+											<ul class="list">
+												<li class="list__item">
+													<button class="list__toggle" type="button">
+														<svg class="icon-chevron-right">
+															<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+														</svg><span>Summer clothes</span>
+													</button>
+												</li>
+												<li class="list__item open">
+													<button class="list__toggle" type="button">
+														<svg class="icon-chevron-right">
+															<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+														</svg><span>Summer shoes</span>
+													</button>
+													<ul class="list">
+														<li class="list__item">
+															<button class="list__toggle" type="button">
+																<svg class="icon-chevron-right">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+																</svg><span>Step-ins</span>
+															</button>
+														</li>
+														<li class="list__item">
+															<button class="list__toggle active" type="button">
+																<svg class="icon-chevron-right">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+																</svg><span>Sneakers</span>
+															</button>
+														</li>
+														<li class="list__item">
+															<button class="list__toggle" type="button">
+																<svg class="icon-chevron-right">
+																	<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+																</svg><span>Running</span>
+															</button>
+														</li>
+													</ul>
+												</li>
+												<li class="list__item">
+													<button class="list__toggle" type="button">
+														<svg class="icon-chevron-right">
+															<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+														</svg><span>Winter clothes for woman</span>
+													</button>
+												</li>
+												<li class="list__item">
+													<button class="list__toggle" type="button">
+														<svg class="icon-chevron-right">
+															<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+														</svg><span>For sale</span>
+													</button>
+												</li>
+												<li class="list__item">
+													<button class="list__toggle" type="button">
+														<svg class="icon-chevron-right">
+															<use xlink:href="../assets/icons/icons.svg#chevron-right"></use>
+														</svg><span>Clothes with 25% discount</span>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="editor-box__content">
+									<div class="item-selects">
+										<label class="item-select">
+											<input class="item-select__input" type="checkbox" name="item-select"/><span class="item-select__mark"></span>
+											<div class="item-select__main">
+												<div class="item-select__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""/></div>
+												<div class="item-select__name">Puma Smash v2</div>
+												<div class="item-select__price">$530,00</div>
+											</div>
+										</label>
+										<label class="item-select">
+											<input class="item-select__input" type="checkbox" name="item-select"/><span class="item-select__mark"></span>
+											<div class="item-select__main">
+												<div class="item-select__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""/></div>
+												<div class="item-select__name">Puma Smash v2 Black Limited Edition</div>
+												<div class="item-select__price">$1 530,99</div>
+											</div>
+										</label>
+										<label class="item-select">
+											<input class="item-select__input" type="checkbox" name="item-select"/><span class="item-select__mark"></span>
+											<div class="item-select__main">
+												<div class="item-select__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""/></div>
+												<div class="item-select__name">Puma Smash v2</div>
+												<div class="item-select__price">$530,00</div>
+											</div>
+										</label>
+										<label class="item-select">
+											<input class="item-select__input" type="checkbox" name="item-select"/><span class="item-select__mark"></span>
+											<div class="item-select__main">
+												<div class="item-select__pic"><img src="../assets/uploads/item-pic2.jpg" alt=""/></div>
+												<div class="item-select__name">Puma Smash v2</div>
+												<div class="item-select__price">$530,00</div>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="editor-box__footer editor-box__footer_row">
+								<button class="button button_bg_gray" type="button">Cancel</button>
+								<button class="button" type="button">Send</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -11,6 +11,7 @@ $md-div: math.div($md, 2);
 $sm-div: math.div($sm, 2);
 
 $sideWidth: size(236);
+$sideWidthInbox: size(355);
 
 :root {
 	--text-base:  #3E424E;
@@ -21,6 +22,7 @@ $sideWidth: size(236);
 	--accent-hover: #8138B6;
 	--accent-pressed: #5E1395;
 	--bg: #FAFAFB;
+	--bg-alt: #6B778C;
 	--sidebar: #1E1E1E;
 
 	--button2: #F2F2F2;
@@ -42,6 +44,7 @@ $sideWidth: size(236);
 
 	--white: #FFFFFF;
 	--red: #E76340;
+	--red-alt: #EB4335;
 	--gray: #A4A4A4;
 	--gray-alt: #ABABAB;
 	--black: #262626;
@@ -69,4 +72,7 @@ $sideWidth: size(236);
 
 	--time: 150ms;
 	--anim: ease;
+
+	--side-width: #{$sideWidth};
+	--inbox-main-width: #{$sideWidthInbox};
 }

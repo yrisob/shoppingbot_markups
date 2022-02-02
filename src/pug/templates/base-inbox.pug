@@ -1,0 +1,29 @@
+include ../common/icon
+include ../common/checkbox
+include ../common/button
+include ../common/select
+include ../common/control
+include ../common/multiple
+include ../layouts/header
+-
+	var navArray = [
+		{name: 'Inbox', icon: 'mail'},
+		{name: 'Products', icon: 'folder'},
+		{name: 'Orders', icon: 'file-text'},
+		{name: 'Customers', icon: 'users'},
+		{name: 'Categories', icon: 'grid'},
+		{name: 'Promo', icon: 'tag'}
+	];
+block variables
+doctype html
+html(lang="ru")
+	block head
+		head
+			include ../layouts/head
+			title #{title}
+	body(class=(isModalOpen) ? 'modal-open' : '')
+		.wrapper
+			include ../layouts/sidebar
+				block sidebar
+			.inbox
+				block content

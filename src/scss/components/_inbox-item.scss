@@ -1,0 +1,62 @@
+.inbox-item {
+	padding: size($lg) size($sm * 2);
+	cursor: pointer;
+	display: block;
+	color: var(--text-base);
+	&:hover {
+		background-color: var(--bg);
+	}
+	&.active {
+		background-color: var(--bg);
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+	}
+	&__headline {
+		font-size: size(15);
+		line-height: 1.2;
+		font-weight: 600;
+		margin-right: size($bs * 0.5);
+	}
+	&__icon {
+		width: size(20);
+		height: size(20);
+		display: flex;
+		flex-shrink: 0;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			margin: auto;
+		}
+	}
+	&__date {
+		font-size: size(15);
+		line-height: 1.2;
+		margin-left: auto;
+	}
+	&__info {
+		display: flex;
+		margin-top: size($md * 0.5);
+	}
+	&__text {
+		font-size: size(15);
+		line-height: 1.2;
+	}
+	&__qnt {
+		flex-shrink: 0;
+		min-width: size(24);
+		height: size(24);
+		border-radius: size(12);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: size(15);
+		font-weight: 600;
+		line-height: 1;
+		margin-left: auto;
+		color: var(--white);
+		background-color: var(--red-alt);
+		padding: 0 size($sm * 0.5);
+	}
+}

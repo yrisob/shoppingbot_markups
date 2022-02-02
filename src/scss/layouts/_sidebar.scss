@@ -1,5 +1,5 @@
 .sidebar {
-	width: $sideWidth;
+	width: var(--side-width);
 	background-color: var(--sidebar);
 	color: var(--white);
 	position: fixed;

@@ -1,0 +1,64 @@
+extends ../templates/base-inbox
+include ../components/inbox-item
+include ../components/inbox-order
+block variables
+	-
+		var title = 'Inbox';
+		var active = 'Inbox';
+
+block content
+	.inbox__main
+		.inbox__scroll
+			+header({
+				back: false,
+				headline: 'Inbox',
+				search: true
+			})
+			.inbox__list
+				+inbox-item({
+					headline: 'Sample Client',
+					img: '../assets/img/messenger.png',
+					text: '11 orders',
+					date: '12:30',
+					qnt: '2'
+				})
+				+inbox-item({
+					headline: 'Johnny Mnemonic',
+					img: '../assets/img/telegram.png',
+					text: 'You have new message',
+					date: '01.29.2022',
+					qnt: '99+',
+					active: 'active'
+				})
+				+inbox-item({
+					headline: 'Emmett Brown',
+					text: '1 order',
+					date: '12.25.2021'
+				})
+
+	.inbox__side
+		+header({
+			back: false,
+			headline: 'Sample Client',
+			icon: '../assets/img/telegram.png',
+			breadcrumbs: [
+				{text: 'Inbox'},
+				{text: 'Sample Client', current: true}
+			]
+		})
+		.inbox__content
+			.inbox__orders
+				+inbox-order({
+					id: 'AKN183333',
+					text: 'PUMA Smash v2 Sneakers',
+					qnt: '1',
+					date: '1 hour ago',
+					status: {status: 'warn', text: 'Pending'}
+				})
+				+inbox-order({
+					id: 'AKN1833212',
+					text: 'PUMA Smash v2 Sneakers Limited Black Edition',
+					messages: '46 messages',
+					date: '23.11.2021',
+					status: {status: 'success', text: 'Success'}
+				})

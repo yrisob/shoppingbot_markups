@@ -11,6 +11,7 @@
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/toolbar";
+@import "layouts/inbox";
 
 @import "content/grid";
 @import "content/typography";
@@ -21,6 +22,7 @@
 @import "content/tab-nav";
 @import "content/tab-content";
 @import "content/subscription";
+@import "content/chat";
 
 @import "common/button";
 @import "common/control";
@@ -43,6 +45,11 @@
 @import "components/small-item";
 @import "components/avatar";
 @import "components/plan";
+@import "components/inbox-item";
+@import "components/inbox-order";
+@import "components/order-sm";
+@import "components/list";
+@import "components/item-select";
 
 @import "components/modal";
 @import "components/editor";

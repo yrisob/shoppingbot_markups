@@ -1,0 +1,40 @@
+mixin list
+	ul.list
+		li.list__item.open
+			button.list__toggle(type='button')
+				+icon('chevron-right')
+				span All categories
+			ul.list
+				li.list__item
+					button.list__toggle(type='button')
+						+icon('chevron-right')
+						span Summer clothes
+				li.list__item.open
+					button.list__toggle(type='button')
+						+icon('chevron-right')
+						span Summer shoes
+					ul.list
+						li.list__item
+							button.list__toggle(type='button')
+								+icon('chevron-right')
+								span Step-ins
+						li.list__item
+							button.list__toggle.active(type='button')
+								+icon('chevron-right')
+								span Sneakers
+						li.list__item
+							button.list__toggle(type='button')
+								+icon('chevron-right')
+								span Running
+				li.list__item
+					button.list__toggle(type='button')
+						+icon('chevron-right')
+						span Winter clothes for woman
+				li.list__item
+					button.list__toggle(type='button')
+						+icon('chevron-right')
+						span For sale
+				li.list__item
+					button.list__toggle(type='button')
+						+icon('chevron-right')
+						span Clothes with 25% discount

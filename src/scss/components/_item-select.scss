@@ -1,0 +1,103 @@
+.item-select {
+	display: flex;
+	width: 100%;
+	cursor: pointer;
+	align-items: center;
+	padding: size($bs * 0.5) size($md);
+	border-top: 1px solid var(--stroke);
+	color: var(--text-base);
+	&:first-child {
+		border-top: 0;
+	}
+	&:last-child {
+		border-bottom: 1px solid var(--stroke);
+	}
+	&:hover {
+		background-color: var(--bg);
+		border-color: transparent;
+		+ .item-select {
+			border-top-color: transparent;
+		}
+	}
+	&__input {
+		display: none;
+	}
+	&__mark {
+		display: inline-block;
+		width: size(16);
+		height: size(16);
+		flex-shrink: 0;
+		border: 2px solid var(--gray);
+		background-color: transparent;
+		position: relative;
+		border-radius: 4px;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			opacity: 0;
+			width: size(8);
+			height: size(1);
+			background-color: var(--white);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: size(2);
+			left: size(2);
+			width: size(8);
+			height: size(5);
+			border-left: 2px solid var(--white);
+			border-bottom: 2px solid var(--white);
+			transform: rotate(-45deg);
+			opacity: 0;
+		}
+	}
+	&__input:checked + &__mark {
+		background-color: var(--accent);
+		border-color: var(--accent);
+		&:before {
+			opacity: 0;
+		}
+		&:after {
+			opacity: 1;
+		}
+	}
+	&__main {
+		flex: 1;
+		padding-left: size($md);
+		display: flex;
+		align-items: center;
+	}
+	&__pic {
+		overflow: hidden;
+		flex-shrink: 0;
+		width: size(44);
+		height: size(44);
+		margin-right: size($md);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+	&__name {
+		flex: 1;
+		margin-right: size($md);
+		font-size: size(15);
+		line-height: 1.2;
+	}
+	&__price {
+		font-size: size(15);
+		line-height: 1.2;
+		text-align: right;
+		margin-left: auto;
+	}
+}

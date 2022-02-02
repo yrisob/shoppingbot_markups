@@ -1,3 +1,4 @@
+include ../components/breadcrumbs
 mixin header(obj)
 	header.header
 		.header__inner
@@ -6,8 +7,14 @@ mixin header(obj)
 					a.header__back(href='#')
 						+icon('chevron-left')
 						|Back
+			if obj.breadcrumbs
+				.header__bar
+					+breadcrumbs(obj.breadcrumbs)
 			.header__head
 				.header__headline=obj.headline
+					if obj.icon
+						.header__icon
+							img(src=obj.icon alt='')
 				if obj.status
 					.header__status(class='header__status_'+obj.status.status)=obj.status.text
 				if obj.date
@@ -22,3 +29,13 @@ mixin header(obj)
 						+button({text: 'Save'})
 			if obj.text
 				.header__text=obj.text
+			if obj.search
+				form.header__search
+					+control({
+						attr: {
+							placeholder: 'Search',
+							name: 'search'
+						},
+						icon: 'search',
+						mods: ['bg_fill']
+					})

@@ -1,7 +1,31 @@
+h1, .h1 {
+	font-size: size(24);
+	line-height: 1.2;
+	font-weight: 600;
+	margin: 0 0 size($lg);
+}
+h2, .h2 {
+	font-size: size(20);
+	line-height: 1.2;
+	font-weight: 600;
+	margin: size($bs) 0 size($bs*0.5);
+}
 h3, .h3 {
 	font-size: size(16);
 	font-weight: 600;
 	line-height: 1.5;
+	margin: size($bs) 0 size($bs*0.5);
+}
+h4, .h4 {
+	font-size: size(14);
+	line-height: 1.2;
+	font-weight: 500;
+	margin: size($bs) 0 size($bs*0.5);
+}
+h5, .h5 {
+	font-size: size(12);
+	line-height: 1.5;
+	font-weight: 500;
 	margin: size($bs) 0 size($bs*0.5);
 }
 
@@ -58,4 +82,27 @@ ul {
 }
 ul li {
 	padding-left: size(6);
+}
+
+.title {
+	font-size: size(20);
+	line-height: 1.2;
+	font-weight: 600;
+	margin: 0;
+}
+.text {
+	font-size: size(14);
+	line-height: 1.2;
+	font-weight: 400;
+	color: var(--text-additional);
+	margin-bottom: size($bs);
+	>*:first-child {
+		margin-top: 0;
+	}
+	>*:last-child {
+		margin-bottom: 0;
+	}
+	.title + & {
+		margin-top: size($bs * 0.5);
+	}
 }

@@ -1,9 +1,11 @@
 mixin navigation()
 	nav.navigation
 		.navigation__list
-			for item in navArray
+			for item, index in navArray
 				- var isActive = (active === item.name) ? 'active': '';
 				.navigation__item
 					a.navigation__link(href='#' class=isActive)
 						+icon(item.icon, 'navigation__icon')
 						span.navigation__name=item.name
+						if index === 0
+							span.navigation__attention

@@ -1,0 +1,16 @@
+include ../components/badge
+mixin order-sm(obj)
+	.order-sm
+		.order-sm__pic
+			img(src=obj.img alt='')
+		.order-sm__name=obj.text
+		.order-sm__props
+			for prop in obj.props
+				.order-sm__prop
+					.order-sm__label=prop.label
+					.order-sm__value=prop.value
+		.order-sm__status
+			+badge(obj.status)
+		.order-sm__footer
+			button.order-sm__more(type='button') More
+				+icon('chevron-right')

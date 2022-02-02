@@ -1,0 +1,47 @@
+.inbox-order {
+	background-color: var(--white);
+	border-radius: 8px;
+	padding: size($md);
+	margin-bottom: size($sm);
+	min-width: size(700);
+	&__id {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: size(14);
+		line-height: 1.2;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: size(14);
+		line-height: 1.5;
+	}
+	&__date {
+		font-weight: 400;
+		font-size: size(14);
+		line-height: 1.5;
+	}
+	&__messages {
+		font-weight: 500;
+		font-size: size(14);
+		line-height: 1.5;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__qnt {
+		flex-shrink: 0;
+		min-width: size(24);
+		height: size(24);
+		border-radius: size(12);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: size(15);
+		font-weight: 600;
+		line-height: 1;
+		margin-left: auto;
+		color: var(--white);
+		background-color: var(--red-alt);
+		padding: 0 size($sm * 0.5);
+	}
+}

@@ -1,0 +1,112 @@
+extends ../templates/base-inbox
+include ../components/inbox-item
+include ../components/dropdown
+include ../components/order-sm
+include ../components/list
+include ../components/item-select
+block variables
+	-
+		var title = 'Inbox';
+		var active = 'Inbox';
+
+block content
+	.inbox__main
+		.inbox__scroll
+			+header({
+				back: false,
+				headline: 'Inbox',
+				search: true
+			})
+			.inbox__list
+				+inbox-item({
+					headline: 'Sample Client',
+					img: '../assets/img/messenger.png',
+					text: '11 orders',
+					date: '12:30',
+					qnt: '2'
+				})
+				+inbox-item({
+					headline: 'Johnny Mnemonic',
+					img: '../assets/img/telegram.png',
+					text: 'You have new message',
+					date: '01.29.2022',
+					qnt: '99+',
+					active: 'active'
+				})
+				+inbox-item({
+					headline: 'Emmett Brown',
+					text: '1 order',
+					date: '12.25.2021'
+				})
+
+	.inbox__side
+		+header({
+			back: false,
+			headline: 'Sample Client',
+			icon: '../assets/img/telegram.png',
+			breadcrumbs: [
+				{text: 'Inbox'},
+				{text: 'Sample Client', current: true}
+			]
+		})
+		.inbox__content
+			.inbox__bar
+				+order-sm({
+					img: '../assets/uploads/item-pic2.jpg',
+					text: 'PUMA Smash v2 Sneakers',
+					props: [{label: 'Color:', value: 'Blank'}, {label: 'Size:', value: 'US 10'}, {
+						label: 'QNT:',
+						value: '2'
+					}],
+					status: {status: 'warn', text: 'Pending'}
+				})
+			.chat
+				.chat__body
+					.chat__message Hi, whats on your new items?  i need something special for my sister.
+					.chat__message.chat__message_own Meet the new iPad Pro. The biggest change to iPad since iPad. Now with an all-screen design with Liquid Retina display, Face ID, A12X Bionic chip, USB-C, Smart Keyboard Folio and a redesigned Apple Pencil.
+					.chat__message Hi, whats on your new items?  i need something special for my sister.
+					.chat__message.chat__message_own Meet the new iPad Pro. The biggest change to iPad since iPad. Now with an all-screen design with Liquid Retina display, Face ID, A12X Bionic chip, USB-C, Smart Keyboard Folio and a redesigned Apple Pencil.
+				.chat__footer
+					.chat__controls
+						.chat__control
+							+dropdown({
+								icon: 'paperclip',
+								modification: 'dropdown__list_top',
+								list: [
+									{content: 'Photo'},
+									{content: 'Product link'}
+								],
+								status: 'open'
+							})
+					.chat__field
+						textarea.chat__textarea(placeholder='Write a message...')
+	.editor.open
+		.editor-box.editor-box_add
+			.editor-box__inner
+				.editor-box__header
+					button.editor-box__back(type='button')
+						+icon('chevron-left')
+						| Back
+					.editor-box__search
+						+control({
+							attr: {
+								placeholder: 'Search',
+								name: 'search'
+							},
+							icon: 'search',
+							mods: ['bg_fill']
+						})
+				.editor-box__body
+					.editor-box__side
+						+list
+					.editor-box__content
+						+item-select([
+							{img:'../assets/uploads/item-pic2.jpg', name: 'Puma Smash v2', price: '$530,00'},
+							{img:'../assets/uploads/item-pic2.jpg', name: 'Puma Smash v2 Black Limited Edition', price: '$1 530,99'},
+							{img:'../assets/uploads/item-pic2.jpg', name: 'Puma Smash v2', price: '$530,00'},
+							{img:'../assets/uploads/item-pic2.jpg', name: 'Puma Smash v2', price: '$530,00'}
+						])
+				.editor-box__footer.editor-box__footer_row
+					+button({text: 'Cancel', mods: 'bg_gray'})
+					+button({text: 'Send'})
+
