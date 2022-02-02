@@ -2,14 +2,15 @@ include ../components/breadcrumbs
 mixin header(obj)
 	header.header
 		.header__inner
-			if obj.back
+			if obj.back || obj.breadcrumbs
 				.header__bar
-					a.header__back(href='#')
-						+icon('chevron-left')
-						|Back
-			if obj.breadcrumbs
-				.header__bar
-					+breadcrumbs(obj.breadcrumbs)
+					if obj.back
+						a.header__back(href='#')
+							+icon('chevron-left')
+							| Back
+					if obj.breadcrumbs
+						+breadcrumbs(obj.breadcrumbs)
+
 			.header__head
 				.header__headline=obj.headline
 					if obj.icon

@@ -1,0 +1,51 @@
+extends ../templates/index
+
+block content
+	.section.section_lg.section_size_short
+		.section__header
+			.section__headline.section__headline_lg Tell us about yourself
+		.section__content
+			form.form
+				.form__group
+					.row
+						.col
+							+radio({text: 'Personal account', name: 'radio1'})
+						.col
+							+radio({text: 'Business account', checked: true, name: 'radio1'})
+				.form__group
+					.form__label.form__label_alt Company name
+					+control({
+						attr: {
+							placeholder: 'name',
+							name: 'name'
+						}
+					})
+				.form__group
+					.form__label.form__label_alt Country
+					+select({
+						list: [
+							{value: 'USA'},
+							{value: 'Not USA'}
+						],
+						name: 'country',
+						def: 'Select country'
+					})
+				.form__group
+					.form__label.form__label_alt City
+					+select({
+						list: [
+							{value: 'Alabama'},
+							{value: 'New York'}
+						],
+						name: 'city',
+						def: 'Select city'
+					})
+				.form__group
+					.form__label.form__label_alt EIN
+					+control({
+						attr: {
+							name: 'ein'
+						}
+					})
+				.form__footer
+					+button({text: 'Create store', mods: 'width_full', disabled: true})

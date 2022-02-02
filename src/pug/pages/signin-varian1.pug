@@ -1,0 +1,29 @@
+extends ../templates/index
+
+block content
+	.section.section_lg.section_size_short
+		.section__header
+			.section__headline.section__headline_lg Sign in
+		.section__content
+			form.form
+				.form__group
+					.form__label.form__label_alt Email
+					+control({
+						attr: {
+							placeholder: 'your@email.com',
+							name: 'email'
+						}
+					})
+				.form__group
+					.form__label.form__label_alt Password
+					+control({
+						attr: {
+							placeholder: 'Enter password',
+							name: 'password'
+						},
+						eye: true
+					})
+					a.form__link(href='#') Forget password?
+				.form__footer
+					+button({text:'Sing in', mods:'width_full'})
+					+button({text:'Create new', mods:'bg_gray,width_full'})

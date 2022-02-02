@@ -1,0 +1,52 @@
+extends ../templates/base
+
+block content
+	+header({
+		back: false,
+		headline: 'Headline',
+		text: 'Description'
+	})
+	+header({
+		back: true,
+		headline: 'Categories',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	+header({
+		back: false,
+		breadcrumbs: [
+			{text: 'Inbox'},
+			{text: 'Sample Client', current: true}
+		],
+		headline: 'Categories',
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+	+header({
+		back: true,
+		headline: 'Order AKN183333',
+		controls: false,
+		cancel: true,
+		date: true,
+		status: {text: 'Success', status: 'success'}
+	})
+	+header({
+		back: true,
+		headline: 'Order AKN183333',
+		controls: true,
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})
+
+	div(style='margin:40px 0 0;')
+	h1 All options
+	+header({
+		back: true,
+		breadcrumbs: [
+			{text: 'Inbox'},
+			{text: 'Sample Client', current: true}
+		],
+		headline: 'Order AKN183333',
+		controls: false,
+		cancel: true,
+		date: true,
+		status: {text: 'Success', status: 'success'},
+		text: 'Categories allow you to group products by similar attributes. The categories in your store are shown below.'
+	})

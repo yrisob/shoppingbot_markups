@@ -1,0 +1,9 @@
+.index {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--bg-index);
+	padding: size($bs * 2);
+}

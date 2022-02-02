@@ -1,0 +1,16 @@
+mixin account-select(array)
+	.account-selects
+		for item in array
+			a.account-selects__item(href='#')
+				if item.new
+					.account-selects__new
+						+icon('plus')
+						span Add New
+				else
+					.account-selects__pic
+						img(src=item.img alt='')
+					.account-selects__main
+						.account-selects__name=item.name
+						.account-selects__text=item.text
+						.account-selects__arrow
+							+icon('chevron-right')

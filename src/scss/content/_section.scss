@@ -4,8 +4,17 @@
 	padding: size($md);
 	border-radius: 8px;
 	margin-bottom: size($sm*2);
+	&_lg {
+		padding: size($md * 2);
+	}
 	&_alt {
 		border: 0;
+	}
+	&_size {
+		&_short {
+			max-width: size(500);
+			width: 100%;
+		}
 	}
 	&__header {
 		display: flex;
@@ -20,12 +29,28 @@
 		font-weight: 700;
 		line-height: 1.2;
 		margin: 0;
+		&_lg {
+			font-size: size(24);
+			line-height: 1.5;
+			font-weight: 600;
+		}
 	}
 	&_alt &__headline {
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: size(16);
 		letter-spacing: 0.02em;
+	}
+	&__link {
+		margin-left: auto;
+		display: inline-block;
+		color: var(--accent);
+		font-size: size(14);
+		line-height: 1.5;
+		font-weight: 400;
+		&:hover {
+			color: var(--accent-hover);
+		}
 	}
 	&__description {
 		flex: 1 1 100%;

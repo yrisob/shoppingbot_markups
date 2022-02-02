@@ -1,0 +1,26 @@
+.attention {
+	display: flex;
+	align-items: center;
+	color: var(--text-base);
+	font-size: size(14);
+	line-height: 1.5;
+	font-weight: 400;
+	margin-bottom: size(4);
+	svg {
+		width: size(16);
+		height: size(16);
+		margin-right: size($bs * 0.5);
+	}
+	&_danger svg {
+		color: var(--color-danger);
+	}
+	&_warn svg {
+		color: var(--color-warn);
+	}
+	&_success svg {
+		color: var(--color-success);
+	}
+	&_info svg {
+		color: var(--color-info);
+	}
+}

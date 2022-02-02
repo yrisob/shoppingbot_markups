@@ -1,0 +1,50 @@
+extends ../templates/index
+include ../components/informer
+block content
+	.section.section_lg.section_size_short
+		.section__header
+			.section__headline.section__headline_lg Start your free 30-day trial of Handlt
+		.section__content
+			form.form
+				.form__group
+					.form__label.form__label_alt Your store name
+					+control({
+						attr: {
+							placeholder: 'name',
+							name: 'name'
+						}
+					})
+				.form__group
+					.form__label.form__label_alt Email
+					+control({
+						attr: {
+							placeholder: 'your@email.com',
+							name: 'email'
+						}
+					})
+				.form__group
+					.form__label.form__label_alt Password
+					+control({
+						attr: {
+							placeholder: 'Enter password',
+							name: 'password'
+						},
+						eye: true
+					})
+				.form__group
+					+informer('informer_width_full')
+						.h4 Your password must have:
+						.attention.attention_danger
+							+icon('x-circle')
+							span At least 8 characters
+						.attention.attention_success
+							+icon('check-circle')
+							span One uppercase character
+						.attention.attention_warn
+							+icon('x-circle')
+							span At least one number
+						.attention.attention_info
+							+icon('alert-circle')
+							span At least one special character
+				.form__footer
+					+button({text: 'Create store', mods: 'width_full', disabled: true})

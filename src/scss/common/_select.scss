@@ -42,6 +42,7 @@
 	&.open &__toggle {
 		border-color: var(--accent);
 		background-color: var(--white);
+		border-radius: 8px 8px 0 0;
 		svg {
 			transform: rotate(180deg);
 		}
@@ -52,15 +53,17 @@
 	&__list {
 		position: absolute;
 		top: 100%;
-		margin-top: size(4);
 		left: 0;
+		right: 0;
 		background-color: var(--white);
 		z-index: 2;
-		border-radius: 8px;
-		box-shadow: var(--dropdown);
+		border-radius: 0 0 8px 8px;
 		min-width: size(300);
 		user-select: none;
 		white-space: nowrap;
+		border-width: 0 1px 1px;
+		border-style: solid;
+		border-color: var(--accent);
 		display: none;
 	}
 	&.open &__list {
@@ -79,7 +82,8 @@
 		border: 0;
 		border-radius: 0;
 		&:not(.disabled):not(:disabled):hover {
-			background-color: var(--bg);
+			background-color: var(--accent);
+			color: var(--white);
 		}
 		&.selected {
 			font-weight: 600;
@@ -89,13 +93,13 @@
 			pointer-events: none;
 			color: var(--gray);
 		}
-		&:first-child {
-			border-top-left-radius: 8px;
-			border-top-right-radius: 8px;
-		}
+		//&:first-child {
+		//	border-top-left-radius: 8px;
+		//	border-top-right-radius: 8px;
+		//}
 		&:last-child {
-			border-bottom-left-radius: 8px;
-			border-bottom-right-radius: 8px;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
 		}
 	}
 }

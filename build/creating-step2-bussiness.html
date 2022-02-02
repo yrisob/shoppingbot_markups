@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title></title>
+	</head>
+	<body>
+		<div class="index">
+			<div class="section section_lg section_size_short">
+				<div class="section__header">
+					<div class="section__headline section__headline_lg">Tell us about yourself</div>
+				</div>
+				<div class="section__content">
+					<form class="form">
+						<div class="form__group">
+							<div class="row">
+								<div class="col">
+									<label class="radio">
+										<input class="radio__input" type="radio" name="radio1"/><span class="radio__mark"></span><span class="radio__text">Personal account</span>
+									</label>
+								</div>
+								<div class="col">
+									<label class="radio">
+										<input class="radio__input" type="radio" name="radio1" checked="checked"/><span class="radio__mark"></span><span class="radio__text">Business account</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="form__label form__label_alt">Company name</div>
+							<div class="control">
+								<input class="control__input" placeholder="name" name="name" type="text"/>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="form__label form__label_alt">Country</div>
+							<div class="select">
+								<select name="country">
+									<option value="">Select country</option>
+									<option value="USA">USA</option>
+									<option value="Not USA">Not USA</option>
+								</select>
+								<button class="select__toggle" type="button"><span class="select__placeholder">Select country</span>
+									<svg class="icon-chevron-down">
+										<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+									</svg>
+								</button>
+								<div class="select__list">
+									<div class="select__item">Select country</div>
+									<div class="select__item">USA</div>
+									<div class="select__item">Not USA</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="form__label form__label_alt">City</div>
+							<div class="select">
+								<select name="city">
+									<option value="">Select city</option>
+									<option value="Alabama">Alabama</option>
+									<option value="New York">New York</option>
+								</select>
+								<button class="select__toggle" type="button"><span class="select__placeholder">Select city</span>
+									<svg class="icon-chevron-down">
+										<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+									</svg>
+								</button>
+								<div class="select__list">
+									<div class="select__item">Select city</div>
+									<div class="select__item">Alabama</div>
+									<div class="select__item">New York</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="form__label form__label_alt">EIN</div>
+							<div class="control">
+								<input class="control__input" name="ein" type="text"/>
+							</div>
+						</div>
+						<div class="form__footer">
+							<button class="button button_width_full" type="button" disabled="disabled">Create store</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

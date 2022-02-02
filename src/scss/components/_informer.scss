@@ -5,6 +5,14 @@
 	padding: size($bs);
 	width: max-content;
 	margin: size($md) 0;
+	.form__group > & {
+		margin: 0;
+	}
+	&_width {
+		&_full {
+			width: 100%;
+		}
+	}
 	&_danger {
 		--informer-bg: var(--danger-00);
 	}

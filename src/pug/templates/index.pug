@@ -1,0 +1,20 @@
+include ../common/icon
+include ../common/checkbox
+include ../common/radio
+include ../common/button
+include ../common/select
+include ../common/control
+include ../common/multiple
+
+block variables
+doctype html
+html(lang="ru")
+	block head
+		head
+			include ../layouts/head
+			title #{title}
+	body
+		.index
+			block content
+
+

@@ -1,0 +1,17 @@
+mixin radio(obj)
+	-
+		var attr = {
+			type: 'radio',
+			name: obj.name
+		}
+		if ('checked' in obj) {
+			attr['checked'] = 'checked';
+		}
+		if ('half' in obj) {
+			attr['data-half'] = 'true';
+		}
+	label.radio
+		input.radio__input&attributes(attr)
+		span.radio__mark
+		if obj.text
+			span.radio__text=obj.text

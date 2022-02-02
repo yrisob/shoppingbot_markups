@@ -39,3 +39,6 @@ mixin control(obj)
 					.autocomplete__item Sneakers
 		if obj.suffix
 			span.control__suffix=obj.suffix
+		if obj.eye
+			button.control__switch(type='button')
+				+icon('eye')
