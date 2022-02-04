@@ -254,50 +254,60 @@ block content
 					button.modal-box__close(type='button')
 						+icon('x')
 				.modal-box__body.modal-box__body_stroke
-					.form.form_direction_row
-						.form__group
-							.form__label Name #[sup *]
-							+control({
-								attr: {
-									placeholder: 'Category name',
-									name: 'category'
-								}
-							})
-						.form__group
-							.form__label Main category
-							+select({
-								list: [
-									{value: '1'},
-									{value: '2'}
-								],
-								name: 'category',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Position
-							+select({
-								list: [
-									{value: '1'},
-									{value: '2'}
-								],
-								name: 'position',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Status
-							+select({
-								list: [
-									{value: 'Active'},
-									{value: 'Inactive'}
-								],
-								name: 'status',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Photo
-							+upload-photo([
-								{upload: true}
-							], true)
+					.form
+						.form__group.row
+							.col-3
+								.form__label Name #[sup *]
+							.col
+								+control({
+									attr: {
+										placeholder: 'Category name',
+										name: 'category'
+									}
+								})
+						.form__group.row
+							.col-3
+								.form__label Main category
+							.col
+								+select({
+									list: [
+										{value: '1'},
+										{value: '2'}
+									],
+									name: 'category',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Position
+							.col
+								+select({
+									list: [
+										{value: '1'},
+										{value: '2'}
+									],
+									name: 'position',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Status
+							.col
+								+select({
+									list: [
+										{value: 'Active'},
+										{value: 'Inactive'}
+									],
+									name: 'status',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Photo
+							.col
+								+upload-photo([
+									{upload: true}
+								], true)
 				.modal-box__footer
 					+button({text: 'Cancel', mods: 'bg_gray'})
 					+button({text: 'Create'})

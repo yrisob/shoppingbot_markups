@@ -172,48 +172,58 @@ block content
 					button.modal-box__close(type='button')
 						+icon('x')
 				.modal-box__body
-					.form.form_direction_row
-						.form__group
-							.form__label Promo code
-							+control({
-								attr: {
-									placeholder: 'CODEEXAMPLE112',
-									name: 'code'
-								}
-							})
-						.form__group
-							.form__label
-							+generate
-						.form__group
-							.form__label Product
-							+select({
-								list: [
-									{value: '1'},
-									{value: '2'}
-								],
-								name: 'product',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Start date
-							+select({
-								list: [
-									{value: '1'},
-									{value: '2'}
-								],
-								name: 'start',
-								def: 'Select'
-							})
-						.form__group
-							.form__label End date
-							+select({
-								list: [
-									{value: '1'},
-									{value: '2'}
-								],
-								name: 'End',
-								def: 'Select'
-							})
+					.form
+						.form__group.row
+							.col-3
+								.form__label Promo code
+							.col
+								+control({
+									attr: {
+										placeholder: 'CODEEXAMPLE112',
+										name: 'code'
+									}
+								})
+						.form__group.row
+							.col-3
+								.form__label
+							.col
+								+generate
+						.form__group.row
+							.col-3
+								.form__label Product
+							.col
+								+select({
+									list: [
+										{value: '1'},
+										{value: '2'}
+									],
+									name: 'product',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Start date
+							.col
+								+select({
+									list: [
+										{value: '1'},
+										{value: '2'}
+									],
+									name: 'start',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label End date
+							.col
+								+select({
+									list: [
+										{value: '1'},
+										{value: '2'}
+									],
+									name: 'End',
+									def: 'Select'
+								})
 
 				.modal-box__footer
 					+button({text: 'Cancel', mods: 'bg_gray'})

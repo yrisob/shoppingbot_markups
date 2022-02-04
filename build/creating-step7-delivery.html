@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<title></title>
+	</head>
+	<body>
+		<div class="index">
+			<div class="steps">
+				<div class="steps__item steps__item_complete">
+					<div class="steps__dot"></div>
+					<div class="steps__text">Name your shop</div>
+				</div>
+				<div class="steps__item steps__item_complete">
+					<div class="steps__dot"></div>
+					<div class="steps__text">Stock your shop</div>
+				</div>
+				<div class="steps__item steps__item_complete">
+					<div class="steps__dot"></div>
+					<div class="steps__text">Payments &amp; messengers</div>
+				</div>
+				<div class="steps__item steps__item_current">
+					<div class="steps__dot"></div>
+					<div class="steps__text">Delivery</div>
+				</div>
+			</div>
+			<form>
+				<div class="section">
+					<div class="section__header">
+						<div class="section__headline">Delivery variants</div>
+						<div class="section__description">Set clear and realistic shipping expectations for shoppers by providing acurate processing time.</div>
+					</div>
+					<div class="section__content">
+						<div class="form">
+							<div class="form__group row">
+								<div class="col-2">
+									<div class="form__label">Service type</div>
+								</div>
+								<div class="col-4">
+									<div class="select">
+										<select name="type">
+											<option value="Select">Select</option>
+											<option value="Active">Active</option>
+											<option value="Inactive">Inactive</option>
+										</select>
+										<button class="select__toggle" type="button"><span>Select</span>
+											<svg class="icon-chevron-down">
+												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+											</svg>
+										</button>
+										<div class="select__list">
+											<div class="select__item selected">Select</div>
+											<div class="select__item">Active</div>
+											<div class="select__item">Inactive</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__group row">
+								<div class="col-2">
+									<div class="form__label">Service name</div>
+								</div>
+								<div class="col-4">
+									<div class="control">
+										<input class="control__input" placeholder="" name="name" type="text"/>
+									</div>
+								</div>
+							</div>
+							<div class="form__group row">
+								<div class="col-2">
+									<div class="form__label">Description</div>
+								</div>
+								<div class="col-4">
+									<div class="control">
+										<textarea class="control__input" name="description" placeholder="Explain your customers how it works exactly "></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="index__footer">
+					<button class="button button_link" type="button">Back</button>
+					<button class="button" type="button">Finish</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

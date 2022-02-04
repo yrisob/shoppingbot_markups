@@ -23,6 +23,12 @@ mixin control(obj)
 				// attr['class'] = 'control__input_'+mod
 			});
 		}
+		if(obj.error){
+			extraClass.push('error');
+		}
+		if (obj.success) {
+			extraClass.push('success');
+		}
 
 	div.control
 		if obj.icon
@@ -42,3 +48,9 @@ mixin control(obj)
 		if obj.eye
 			button.control__switch(type='button')
 				+icon('eye')
+		if obj.tips
+			div.control__tips
+				+icon('alert-circle')
+				div=obj.tips
+		if obj.errorText
+			div.control__error=obj.errorText

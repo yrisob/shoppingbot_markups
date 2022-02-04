@@ -12,7 +12,7 @@
 		color: var(--text-base);
 		margin: 0 0 size($bs*2);
 	}
-	.row + .row {
+	.row:not(.form__group) + .row:not(.form__group) {
 		margin-top: size($md);
 	}
 	&_horizontal {
@@ -163,28 +163,36 @@
 		grid-gap: size($md);
 		grid-template-columns: size(150) 1fr;
 	}
-	&_direction_row &__group > *:not(.form__label){
-		flex: 1;
-	}
-	&_direction_row &__label {
-		margin-bottom: 0;
+	//&_direction_row &__group > *:not(.form__label){
+	//	flex: 1;
+	//}
+	//&_direction_row &__label {
+	//	margin-bottom: 0;
+	//	text-align: right;
+	//	justify-content: flex-end;
+	//	flex: 1 0 size(130);
+	//	max-width: size(130);
+	//	padding: size(11) 0;
+	//	margin-right: size($bs * 0.5);
+	//	flex-wrap: wrap;
+	//}
+	//&_direction_row &__remove {
+	//	margin-left: 0;
+	//	margin-top: size(4);
+	//	flex: 1 1 100%;
+	//	max-width: 100%;
+	//	text-align: right;
+	//}
+	//&_direction_row &__group {
+	//	display: flex;
+	//}
+	&__group.row &__label {
+		padding: 11px 0;
 		text-align: right;
 		justify-content: flex-end;
-		flex: 1 0 size(100);
-		max-width: size(100);
-		padding: size(11) 0;
-		margin-right: size($bs * 0.5);
+		margin: 0;
 		flex-wrap: wrap;
-	}
-	&_direction_row &__remove {
-		margin-left: 0;
-		margin-top: size(4);
-		flex: 1 1 100%;
-		max-width: 100%;
-		text-align: right;
-	}
-	&_direction_row &__group {
-		display: flex;
+		gap: size($sm * 0.5);
 	}
 	&__hidden {
 		padding-top: size($md);

@@ -1,18 +1,16 @@
-extends ../templates/base
-include ../components/dropdown
-include ../components/informer
+extends ../templates/index
+include ../components/steps
 include ../components/upload-photo
+include ../components/informer
 include ../components/attach-link
-block variables
-	-
-		var title = 'Products New';
-		var active = 'Products';
 block content
-	+header({
-		back: true,
-		headline: 'New product'
-	})
-	.content.content_bg
+	+steps([
+		{text: 'Name your shop', extra: 'steps__item_complete'},
+		{text: 'Stock your shop', extra: 'steps__item_current'},
+		{text: 'Payments & messengers'},
+		{text: 'Delivery'}
+	])
+	form
 		.section
 			.section__header
 				.section__headline Photos
@@ -30,17 +28,18 @@ block content
 								li Shoot against a clean, simple background.
 					.col-8
 						+upload-photo([
-							{image:'../assets/uploads/item-pic2.jpg'},
-							{image:'../assets/uploads/item-pic2.jpg'},
-							{upload:true},
-							{upload:false},
-							{upload:false},
-							{upload:false},
-							{upload:false},
-							{upload:false},
-							{upload:false},
-							{upload:false}
+							{image: '../assets/uploads/item-pic2.jpg'},
+							{image: '../assets/uploads/item-pic2.jpg'},
+							{upload: true},
+							{upload: false},
+							{upload: false},
+							{upload: false},
+							{upload: false},
+							{upload: false},
+							{upload: false},
+							{upload: false}
 						])
+
 		.section
 			.section__header
 				.section__headline Video
@@ -48,6 +47,7 @@ block content
 			.section__content
 				+attach-link(false)
 				+attach-link(true)
+
 		.section
 			.section__header
 				.section__headline Details
@@ -109,40 +109,6 @@ block content
 				.section__headline Variants
 				.section__description Add available options like color or size. Buyers will choose from these during checkout.
 			.section__content
-				.form
-					.form__fieldset
-						.form__set
-							.form__group
-								.form__label Option 1
-									button.form__remove(type='button') Remove
-								.form__option
-									+control({
-										attr: {
-											placeholder: 'Option 1',
-											name: 'option1',
-											value: 'Size'
-										}
-									})
-									+multiple({
-										name: 'sizes',
-										list: ['8', '9', '9,5']
-									})
-						.form__set
-							.form__group
-								.form__label Option 2
-									button.form__remove(type='button') Remove
-								.form__option
-									+control({
-										attr: {
-											placeholder: 'Option 2',
-											name: 'option2',
-											value: 'Color'
-										}
-									})
-									+multiple({
-										name: 'colors',
-										list: ['Black', 'White', 'Red', 'Green']
-									})
 				.section__controls
 					+button({text: 'Add variations', mods: 'bg_gray'})
 
@@ -151,48 +117,6 @@ block content
 				.section__headline Category
 				.section__description Categories allow you to group products by similar attributes.
 			.section__content
-				.form
-					.form__fieldset
-						.form__set
-							.form__group
-								.form__label Category 1
-									button.form__remove(type='button') Remove
-								+control({
-									attr: {
-										placeholder: 'Category 1',
-										name: 'category1',
-										value: 'Shoes'
-									},
-									autocomplete: true
-								})
-						.form__set
-							.form__group
-								.form__label Subcategory 1
-									button.form__remove(type='button') Remove
-								+control({
-									attr: {
-										placeholder: 'Subcategory 1',
-										name: 'subcategory1',
-										value: 'Puma'
-									}
-								})
-					.form__footer
-						+button({text: 'Add subcategory', mods: 'link, color_accent', icon: 'plus'})
-
-				.form
-					.form__fieldset
-						.form__set
-							.form__group
-								.form__label Category 2
-									button.form__remove(type='button') Remove
-								+control({
-									attr: {
-										placeholder: 'Category 2',
-										name: 'category2'
-									}
-								})
-					.form__footer
-						+button({text: 'Add subcategory', mods: 'link, color_accent', icon: 'plus'})
 				.section__controls
 					+button({text: 'Add category', mods: 'bg_gray'})
 
@@ -204,7 +128,6 @@ block content
 				.form
 					.form__group
 						+checkbox({text: 'This is a physical product.'})
-
-		.content__footer
-			+button({text:'Cancel', mods:'link,color_danger'})
-			+button({text:'Save'})
+		.index__footer
+			+button({text: 'Back', mods: 'link'})
+			+button({text: 'Save and continue'})

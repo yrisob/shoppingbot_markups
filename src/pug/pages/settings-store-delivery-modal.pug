@@ -141,41 +141,49 @@ block content
 					button.modal-box__close(type='button')
 						+icon('x')
 				.modal-box__body
-					.form.form_direction_row
-						.form__group
-							.form__label Service type
-							+select({
-								list: [
-									{value: 'Type 1'},
-									{value: 'Type 2'}
-								],
-								name: 'status',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Service name
-							+control({
-								attr: {
-									name: 'name'
-								}
-							})
-						.form__group
-							.form__label Status
-							+select({
-								list: [
-									{value: 'Active', selected: true},
-									{value: 'Inactive'}
-								],
-								name: 'status',
-							})
-						.form__group
-							.form__label Descriptoin
-							+control({
-								attr:{
-									placeholder: 'Expail your customers how it works exactly '
-								},
-								type:'textarea'
-							})
+					.form
+						.form__group.row
+							.col-3
+								.form__label Service type
+							.col
+								+select({
+									list: [
+										{value: 'Type 1'},
+										{value: 'Type 2'}
+									],
+									name: 'status',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Service name
+							.col
+								+control({
+									attr: {
+										name: 'name'
+									}
+								})
+						.form__group.row
+							.col-3
+								.form__label Status
+							.col
+								+select({
+									list: [
+										{value: 'Active', selected: true},
+										{value: 'Inactive'}
+									],
+									name: 'status',
+								})
+						.form__group.row
+							.col-3
+								.form__label Description
+							.col
+								+control({
+									attr:{
+										placeholder: 'Expail your customers how it works exactly '
+									},
+									type:'textarea'
+								})
 				.modal-box__footer
 					+button({text: 'Cancel', mods: 'bg_gray'})
 					+button({text: 'Add'})

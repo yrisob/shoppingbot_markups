@@ -1,0 +1,14 @@
+extends ../templates/index
+include ../components/steps
+include ../components/page-info
+block content
+	+steps([
+		{text:'Name your shop', extra:'steps__item_complete'},
+		{text:'Stock your shop', extra:'steps__item_current'},
+		{text:'Payments & messengers'},
+		{text:'Delivery'}
+	])
+	+page-info({
+		title: 'Let’s add your first product!',
+		button: 'Let’s do it'
+	})

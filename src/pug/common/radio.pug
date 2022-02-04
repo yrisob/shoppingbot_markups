@@ -10,6 +10,9 @@ mixin radio(obj)
 		if ('half' in obj) {
 			attr['data-half'] = 'true';
 		}
+		if ('disabled' in obj) {
+			attr['disabled'] = 'disabled';
+		}
 	label.radio
 		input.radio__input&attributes(attr)
 		span.radio__mark

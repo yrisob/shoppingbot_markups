@@ -238,55 +238,71 @@
 								</button>
 							</div>
 							<div class="modal-box__body">
-								<div class="form form_direction_row">
-									<div class="form__group">
-										<div class="form__label">Service type</div>
-										<div class="select">
-											<select name="status">
-												<option value="">Select</option>
-												<option value="Type 1">Type 1</option>
-												<option value="Type 2">Type 2</option>
-											</select>
-											<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg>
-											</button>
-											<div class="select__list">
-												<div class="select__item">Select</div>
-												<div class="select__item">Type 1</div>
-												<div class="select__item">Type 2</div>
+								<div class="form">
+									<div class="form__group row">
+										<div class="col-3">
+											<div class="form__label">Service type</div>
+										</div>
+										<div class="col">
+											<div class="select">
+												<select name="status">
+													<option value="">Select</option>
+													<option value="Type 1">Type 1</option>
+													<option value="Type 2">Type 2</option>
+												</select>
+												<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
+													<svg class="icon-chevron-down">
+														<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+													</svg>
+												</button>
+												<div class="select__list">
+													<div class="select__item">Select</div>
+													<div class="select__item">Type 1</div>
+													<div class="select__item">Type 2</div>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="form__group">
-										<div class="form__label">Service name</div>
-										<div class="control">
-											<input class="control__input" name="name" type="text"/>
+									<div class="form__group row">
+										<div class="col-3">
+											<div class="form__label">Service name</div>
 										</div>
-									</div>
-									<div class="form__group">
-										<div class="form__label">Status</div>
-										<div class="select">
-											<select name="status">
-												<option value="Active">Active</option>
-												<option value="Inactive">Inactive</option>
-											</select>
-											<button class="select__toggle" type="button"><span>Active</span>
-												<svg class="icon-chevron-down">
-													<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-												</svg>
-											</button>
-											<div class="select__list">
-												<div class="select__item selected">Active</div>
-												<div class="select__item">Inactive</div>
+										<div class="col">
+											<div class="control">
+												<input class="control__input" name="name" type="text"/>
 											</div>
 										</div>
 									</div>
-									<div class="form__group">
-										<div class="form__label">Descriptoin</div>
-										<div class="control">
-											<textarea class="control__input" placeholder="Expail your customers how it works exactly " name="custom_name"></textarea>
+									<div class="form__group row">
+										<div class="col-3">
+											<div class="form__label">Status</div>
+										</div>
+										<div class="col">
+											<div class="select">
+												<select name="status">
+													<option value="Active">Active</option>
+													<option value="Inactive">Inactive</option>
+												</select>
+												<button class="select__toggle" type="button"><span>Active</span>
+													<svg class="icon-chevron-down">
+														<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
+													</svg>
+												</button>
+												<div class="select__list">
+													<div class="select__item selected">Active</div>
+													<div class="select__item">Inactive</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group row">
+										<div class="col-3">
+											<div class="form__label">Description</div>
+										</div>
+										<div class="col">
+											<div class="control">
+												<textarea class="control__input" placeholder="Expail your customers how it works exactly " name="custom_name"></textarea>
+											</div>
 										</div>
 									</div>
 								</div>

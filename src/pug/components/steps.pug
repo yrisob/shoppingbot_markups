@@ -1,0 +1,6 @@
+mixin steps(array)
+	.steps
+		for item in array
+			.steps__item(class=item.extra)
+				.steps__dot
+				.steps__text=item.text

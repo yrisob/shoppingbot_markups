@@ -14,6 +14,15 @@ mixin select(obj)
 				extraClass.push('select__toggle_' + mod)
 			});
 		}
+		if (obj.error) {
+			extraClass.push('error');
+		}
+		if (obj.success) {
+			extraClass.push('success');
+		}
+		if(obj.disabled){
+			extraClass.push('disabled');
+		}
 	div.select(class=obj.status)
 		select(name=obj.name)
 			if obj.def
@@ -27,6 +36,8 @@ mixin select(obj)
 		button.select__toggle(type='button' class=extraClass)
 			span(class=(obj.def)?'select__placeholder':'')=(obj.def) ? obj.def : obj.list[activeItem].value
 			+icon('chevron-down')
+		if obj.errorText
+			div.select__error=obj.errorText
 		.select__list
 			if obj.def
 				.select__item=obj.def

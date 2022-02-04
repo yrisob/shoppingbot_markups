@@ -1,0 +1,53 @@
+extends ../templates/index
+include ../components/steps
+block content
+	+steps([
+		{text: 'Name your shop', extra: 'steps__item_complete'},
+		{text: 'Stock your shop', extra: 'steps__item_complete'},
+		{text: 'Payments & messengers', extra: 'steps__item_complete'},
+		{text: 'Delivery', extra: 'steps__item_current'}
+	])
+	form
+		.section
+			.section__header
+				.section__headline Delivery variants
+				.section__description Set clear and realistic shipping expectations for shoppers by providing acurate processing time.
+			.section__content
+				.form
+					.form__group.row
+						.col-2
+							.form__label Service type
+						.col-4
+							+select({
+								list: [
+									{value: 'Select', selected: true},
+									{value: 'Active'},
+									{value: 'Inactive'}
+								],
+								name: 'type'
+							})
+					.form__group.row
+						.col-2
+							.form__label Service name
+						.col-4
+							+control({
+								attr: {
+									placeholder: '',
+									name: 'name'
+								}
+							})
+					.form__group.row
+						.col-2
+							.form__label Description
+						.col-4
+							+control({
+								type: 'textarea',
+								attr: {
+									name: 'description',
+									placeholder: 'Explain your customers how it works exactly '
+								},
+								text: ''
+							})
+		.index__footer
+			+button({text: 'Back', mods: 'link'})
+			+button({text: 'Finish'})

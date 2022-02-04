@@ -4,6 +4,9 @@
 	padding: size($md);
 	border-radius: 8px;
 	margin-bottom: size($sm*2);
+	.index & {
+		max-width: size(1140);
+	}
 	&_lg {
 		padding: size($md * 2);
 	}

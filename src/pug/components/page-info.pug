@@ -1,0 +1,12 @@
+mixin page-info(obj)
+	.page-info
+		if obj.headline
+			.page-info__headline=obj.headline
+		if obj.title
+			.page-info__title=obj.title
+		if obj.text
+			.page-info__text=obj.text
+		if obj.button
+			+button({text: obj.button})
+		if obj.waiting
+			.page-info__waiting

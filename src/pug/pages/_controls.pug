@@ -1,0 +1,254 @@
+extends ../templates/base
+
+block content
+	.content
+		div.form
+			.form__group
+				+button({text:'button'})
+				+button({text:'button', disabled: true})
+			.form__group
+				+button({text: 'button', icon: 'plus'})
+				+button({text: 'button', icon: 'plus',  disabled: true})
+			.form__group
+				+button({text: 'button', mods: 'bg_gray'})
+				+button({text: 'button', mods: 'bg_gray', disabled: true})
+			.form__group
+				+button({text: 'button', icon: 'plus', mods: 'bg_gray'})
+				+button({text: 'button', icon: 'plus', mods: 'bg_gray', disabled: true})
+			.form__group
+				+button({text: 'button', mods: 'bg_gray,color_danger'})
+				+button({text: 'button', mods: 'bg_gray,color_danger', disabled: true})
+			.form__group
+				+button({text: 'button', mods: 'bg_gray,color_accent'})
+				+button({text: 'button', mods: 'bg_gray,color_accent', disabled: true})
+			.form__group
+				+button({text: 'button', mods: 'bg_danger'})
+				+button({text: 'button', mods: 'bg_danger', disabled: true})
+			.form__group
+				+button({text: 'button link', mods: 'link'})
+
+			.form__group
+				+radio({text: 'Personal account', name: 'radio1'})
+				+radio({text: 'Business account', checked: true, name: 'radio1'})
+				+radio({text: 'Disabled', disabled: true, name: 'radio1'})
+
+			.form__group
+				+checkbox({text: 'Personal account', name: 'checkbox1'})
+				+checkbox({text: 'Business account', checked: true, name: 'checkbox1'})
+				+checkbox({text: 'Disabled', disabled: true, name: 'checkbox1'})
+
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					}
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Search by name, category...',
+						name: 'search'
+					},
+					icon: 'search'
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Search by name, category...',
+						name: 'search'
+					},
+					icon: 'search',
+					mods: ['bg_fill']
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Disabled',
+						name: 'name',
+						disabled: 'disabled'
+					}
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Disabled',
+						name: 'name',
+						disabled: 'disabled'
+					},
+					mods: ['bg_fill']
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name Fill',
+						name: 'name'
+					},
+					mods: ['bg_fill']
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					error: true
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					mods: ['bg_fill'],
+					error: true
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					success: true
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					mods: ['bg_fill'],
+					success: true
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					eye: true
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					tips: 'Tips'
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					suffix: 'min'
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Name',
+						name: 'name'
+					},
+					error: true,
+					errorText: 'Error text'
+				})
+			.form__group
+				+control({
+					type: 'textarea',
+					attr: {
+						name: 'description'
+					},
+					text: ''
+				})
+			.form__group
+				+control({
+					attr: {
+						placeholder: 'Category 1',
+						name: 'category1',
+						value: 'Autocomplete'
+					},
+					autocomplete: true
+				})
+			.form__group(style='margin-top:100px')
+				.title Multi
+			.form__group
+				+multiple({
+					name: 'sizes',
+					list: ['8', '9', '9,5']
+				})
+			.form__group
+				.title Select
+			.form__group
+				+select({
+					list: [
+						{value: 'Select', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select'
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					mods: ['bg_fill']
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select Disabled', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					disabled: true
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select Disabled', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					mods: ['bg_fill'],
+					disabled: true
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					error: true,
+					errorText: 'Error'
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					mods: ['bg_fill'],
+					error: true
+				})
+			.form__group
+				+select({
+					list: [
+						{value: 'Select', selected: true},
+						{value: 'Active'},
+						{value: 'Inactive'}
+					],
+					name: 'select',
+					mods: ['bg_fill'],
+					status: 'open'
+				})

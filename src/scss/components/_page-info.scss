@@ -1,0 +1,43 @@
+.page-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: size($bs);
+	color: var(--text-base);
+	&__headline {
+		font-size: size(28);
+		line-height: 1.2;
+		font-weight: 600;
+		margin: 0 0 size($sm);
+	}
+	&__text {
+		margin-bottom: size($lg + $md);
+		font-size: size(14);
+		line-height: 1.5;
+		font-weight: 400;
+	}
+	&__title {
+		font-size: size(24);
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 0 0 size($sm * 2);
+	}
+	&__waiting {
+		background: url("../img/waiting.svg") center/contain no-repeat;
+		width: size(100);
+		height: size(100);
+		animation: waiting-rotate 1s linear infinite;
+		user-select: none;
+	}
+	.steps + & {
+		margin-top: size(60);
+	}
+}
+@keyframes waiting-rotate {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+

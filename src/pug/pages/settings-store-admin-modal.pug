@@ -117,34 +117,40 @@ block content
 					button.modal-box__close(type='button')
 						+icon('x')
 				.modal-box__body
-					.form.form_direction_row
-						.form__group
-							.form__label Email
-							+control({
-								attr: {
-									name: 'email'
-								}
-							})
-						.form__group
-							.form__label Name
-							+select({
-								list: [
-									{value: 'user 1'},
-									{value: 'user 2'}
-								],
-								name: 'name',
-								def: 'Select'
-							})
-						.form__group
-							.form__label Role
-							+select({
-								list: [
-									{value: 'Admin'},
-									{value: 'Manager'}
-								],
-								name: 'role',
-								def: 'Select'
-							})
+					.form
+						.form__group.row
+							.col-3
+								.form__label Email
+							.col
+								+control({
+									attr: {
+										name: 'email'
+									}
+								})
+						.form__group.row
+							.col-3
+								.form__label Name
+							.col
+								+select({
+									list: [
+										{value: 'user 1'},
+										{value: 'user 2'}
+									],
+									name: 'name',
+									def: 'Select'
+								})
+						.form__group.row
+							.col-3
+								.form__label Role
+							.col
+								+select({
+									list: [
+										{value: 'Admin'},
+										{value: 'Manager'}
+									],
+									name: 'role',
+									def: 'Select'
+								})
 				.modal-box__footer
 					+button({text: 'Cancel', mods: 'bg_gray'})
 					+button({text: 'Create'})

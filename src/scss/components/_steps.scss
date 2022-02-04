@@ -1,0 +1,70 @@
+.steps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: size($bs*2);
+	&__dot {
+		position: relative;
+		z-index: 1;
+		display: block;
+		border-radius: 50%;
+		background-color: #C4C4C4;
+		width: size(10);
+		height: size(10);
+		margin-bottom: size($md);
+	}
+	&__item {
+		position: relative;
+		color: var(--text-additional);
+		font-size: size(14);
+		line-height: 1.5;
+		font-weight: 400;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 size(36);
+		&:not(:first-child):before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: size(3);
+			left: 0;
+			width: 50%;
+			height: 3px;
+			background-color: #BDBDBD;
+		}
+		&:not(:last-child):after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: size(3);
+			right: 0;
+			width: 50%;
+			height: 3px;
+			background-color: #BDBDBD;
+		}
+		&_current {
+			font-weight: 600;
+			color: var(--accent);
+			&:not(:first-child):before {
+				background-color: var(--accent);
+			}
+		}
+		&_complete {
+			color: var(--accent);
+			&:not(:first-child):before {
+				background-color: var(--accent);
+			}
+			&:not(:last-child):after {
+				background-color: var(--accent);
+			}
+		}
+	}
+	&__item_current &__dot {
+		background-color: var(--accent);
+		box-shadow: 0 0 0 4px var(--accent);
+	}
+	&__item_complete &__dot {
+		background-color: var(--accent);
+	}
+}

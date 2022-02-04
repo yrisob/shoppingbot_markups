@@ -170,49 +170,79 @@
 							<div class="section__description">Tell the world all about your item and why they’ll love it.</div>
 						</div>
 						<div class="section__content">
-							<div class="form form_direction_row form_width_short">
-								<div class="form__group">
-									<div class="form__label">Title</div>
-									<div class="control">
-										<input class="control__input" placeholder="Product name" name="title" type="text"/>
+							<div class="form">
+								<div class="form__group row">
+									<div class="col-1">
+										<div class="form__label">Title</div>
 									</div>
-								</div>
-								<div class="form__group">
-									<div class="form__label">Type</div>
-									<div class="select">
-										<select name="type">
-											<option value="">Select</option>
-											<option value="Product">Product</option>
-											<option value="Service">Service</option>
-										</select>
-										<button class="select__toggle" type="button"><span class="select__placeholder">Select</span>
-											<svg class="icon-chevron-down">
-												<use xlink:href="../assets/icons/icons.svg#chevron-down"></use>
-											</svg>
-										</button>
-										<div class="select__list">
-											<div class="select__item">Select</div>
-											<div class="select__item">Product</div>
-											<div class="select__item">Service</div>
+									<div class="col-4">
+										<div class="control">
+											<input class="control__input" placeholder="Product name" name="title" type="text"/>
 										</div>
 									</div>
 								</div>
-								<div class="form__group">
-									<div class="form__label">Description</div>
-									<div class="control">
-										<textarea class="control__input" name="description">Smash was such a hit on the courts, we’ve decided to take these classic sports shoes and deem them an all-around fashion icon. Updated with softer leather and an improved feel...</textarea>
+								<div class="form__group row">
+									<div class="col-1">
+										<div class="form__label">Type</div>
+									</div>
+									<div class="col-4">
+										<div class="multiple">
+											<input type="hidden" name="type" value="Physical;Digital;Service"/>
+											<div class="multiple__list">
+												<div class="multiple__item"><span>Physical</span>
+													<button class="multiple__remove" type="button">
+														<svg class="icon-x">
+															<use xlink:href="../assets/icons/icons.svg#x"></use>
+														</svg>
+													</button>
+												</div>
+												<div class="multiple__item"><span>Digital</span>
+													<button class="multiple__remove" type="button">
+														<svg class="icon-x">
+															<use xlink:href="../assets/icons/icons.svg#x"></use>
+														</svg>
+													</button>
+												</div>
+												<div class="multiple__item"><span>Service</span>
+													<button class="multiple__remove" type="button">
+														<svg class="icon-x">
+															<use xlink:href="../assets/icons/icons.svg#x"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<input class="multiple__search" type="text"/>
+										</div>
 									</div>
 								</div>
-								<div class="form__group">
-									<div class="form__label">Tags</div>
-									<div class="control">
-										<input class="control__input" placeholder="Shape, colot, style, function, ect." name="tags" type="text"/>
+								<div class="form__group row">
+									<div class="col-1">
+										<div class="form__label">Description</div>
+									</div>
+									<div class="col-4">
+										<div class="control">
+											<textarea class="control__input" name="description">Smash was such a hit on the courts, we’ve decided to take these classic sports shoes and deem them an all-around fashion icon. Updated with softer leather and an improved feel...</textarea>
+										</div>
 									</div>
 								</div>
-								<div class="form__group">
-									<div class="form__label">Materials</div>
-									<div class="control">
-										<input class="control__input" placeholder="Ingredients, components. ect." name="materials" type="text"/>
+								<div class="form__group row">
+									<div class="col-1">
+										<div class="form__label">Tags</div>
+									</div>
+									<div class="col-4">
+										<div class="control">
+											<input class="control__input" placeholder="Shape, colot, style, function, ect." name="tags" type="text"/>
+										</div>
+									</div>
+								</div>
+								<div class="form__group row">
+									<div class="col-1">
+										<div class="form__label">Materials</div>
+									</div>
+									<div class="col-4">
+										<div class="control">
+											<input class="control__input" placeholder="Ingredients, components. ect." name="materials" type="text"/>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -393,9 +423,13 @@
 							<div class="section__description">Set clear and realistic shipping expectations for shoppers by providing accurate processing time.</div>
 						</div>
 						<div class="section__content">
-							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox"/><span class="checkbox__mark"></span><span class="checkbox__text">This is a physical product.</span>
-							</label>
+							<div class="form">
+								<div class="form__group">
+									<label class="checkbox">
+										<input class="checkbox__input" type="checkbox"/><span class="checkbox__mark"></span><span class="checkbox__text">This is a physical product.</span>
+									</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="content__footer">
